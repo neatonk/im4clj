@@ -13,7 +13,10 @@
         [clojure.java.io :only [file]]))
 
 (def test-image "test/test-image.jpg")
+
 (def tmp-dir "test/tmp")
+(def tmp-dir-im (str tmp-dir "/im"))
+(def tmp-dir-gm (str tmp-dir "/gm"))
 
 (defn tmp-path
   [file-name]
@@ -23,24 +26,28 @@
   [path]
   (-> path file .exists))
 
-(defn ensure-tmp-dir
+(defn ensure-tmp-dirs
   []
-  (if-not (exists? tmp-dir)
-    (-> tmp-dir file .mkdir)))
+  (when-not (exists? tmp-dir)
+    (-> tmp-dir file .mkdir))
+  (when-not (exists? tmp-dir-im)
+    (-> tmp-dir-im file .mkdir))
+  (when-not (exists? tmp-dir-gm)
+    (-> tmp-dir-gm file .mkdir)))
 
 (defn cleanup-tmp-dir []
   (doseq [f (-> tmp-dir file file-seq)]
     (when-not (.isDirectory f)
       (.delete f))))
 
-(defn fixture-clean [f]
-  (ensure-tmp-dir)
-  (cleanup-tmp-dir)
-  (f))
+;; (defn fixture-setup-tmp-dirs [f]
+;;   (ensure-tmp-dirs)
+;;   (cleanup-tmp-dir)
+;;   (f))
 
+;; (use-fixtures :once fixture-setup-tmp-dirs)
 
-(use-fixtures :once fixture-clean)
-
+;; Tests...
 (deftest config-test
   (testing "defaults..."
     (is (false? (use-gm?))
@@ -62,17 +69,18 @@
   [opt]
   (symbol "im4clj.core" (name opt)))
 
-(def options (map opt-symbol
-                  ['colorspace 'crop 'border 'bordercolor 'borderwidth 'contrast
-                   'define 'depth 'draw 'flip 'flop 'font 'gaussian 'intent
-                   'limit 'quality 'resize 'rotate 'set 'sharpen 'text-font 'type
-                   'unsharp]))
+;; IM/GM tests
+(def options
+  (map opt-symbol
+       ['colorspace 'crop 'border 'bordercolor 'borderwidth 'contrast 'define
+        'depth 'draw 'flip 'flop 'font 'gaussian 'intent 'limit 'quality 'resize
+        'rotate 'set 'sharpen 'text-font 'type 'unsharp]))
 
-(deftest options-test
+(deftest existing-options-test
   (doseq [opt options]
     (is (resolve opt))))
 
-(deftest convert-test
+(deftest convert-tests
   (doseq [opt ['(colorspace "GRAY")
                '(crop "100x100+0+0")
                '(border "10x10")
@@ -98,7 +106,8 @@
                ;'(text-font "Courier.ttf")
                ;'(type "Optimize")
                '(unsharp 3)]]
-    (let [out-path (tmp-path (str "convert-" (join "-" opt) ".jpg"))
+    (let [im-or-gm (if (use-gm?) "gm" "im")
+          out-path (tmp-path (str im-or-gm "/convert-" (join "-" opt) ".jpg"))
           opt-var  (resolve (-> opt first opt-symbol))
           opt-args (rest opt)
           test-str (join " " (cons opt-var opt-args))]
@@ -110,3 +119,13 @@
                                   out-path)]
           (is (nil? return-val))
           (is (exists? out-path)))))))
+
+(defn test-ns-hook []
+  (ensure-tmp-dirs)
+  (cleanup-tmp-dir)
+  (config-test)
+  (command-test)
+  (with-im
+    (convert-tests))
+  (with-gm
+    (convert-tests)))
