@@ -10,9 +10,7 @@
       :author "Kevin Neaton"}
   im4clj.im4java
   (:use [im4clj config])
-  (:import [org.im4java.core ImageCommand Operation CompositeCmd ConvertCmd
-            DcrawCmd DisplayCmd ExiftoolCmd GraphicsMagickCmd IdentifyCmd
-            ImageMagickCmd JpegtranCmd MogrifyCmd MontageCmd UFRawCmd]
+  (:import [org.im4java.core ImageCommand Operation]
            [org.im4java.process ProcessStarter]))
 
 ;; util fn's
