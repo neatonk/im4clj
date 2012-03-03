@@ -19,16 +19,25 @@
   [file-name]
   (str tmp-dir "/" file-name))
 
+(defn exists?
+  [path]
+  (-> path file .exists))
+
+(defn ensure-tmp-dir
+  []
+  (if-not (exists? tmp-dir)
+    (-> tmp-dir file .mkdir)))
+
 (defn cleanup-tmp-dir []
   (doseq [f (-> tmp-dir file file-seq)]
     (when-not (.isDirectory f)
       (.delete f))))
 
-(defn exists?
-  [path]
-  (-> path file .exists))
+(defn fixture-clean [f]
+  (ensure-tmp-dir)
+  (cleanup-tmp-dir)
+  (f))
 
-(defn fixture-clean [f] (cleanup-tmp-dir) (f))
 
 (use-fixtures :once fixture-clean)
 
