@@ -6,13 +6,6 @@
 ;   the terms of this license.
 ;   You must not remove this notice, or any other, from this software.
 
-(ns ^{:doc "ImageMagick for Clojure."
-      :author "Kevin Neaton"}
-  im4clj.core
-  (:use [im4clj.util ns])
-  (:require [im4clj commands config options run]))
-
-(immigrate 'im4clj.commands
-           'im4clj.config
-           'im4clj.options
-           'im4clj.run)
+(ns im4clj.test.options
+  (:use [im4clj.options]
+        [clojure.test]))

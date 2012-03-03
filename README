@@ -1,6 +1,6 @@
 # im4clj
 
-FIXME: write description
+ImageMagick commandline wrapper for Clojure.
 
 ## Usage
 
@@ -8,6 +8,8 @@ FIXME: write
 
 ## License
 
-Copyright (C) 2012 deeperbydesign, inc
+Copyright (C) deeperbydesign, inc 2012.
 
 Distributed under the Eclipse Public License, the same as Clojure.
+
+Test images obtained from NASA's website are public domain and not subject to the above copyright notice.
