@@ -40,7 +40,7 @@
   (let [opt-str (option-name opt)]
     (cons opt-str args)))
 
-(def ^:private opt-specs
+(def ^:private option-specs
   {'border
    {:doc "TODO: add docstring."
     :arglists '([width height])}
@@ -133,12 +133,16 @@
    {:doc "TODO: add docstring."
     :arglists '([])}})
 
-(defn- intern-imops
-  ([] (intern-imops *ns*))
+(defn- option-docstr
+  [cmd]
+  (format "Creates a new %s option for use in a command. See IM/GM documentation for usage." cmd))
+
+(defn- intern-options
+  ([] (intern-options *ns*))
   ([ns]
-     (doseq [[opt opt-meta] opt-specs]
-       (let [doc (format "Returns a new %s option for ImageMagick/GraphicsMagick. See IM/GM documentation." opt)
-             doc (str doc "\n\n" (:doc opt-meta))
+     (doseq [[opt opt-meta] option-specs]
+       (let [doc (option-docstr opt)
+             doc (if-let [d (:doc opt-meta)] (str doc "\n\n" d) doc)
              opt (with-meta opt
                    (assoc opt-meta
                      :doc doc
@@ -146,4 +150,4 @@
                      :type ::option))]
          (intern ns opt (partial option opt))))))
 
-(intern-imops)
+(intern-options)
