@@ -23,14 +23,59 @@
   [cmd]
   (if (use-gm?) (list "gm" cmd) cmd))
 
-;; IM/GM Command's
-(defn convert
-  "Run a convert command with the given options.
+(def ^:private command-specs
+  {'animate
+   {:doc "TODO: add example usage."}
 
-   Example Usage:
+   'compare
+   {:doc "TODO: add example usage."}
 
-   (convert \"input.jpg\" (resize 640 480) \"output.jpg\")
-  "
-  [& opts]
-  (let [cmd (command :convert)]
-    (apply run cmd opts)))
+   'composite
+   {:doc "TODO: add example usage."}
+
+   'conjure
+   {:doc "TODO: add example usage."}
+
+   'convert
+   {:doc "Example Usage:\n\n(convert \"input.jpg\" (resize 640 480) \"output.jpg\")"}
+
+   'display
+   {:doc "TODO: add example usage."}
+
+   'identify
+   {:doc "TODO: add example usage."}
+
+   'import
+   {:doc "TODO: add example usage."}
+
+   'mogrify
+   {:doc "TODO: add example usage."}
+
+   'montage
+   {:doc "TODO: add example usage."}
+
+   'stream
+   {:doc "TODO: add example usage.\n\nImageMagick only."}})
+
+(defn- command-docstr
+  [cmd]
+  (format "Run a %s command with the given options. See IM/GM documentation for details." cmd))
+
+(defn- intern-commands
+  ([] (intern-commands *ns*))
+  ([ns]
+     (doseq [[cmd cmd-meta] command-specs]
+       (let [doc (command-docstr cmd)
+             doc (if-let [d (:doc cmd-meta)] (str doc "\n\n" d) doc)
+             cmd (with-meta cmd
+                   (assoc cmd-meta
+                     :doc doc
+                     :arglists '([& opts])
+                     :file "im4clj/commands.clj"
+                     :type ::command))]
+         (intern ns cmd
+                 (fn [& opts]
+                   (let [cmd-str (command :convert)]
+                     (apply run cmd-str opts))))))))
+
+(intern-commands)
