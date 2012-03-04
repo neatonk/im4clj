@@ -1,0 +1,186 @@
+<html>
+  <head>
+    <title>im4clj.geometry - im4clj API documentation</title>
+    <link href="static/favicon.png" rel="icon" />
+    <link href="static/favicon.png" rel="shortcut icon" />
+    <link media="all" type="text/css" href="static/clojure.css" rel="stylesheet" />
+    <link media="all" type="text/css" href="static/wiki.css" rel="stylesheet" />
+    <link media="all" type="text/css" href="static/internal.css" rel="stylesheet" />
+    <style>.menuWrapper{height: 36px;}</style>
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" href="http://www.wikispaces.com/_/2009051601/s/internal_ie.css" type="text/css" />
+    <![endif]-->
+  </head>
+<!--
+This document was auto-generated from the source by the clojure autodoc system.
+To report errors or ask questions about the overall documentation structure, formatting,
+etc., contact Tom Faulhaber (google mail name: tomfaulhaber).
+For errors in the documentation of a particular namespace, contact the author of that
+namespace.
+-->
+  <body>
+    <div id="AllContentContainer">
+      <div id="Header">
+	<a id="Logo" href="index.html"><img alt="Clojure" height="100" width="100" src="static/clojure-icon.gif" /></a>
+	<h1><a title="page header title" id="page-header" href="index.html">im4clj API Documentation</a></h1>
+      </div>
+      <div id="leftcolumn"><div style="text-align: center;"></div>
+<div class="menu">
+  <div class="WikiCustomNav WikiElement wiki">
+    <span class="toc-header"><span id="project-name">im4clj</span> <span id="version"></span> API</span><br />
+    <ul>
+      <li><a class="wiki_link" href="index.html">Overview</a></li>
+      <li><a class="wiki_link" href="api-index.html">API Index</a></li>
+    </ul>
+    <div class="NamespaceTOC">
+      <span class="toc-header">Namespaces</span>
+      <ul id="left-sidebar-list">
+        <li><a href="im4clj.commands-api.html" class="wiki_link">im4clj.commands</a></li><li><a href="im4clj.config-api.html" class="wiki_link">im4clj.config</a></li><li><a href="im4clj.core-api.html" class="wiki_link">im4clj.core</a></li><li><a href="im4clj.geometry-api.html" class="wiki_link">im4clj.geometry</a></li><li><a href="im4clj.im4java-api.html" class="wiki_link">im4clj.im4java</a></li><li><a href="im4clj.options-api.html" class="wiki_link">im4clj.options</a></li><li><a href="im4clj.run-api.html" class="wiki_link">im4clj.run</a></li><li><a href="im4clj.util.log-api.html" class="wiki_link">im4clj.util.log</a></li><li><a href="im4clj.util.ns-api.html" class="wiki_link">im4clj.util.ns</a></li>
+      </ul>
+    </div>
+    
+    <a href="http://clojure.org" class="wiki_link">Clojure Home</a>
+  </div>
+</div>
+</div>
+      <div id="rightcolumn">
+	<div id="Content">
+	  <div class="contentBox"><div class="innerContentBox">
+              <div id="content_view" class="wiki wikiPage">
+                <div id="right-sidebar"><div id="toc">
+  <h1 class="nopad">Table of Contents</h1>
+  <div style="margin-left: 1em;" class="toc-section">
+    <a href="#toc0">Overview</a>
+    <div style="margin-left: 1em;" class="toc-entry">
+      <a href="#im4clj.geometry/geometry-spec">geometry-spec</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#im4clj.geometry/offset">offset</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#im4clj.geometry/signed-string">signed-string</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#im4clj.geometry/size">size</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#im4clj.geometry/special-char?">special-char?</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#im4clj.geometry/special-chars">special-chars</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#im4clj.geometry/valid-geometry-spec?">valid-geometry-spec?</a>
+    </div>
+    <br />
+  </div>
+</div>
+</div>
+                <div id="content-tag"><h1 id="overview">API for <span id="namespace-name">im4clj.geometry</span>
+  - <span id="header-project">im4clj</span> <span id="header-version"></span>
+  </h1>
+<span id="author-line">by <span id="author-name">Kevin Neaton</span><br /></span>
+<br />Full namespace name: <span id="long-name">im4clj.geometry</span>
+<p></p>
+<h2>Overview</h2>
+<pre id="namespace-docstr">Functions used to generate and validate ImageMagick geometry spec strings.</pre>
+
+
+<br />
+<h2>Public Variables and Functions</h2>
+<div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="im4clj.geometry/geometry-spec">geometry-spec</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (geometry-spec w)
+       (geometry-spec w h)
+       (geometry-spec w h s)
+       (geometry-spec w h x y)
+       (geometry-spec w h x y s)
+</pre>
+  <pre id="var-docstr">Image size and offset.</pre>
+  
+  
+  <a href="https://github.com/neatonk/im4clj/031d9655cc06c8c63eda27402d35e00f64eafbd5/src/im4clj/geometry.clj#L56" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="im4clj.geometry/offset">offset</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (offset x y)
+</pre>
+  <pre id="var-docstr">Specify the image offset in pixels from top left.</pre>
+  
+  
+  <a href="https://github.com/neatonk/im4clj/031d9655cc06c8c63eda27402d35e00f64eafbd5/src/im4clj/geometry.clj#L28" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="im4clj.geometry/signed-string">signed-string</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (signed-string n)
+</pre>
+  <pre id="var-docstr">Converts an integer to a signed string.</pre>
+  
+  
+  <a href="https://github.com/neatonk/im4clj/031d9655cc06c8c63eda27402d35e00f64eafbd5/src/im4clj/geometry.clj#L13" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="im4clj.geometry/size">size</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (size w)
+       (size w h)
+       (size w h s)
+</pre>
+  <pre id="var-docstr">Specify the image width and height in pixels or percentages.</pre>
+  
+  
+  <a href="https://github.com/neatonk/im4clj/031d9655cc06c8c63eda27402d35e00f64eafbd5/src/im4clj/geometry.clj#L22" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="im4clj.geometry/special-char?">special-char?</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (special-char? c)
+</pre>
+  <pre id="var-docstr">Predicate. Determines whether or not 'c' is a special character, or a string
+begining with a special character. :see-also special-chars.</pre>
+  
+  
+  <a href="https://github.com/neatonk/im4clj/031d9655cc06c8c63eda27402d35e00f64eafbd5/src/im4clj/geometry.clj#L37" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="im4clj.geometry/special-chars">special-chars</h2>
+  <span id="var-type">var</span><br />
+  <pre id="var-usage"></pre>
+  <pre id="var-docstr">Special characters used to modify the meaning of a geometry-spec.</pre>
+  
+  
+  <a href="https://github.com/neatonk/im4clj/031d9655cc06c8c63eda27402d35e00f64eafbd5/src/im4clj/geometry.clj#L34" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="im4clj.geometry/valid-geometry-spec?">valid-geometry-spec?</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (valid-geometry-spec? s)
+</pre>
+  <pre id="var-docstr">Predicate. Returns true if 's' is a properly formed geometry-spec string.</pre>
+  
+  
+  <a href="https://github.com/neatonk/im4clj/031d9655cc06c8c63eda27402d35e00f64eafbd5/src/im4clj/geometry.clj#L51" id="var-source">Source</a>
+</div>
+
+
+</div>
+              </div>
+            </div>
+          </div>
+	</div>
+	<div id="foot">
+	  <div style="text-align: center;" id="copyright">Copyright 2012, deeperbydesign, inc.</div>
+	</div>
+      </div>
+      <div id="DesignedBy">Logo &amp; site design by <a title="Visit Tom Hickey's website." href="http://www.tomhickey.com">Tom Hickey</a>.<br />
+      Clojure auto-documentation system by Tom Faulhaber.</div>
+    </div>
+    <!-- /AllContentContainer -->
+  </body>
+
+</html>

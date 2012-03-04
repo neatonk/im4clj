@@ -1,0 +1,563 @@
+<html>
+  <head>
+    <title>im4clj.core - im4clj API documentation</title>
+    <link href="static/favicon.png" rel="icon" />
+    <link href="static/favicon.png" rel="shortcut icon" />
+    <link media="all" type="text/css" href="static/clojure.css" rel="stylesheet" />
+    <link media="all" type="text/css" href="static/wiki.css" rel="stylesheet" />
+    <link media="all" type="text/css" href="static/internal.css" rel="stylesheet" />
+    <style>.menuWrapper{height: 36px;}</style>
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" href="http://www.wikispaces.com/_/2009051601/s/internal_ie.css" type="text/css" />
+    <![endif]-->
+  </head>
+<!--
+This document was auto-generated from the source by the clojure autodoc system.
+To report errors or ask questions about the overall documentation structure, formatting,
+etc., contact Tom Faulhaber (google mail name: tomfaulhaber).
+For errors in the documentation of a particular namespace, contact the author of that
+namespace.
+-->
+  <body>
+    <div id="AllContentContainer">
+      <div id="Header">
+	<a id="Logo" href="index.html"><img alt="Clojure" height="100" width="100" src="static/clojure-icon.gif" /></a>
+	<h1><a title="page header title" id="page-header" href="index.html">im4clj API Documentation</a></h1>
+      </div>
+      <div id="leftcolumn"><div style="text-align: center;"></div>
+<div class="menu">
+  <div class="WikiCustomNav WikiElement wiki">
+    <span class="toc-header"><span id="project-name">im4clj</span> <span id="version"></span> API</span><br />
+    <ul>
+      <li><a class="wiki_link" href="index.html">Overview</a></li>
+      <li><a class="wiki_link" href="api-index.html">API Index</a></li>
+    </ul>
+    <div class="NamespaceTOC">
+      <span class="toc-header">Namespaces</span>
+      <ul id="left-sidebar-list">
+        <li><a href="im4clj.commands-api.html" class="wiki_link">im4clj.commands</a></li><li><a href="im4clj.config-api.html" class="wiki_link">im4clj.config</a></li><li><a href="im4clj.core-api.html" class="wiki_link">im4clj.core</a></li><li><a href="im4clj.geometry-api.html" class="wiki_link">im4clj.geometry</a></li><li><a href="im4clj.im4java-api.html" class="wiki_link">im4clj.im4java</a></li><li><a href="im4clj.options-api.html" class="wiki_link">im4clj.options</a></li><li><a href="im4clj.run-api.html" class="wiki_link">im4clj.run</a></li><li><a href="im4clj.util.log-api.html" class="wiki_link">im4clj.util.log</a></li><li><a href="im4clj.util.ns-api.html" class="wiki_link">im4clj.util.ns</a></li>
+      </ul>
+    </div>
+    
+    <a href="http://clojure.org" class="wiki_link">Clojure Home</a>
+  </div>
+</div>
+</div>
+      <div id="rightcolumn">
+	<div id="Content">
+	  <div class="contentBox"><div class="innerContentBox">
+              <div id="content_view" class="wiki wikiPage">
+                <div id="right-sidebar"><div id="toc">
+  <h1 class="nopad">Table of Contents</h1>
+  <div style="margin-left: 1em;" class="toc-section">
+    <a href="#toc0">Overview</a>
+    <div style="margin-left: 1em;" class="toc-entry">
+      <a href="#im4clj.core/border">border</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#im4clj.core/bordercolor">bordercolor</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#im4clj.core/borderwidth">borderwidth</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#im4clj.core/colorspace">colorspace</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#im4clj.core/command">command</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#im4clj.core/contrast">contrast</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#im4clj.core/convert">convert</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#im4clj.core/crop">crop</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#im4clj.core/define">define</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#im4clj.core/depth">depth</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#im4clj.core/draw">draw</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#im4clj.core/flip">flip</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#im4clj.core/flop">flop</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#im4clj.core/font">font</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#im4clj.core/gaussian">gaussian</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#im4clj.core/intent">intent</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#im4clj.core/limit">limit</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#im4clj.core/quality">quality</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#im4clj.core/resize">resize</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#im4clj.core/rotate">rotate</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#im4clj.core/run">run</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#im4clj.core/sharpen">sharpen</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#im4clj.core/stringify">stringify</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#im4clj.core/stringify-method">stringify-method</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#im4clj.core/text-font">text-font</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#im4clj.core/unsharp">unsharp</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#im4clj.core/use-gm">use-gm</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#im4clj.core/use-gm!">use-gm!</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#im4clj.core/use-gm?">use-gm?</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#im4clj.core/with-gm">with-gm</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#im4clj.core/with-im">with-im</a>
+    </div>
+    <br />
+  </div>
+</div>
+</div>
+                <div id="content-tag"><h1 id="overview">API for <span id="namespace-name">im4clj.core</span>
+  - <span id="header-project">im4clj</span> <span id="header-version"></span>
+  </h1>
+<span id="author-line">by <span id="author-name">Kevin Neaton</span><br /></span>
+<br />Full namespace name: <span id="long-name">im4clj.core</span>
+<p></p>
+<h2>Overview</h2>
+<pre id="namespace-docstr">ImageMagick for Clojure.</pre>
+
+
+<br />
+<h2>Public Variables and Functions</h2>
+<div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="im4clj.core/border">border</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (border width height)
+</pre>
+  <pre id="var-docstr">Returns a new border option for ImageMagick/GraphicsMagick. See IM/GM documentation.
+
+TODO: add docstring.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="im4clj.core/bordercolor">bordercolor</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (bordercolor color)
+</pre>
+  <pre id="var-docstr">Returns a new bordercolor option for ImageMagick/GraphicsMagick. See IM/GM documentation.
+
+TODO: add docstring.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="im4clj.core/borderwidth">borderwidth</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (borderwidth width height [offset-x offset-y] ? special?)
+</pre>
+  <pre id="var-docstr">Returns a new borderwidth option for ImageMagick/GraphicsMagick. See IM/GM documentation.
+
+TODO: add docstring.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="im4clj.core/colorspace">colorspace</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (colorspace value)
+</pre>
+  <pre id="var-docstr">Returns a new colorspace option for ImageMagick/GraphicsMagick. See IM/GM documentation.
+
+TODO: add docstring.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="im4clj.core/command">command</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (command cmd)
+</pre>
+  <pre id="var-docstr">Build a new command. Prepends "gm" to the command if (use-gm?) is true.
+
+ Example Usage:
+
+ (command :convert)
+ (command 'convert)
+ (command "convert")
+</pre>
+  
+  
+  <a href="https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/commands.clj#L14" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="im4clj.core/contrast">contrast</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (contrast)
+</pre>
+  <pre id="var-docstr">Returns a new contrast option for ImageMagick/GraphicsMagick. See IM/GM documentation.
+
+TODO: add docstring.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="im4clj.core/convert">convert</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (convert &amp; opts)
+</pre>
+  <pre id="var-docstr">Run a convert command with the given options.
+
+ Example Usage:
+
+ (convert "input.jpg" (resize 640 480) "output.jpg")
+</pre>
+  
+  
+  <a href="https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/commands.clj#L27" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="im4clj.core/crop">crop</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (crop width height [offset-x offset-y] ? special?)
+</pre>
+  <pre id="var-docstr">Returns a new crop option for ImageMagick/GraphicsMagick. See IM/GM documentation.
+
+TODO: add docstring.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="im4clj.core/define">define</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (define key)
+       (define key value)
+</pre>
+  <pre id="var-docstr">Returns a new define option for ImageMagick/GraphicsMagick. See IM/GM documentation.
+
+TODO: add docstring.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="im4clj.core/depth">depth</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (depth value)
+</pre>
+  <pre id="var-docstr">Returns a new depth option for ImageMagick/GraphicsMagick. See IM/GM documentation.
+
+TODO: add docstring.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="im4clj.core/draw">draw</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (draw string)
+</pre>
+  <pre id="var-docstr">Returns a new draw option for ImageMagick/GraphicsMagick. See IM/GM documentation.
+
+TODO: add docstring.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="im4clj.core/flip">flip</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (flip)
+</pre>
+  <pre id="var-docstr">Returns a new flip option for ImageMagick/GraphicsMagick. See IM/GM documentation.
+
+TODO: add docstring.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="im4clj.core/flop">flop</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (flop)
+</pre>
+  <pre id="var-docstr">Returns a new flop option for ImageMagick/GraphicsMagick. See IM/GM documentation.
+
+TODO: add docstring.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="im4clj.core/font">font</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (font name)
+</pre>
+  <pre id="var-docstr">Returns a new font option for ImageMagick/GraphicsMagick. See IM/GM documentation.
+
+TODO: add docstring.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="im4clj.core/gaussian">gaussian</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (gaussian radius)
+       (gaussian radius sigma)
+</pre>
+  <pre id="var-docstr">Returns a new gaussian option for ImageMagick/GraphicsMagick. See IM/GM documentation.
+
+TODO: add docstring.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="im4clj.core/intent">intent</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (intent type)
+</pre>
+  <pre id="var-docstr">Returns a new intent option for ImageMagick/GraphicsMagick. See IM/GM documentation.
+
+TODO: add docstring.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="im4clj.core/limit">limit</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (limit type value)
+</pre>
+  <pre id="var-docstr">Returns a new limit option for ImageMagick/GraphicsMagick. See IM/GM documentation.
+
+TODO: add docstring.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="im4clj.core/quality">quality</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (quality value)
+</pre>
+  <pre id="var-docstr">Returns a new quality option for ImageMagick/GraphicsMagick. See IM/GM documentation.
+
+TODO: add docstring.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="im4clj.core/resize">resize</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (resize width)
+       (resize width height)
+</pre>
+  <pre id="var-docstr">Returns a new resize option for ImageMagick/GraphicsMagick. See IM/GM documentation.
+
+resize an image.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="im4clj.core/rotate">rotate</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (rotate degrees)
+</pre>
+  <pre id="var-docstr">Returns a new rotate option for ImageMagick/GraphicsMagick. See IM/GM documentation.
+
+TODO: add docstring.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="im4clj.core/run">run</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (run cmd &amp; opts)
+</pre>
+  <pre id="var-docstr">Run a command by name with the given opts. Accepts any 'stringify-able'
+ type. Does not check (use-gm?).
+
+ Prefer pre-defined commands e.g. im4clj.core/convert.
+
+ Example Usage:
+
+ (run :convert "input.jpg" :resize 100 "output.jpg")
+ (run [:gm :convert] "input.jpg" :resize 100 "output.jpg")
+</pre>
+  
+  
+  <a href="https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/run.clj#L32" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="im4clj.core/sharpen">sharpen</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (sharpen radius)
+       (sharpen radius sigma)
+</pre>
+  <pre id="var-docstr">Returns a new sharpen option for ImageMagick/GraphicsMagick. See IM/GM documentation.
+
+TODO: add docstring.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="im4clj.core/stringify">stringify</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (stringify &amp; args)
+</pre>
+  <pre id="var-docstr">Convert args to a flat sequence of strings.
+
+TODO: define stringify method for core types and move flatten to appropriate
+methods.</pre>
+  
+  
+  <a href="https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/run.clj#L22" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="im4clj.core/stringify-method">stringify-method</h2>
+  <span id="var-type">var</span><br />
+  <pre id="var-usage"></pre>
+  <pre id="var-docstr">Method used by im4clj.core/stringify.</pre>
+  
+  
+  <a href="https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/run.clj#L14" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="im4clj.core/text-font">text-font</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (text-font name)
+</pre>
+  <pre id="var-docstr">Returns a new text-font option for ImageMagick/GraphicsMagick. See IM/GM documentation.
+
+TODO: add docstring.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="im4clj.core/unsharp">unsharp</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (unsharp)
+</pre>
+  <pre id="var-docstr">Returns a new unsharp option for ImageMagick/GraphicsMagick. See IM/GM documentation.
+
+TODO: add docstring.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="im4clj.core/use-gm">use-gm</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (use-gm)
+</pre>
+  <pre id="var-docstr">Get the thread-local value of *use-gm*.</pre>
+  
+  
+  <a href="https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj#L15" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="im4clj.core/use-gm!">use-gm!</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (use-gm!)
+       (use-gm! bool)
+</pre>
+  <pre id="var-docstr">Set the thread-local value of *use-gm*.</pre>
+  
+  
+  <a href="https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj#L19" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="im4clj.core/use-gm?">use-gm?</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (use-gm?)
+</pre>
+  <pre id="var-docstr">Predicate. Returns true if *use-gm* is bound to true. Use with-gm and with-im
+for binding.</pre>
+  
+  
+  <a href="https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj#L24" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="im4clj.core/with-gm">with-gm</h2>
+  <span id="var-type">macro</span><br />
+  <pre id="var-usage">Usage: (with-gm &amp; body)
+</pre>
+  <pre id="var-docstr">Evaluates 'body' with *use-gm* bound to true.</pre>
+  
+  
+  <a href="https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj#L29" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="im4clj.core/with-im">with-im</h2>
+  <span id="var-type">macro</span><br />
+  <pre id="var-usage">Usage: (with-im &amp; body)
+</pre>
+  <pre id="var-docstr">Evaluates 'body' with *use-gm* bound to false.</pre>
+  
+  
+  <a href="https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj#L35" id="var-source">Source</a>
+</div>
+
+
+</div>
+              </div>
+            </div>
+          </div>
+	</div>
+	<div id="foot">
+	  <div style="text-align: center;" id="copyright">Copyright 2012, deeperbydesign, inc.</div>
+	</div>
+      </div>
+      <div id="DesignedBy">Logo &amp; site design by <a title="Visit Tom Hickey's website." href="http://www.tomhickey.com">Tom Hickey</a>.<br />
+      Clojure auto-documentation system by Tom Faulhaber.</div>
+    </div>
+    <!-- /AllContentContainer -->
+  </body>
+
+</html>
