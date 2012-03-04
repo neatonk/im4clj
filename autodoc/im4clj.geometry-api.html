@@ -22,7 +22,7 @@ namespace.
     <div id="AllContentContainer">
       <div id="Header">
 	<a id="Logo" href="index.html"><img alt="Clojure" height="100" width="100" src="static/clojure-icon.gif" /></a>
-	<h1><a title="page header title" id="page-header" href="index.html">im4clj</a></h1>
+	<h1><a title="page header title" id="page-header" href="index.html">im4clj API Documentation</a></h1>
       </div>
       <div id="leftcolumn"><div style="text-align: center;"></div>
 <div class="menu">
@@ -61,6 +61,10 @@ namespace.
       <a href="#im4clj.geometry/size">size</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#im4clj.geometry/special-char?">special-char?</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#im4clj.geometry/special-chars">special-chars</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#im4clj.geometry/valid-geometry-spec?">valid-geometry-spec?</a>
     </div>
     <br />
   </div>
@@ -92,7 +96,7 @@ namespace.
   <pre id="var-docstr">Image size and offset.</pre>
   
   
-  
+  <a href="https://github.com/neatonk/im4clj/031d9655cc06c8c63eda27402d35e00f64eafbd5/src/im4clj/geometry.clj#L56" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -103,7 +107,7 @@ namespace.
   <pre id="var-docstr">Specify the image offset in pixels from top left.</pre>
   
   
-  
+  <a href="https://github.com/neatonk/im4clj/031d9655cc06c8c63eda27402d35e00f64eafbd5/src/im4clj/geometry.clj#L28" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -114,7 +118,7 @@ namespace.
   <pre id="var-docstr">Converts an integer to a signed string.</pre>
   
   
-  
+  <a href="https://github.com/neatonk/im4clj/031d9655cc06c8c63eda27402d35e00f64eafbd5/src/im4clj/geometry.clj#L13" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -127,7 +131,7 @@ namespace.
   <pre id="var-docstr">Specify the image width and height in pixels or percentages.</pre>
   
   
-  
+  <a href="https://github.com/neatonk/im4clj/031d9655cc06c8c63eda27402d35e00f64eafbd5/src/im4clj/geometry.clj#L22" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -135,11 +139,32 @@ namespace.
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (special-char? c)
 </pre>
-  <pre id="var-docstr">Predicate. Determines whether or not c is a special character, or a string
+  <pre id="var-docstr">Predicate. Determines whether or not 'c' is a special character, or a string
 begining with a special character. :see-also special-chars.</pre>
   
   
+  <a href="https://github.com/neatonk/im4clj/031d9655cc06c8c63eda27402d35e00f64eafbd5/src/im4clj/geometry.clj#L37" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="im4clj.geometry/special-chars">special-chars</h2>
+  <span id="var-type">var</span><br />
+  <pre id="var-usage"></pre>
+  <pre id="var-docstr">Special characters used to modify the meaning of a geometry-spec.</pre>
   
+  
+  <a href="https://github.com/neatonk/im4clj/031d9655cc06c8c63eda27402d35e00f64eafbd5/src/im4clj/geometry.clj#L34" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="im4clj.geometry/valid-geometry-spec?">valid-geometry-spec?</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (valid-geometry-spec? s)
+</pre>
+  <pre id="var-docstr">Predicate. Returns true if 's' is a properly formed geometry-spec string.</pre>
+  
+  
+  <a href="https://github.com/neatonk/im4clj/031d9655cc06c8c63eda27402d35e00f64eafbd5/src/im4clj/geometry.clj#L51" id="var-source">Source</a>
 </div>
 
 
@@ -149,7 +174,7 @@ begining with a special character. :see-also special-chars.</pre>
           </div>
 	</div>
 	<div id="foot">
-	  <div style="text-align: center;" id="copyright">No copyright info </div>
+	  <div style="text-align: center;" id="copyright">Copyright 2012, deeperbydesign, inc.</div>
 	</div>
       </div>
       <div id="DesignedBy">Logo &amp; site design by <a title="Visit Tom Hickey's website." href="http://www.tomhickey.com">Tom Hickey</a>.<br />
