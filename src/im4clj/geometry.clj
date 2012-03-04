@@ -31,22 +31,27 @@
   (apply str (map signed-string [x y])))
 
 ;; check
-(def special-chars #{\% \@ \! \^ \< \>})
+(def ^{:doc "Special characters used to modify the meaning of a geometry-spec."}
+  special-chars #{\% \@ \! \^ \< \>})
 
 (defn special-char?
-  "Predicate. Determines whether or not c is a special character, or a string
+  "Predicate. Determines whether or not 'c' is a special character, or a string
    begining with a special character. :see-also special-chars."
   [c]
   (let [c (if (string? c) (first c) c)]
     (boolean (special-chars c))))
 
-(def size-re #"(?>\d+x\d*|\d*x\d+)")
-(def offset-re #"(?>[+-]\d+[+-]\d+)")
-(def special-re (re-pattern (str "(?>[" (apply str special-chars) "])")))
-(def geometry-spec-re (re-pattern (str "^" size-re offset-re "?" special-re "?" "$")))
+(def ^:private size-re #"(?>\d+x\d*|\d*x\d+)")
+(def ^:private offset-re #"(?>[+-]\d+[+-]\d+)")
+(def ^:private special-re
+  (re-pattern (str "(?>[" (apply str special-chars) "])")))
+(def ^:private geometry-spec-re
+  (re-pattern (str "^" size-re offset-re "?" special-re "?" "$")))
 
 (defn valid-geometry-spec?
-  [s] (re-find geometry-spec-re s))
+  "Predicate. Returns true if 's' is a properly formed geometry-spec string."
+  [s]
+  (boolean (re-find geometry-spec-re s)))
 
 (defn geometry-spec
   "Image size and offset."
