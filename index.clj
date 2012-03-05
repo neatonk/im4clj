@@ -1,6 +1,6 @@
 {:namespaces
  ({:source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/commands.clj",
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
    :wiki-url
    "http://neatonk.github.com/im4clj/im4clj.commands-api.html",
    :name "im4clj.commands",
@@ -35,7 +35,14 @@
    :doc
    "Wrapper functions and utils for running shell commands with im4java."}
   {:source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/options.clj",
+   "https://github.com/neatonk/im4clj/9b81a1ed5d99a736b24dea215478893219564642/src/im4clj/magick.clj",
+   :wiki-url "http://neatonk.github.com/im4clj/im4clj.magick-api.html",
+   :name "im4clj.magick",
+   :author "Kevin Neaton",
+   :doc
+   "ImageMagick for Clojure. im4clj.magick defines a single public... magick. Use magick to access all of im4clj's goodness without polluting our current namespace."}
+  {:source-url
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :wiki-url
    "http://neatonk.github.com/im4clj/im4clj.options-api.html",
    :name "im4clj.options",
@@ -61,13 +68,25 @@
    :name "im4clj.util.ns",
    :doc "Namespace utilities"}),
  :vars
- ({:arglists ([cmd]),
+ ({:file "src/im4clj/commands.clj",
+   :raw-source-url
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
+   :source-url nil,
+   :wiki-url
+   "http://neatonk.github.com/im4clj//im4clj.commands-api.html#im4clj.commands/animate",
+   :namespace "im4clj.commands",
+   :var-type "function",
+   :arglists ([& opts]),
+   :doc
+   "Run a animate command with the given options. See IM/GM documentation for usage.\n\nTODO: add example usage.",
+   :name "animate"}
+  {:arglists ([cmd]),
    :name "command",
    :namespace "im4clj.commands",
    :source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/commands.clj#L14",
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj#L14",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/commands.clj",
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.commands-api.html#im4clj.commands/command",
    :doc
@@ -75,20 +94,126 @@
    :var-type "function",
    :line 14,
    :file "src/im4clj/commands.clj"}
-  {:arglists ([& opts]),
-   :name "convert",
-   :namespace "im4clj.commands",
-   :source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/commands.clj#L27",
+  {:file "src/im4clj/commands.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/commands.clj",
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
+   :source-url nil,
+   :wiki-url
+   "http://neatonk.github.com/im4clj//im4clj.commands-api.html#im4clj.commands/compare",
+   :namespace "im4clj.commands",
+   :var-type "function",
+   :arglists ([& opts]),
+   :doc
+   "Run a compare command with the given options. See IM/GM documentation for usage.\n\nTODO: add example usage.",
+   :name "compare"}
+  {:file "src/im4clj/commands.clj",
+   :raw-source-url
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
+   :source-url nil,
+   :wiki-url
+   "http://neatonk.github.com/im4clj//im4clj.commands-api.html#im4clj.commands/composite",
+   :namespace "im4clj.commands",
+   :var-type "function",
+   :arglists ([& opts]),
+   :doc
+   "Run a composite command with the given options. See IM/GM documentation for usage.\n\nTODO: add example usage.",
+   :name "composite"}
+  {:file "src/im4clj/commands.clj",
+   :raw-source-url
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
+   :source-url nil,
+   :wiki-url
+   "http://neatonk.github.com/im4clj//im4clj.commands-api.html#im4clj.commands/conjure",
+   :namespace "im4clj.commands",
+   :var-type "function",
+   :arglists ([& opts]),
+   :doc
+   "Run a conjure command with the given options. See IM/GM documentation for usage.\n\nTODO: add example usage.",
+   :name "conjure"}
+  {:file "src/im4clj/commands.clj",
+   :raw-source-url
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
+   :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.commands-api.html#im4clj.commands/convert",
-   :doc
-   "Run a convert command with the given options.\n\n Example Usage:\n\n (convert \"input.jpg\" (resize 640 480) \"output.jpg\")\n",
+   :namespace "im4clj.commands",
    :var-type "function",
-   :line 27,
-   :file "src/im4clj/commands.clj"}
+   :arglists ([& opts]),
+   :doc
+   "Run a convert command with the given options. See IM/GM documentation for usage.\n\nExample Usage:\n\n(convert \"input.jpg\" (resize 640 480) \"output.jpg\")",
+   :name "convert"}
+  {:file "src/im4clj/commands.clj",
+   :raw-source-url
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
+   :source-url nil,
+   :wiki-url
+   "http://neatonk.github.com/im4clj//im4clj.commands-api.html#im4clj.commands/display",
+   :namespace "im4clj.commands",
+   :var-type "function",
+   :arglists ([& opts]),
+   :doc
+   "Run a display command with the given options. See IM/GM documentation for usage.\n\nTODO: add example usage.",
+   :name "display"}
+  {:file "src/im4clj/commands.clj",
+   :raw-source-url
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
+   :source-url nil,
+   :wiki-url
+   "http://neatonk.github.com/im4clj//im4clj.commands-api.html#im4clj.commands/identify",
+   :namespace "im4clj.commands",
+   :var-type "function",
+   :arglists ([& opts]),
+   :doc
+   "Run a identify command with the given options. See IM/GM documentation for usage.\n\nTODO: add example usage.",
+   :name "identify"}
+  {:file "src/im4clj/commands.clj",
+   :raw-source-url
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
+   :source-url nil,
+   :wiki-url
+   "http://neatonk.github.com/im4clj//im4clj.commands-api.html#im4clj.commands/import",
+   :namespace "im4clj.commands",
+   :var-type "function",
+   :arglists ([& opts]),
+   :doc
+   "Run a import command with the given options. See IM/GM documentation for usage.\n\nTODO: add example usage.",
+   :name "import"}
+  {:file "src/im4clj/commands.clj",
+   :raw-source-url
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
+   :source-url nil,
+   :wiki-url
+   "http://neatonk.github.com/im4clj//im4clj.commands-api.html#im4clj.commands/mogrify",
+   :namespace "im4clj.commands",
+   :var-type "function",
+   :arglists ([& opts]),
+   :doc
+   "Run a mogrify command with the given options. See IM/GM documentation for usage.\n\nTODO: add example usage.",
+   :name "mogrify"}
+  {:file "src/im4clj/commands.clj",
+   :raw-source-url
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
+   :source-url nil,
+   :wiki-url
+   "http://neatonk.github.com/im4clj//im4clj.commands-api.html#im4clj.commands/montage",
+   :namespace "im4clj.commands",
+   :var-type "function",
+   :arglists ([& opts]),
+   :doc
+   "Run a montage command with the given options. See IM/GM documentation for usage.\n\nTODO: add example usage.",
+   :name "montage"}
+  {:file "src/im4clj/commands.clj",
+   :raw-source-url
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
+   :source-url nil,
+   :wiki-url
+   "http://neatonk.github.com/im4clj//im4clj.commands-api.html#im4clj.commands/stream",
+   :namespace "im4clj.commands",
+   :var-type "function",
+   :arglists ([& opts]),
+   :doc
+   "Run a stream command with the given options. See IM/GM documentation for usage.\n\nTODO: add example usage.\n\nImageMagick only.",
+   :name "stream"}
   {:arglists ([]),
    :name "use-gm",
    :namespace "im4clj.config",
@@ -155,9 +280,21 @@
    :var-type "macro",
    :line 35,
    :file "src/im4clj/config.clj"}
+  {:file "src/im4clj/commands.clj",
+   :raw-source-url
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
+   :source-url nil,
+   :wiki-url
+   "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/animate",
+   :namespace "im4clj.core",
+   :var-type "function",
+   :arglists ([& opts]),
+   :doc
+   "Run a animate command with the given options. See IM/GM documentation for usage.\n\nTODO: add example usage.",
+   :name "animate"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/options.clj",
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/border",
@@ -165,11 +302,11 @@
    :var-type "function",
    :arglists ([width height]),
    :doc
-   "Returns a new border option for ImageMagick/GraphicsMagick. See IM/GM documentation.\n\nTODO: add docstring.",
+   "Creates a new border option for use in a command. See IM/GM documentation for usage.\n\nTODO: add docstring.",
    :name "border"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/options.clj",
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/bordercolor",
@@ -177,11 +314,11 @@
    :var-type "function",
    :arglists ([color]),
    :doc
-   "Returns a new bordercolor option for ImageMagick/GraphicsMagick. See IM/GM documentation.\n\nTODO: add docstring.",
+   "Creates a new bordercolor option for use in a command. See IM/GM documentation for usage.\n\nTODO: add docstring.",
    :name "bordercolor"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/options.clj",
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/borderwidth",
@@ -189,11 +326,11 @@
    :var-type "function",
    :arglists ([width height [offset-x offset-y] ? special?]),
    :doc
-   "Returns a new borderwidth option for ImageMagick/GraphicsMagick. See IM/GM documentation.\n\nTODO: add docstring.",
+   "Creates a new borderwidth option for use in a command. See IM/GM documentation for usage.\n\nTODO: add docstring.",
    :name "borderwidth"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/options.clj",
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/colorspace",
@@ -201,15 +338,15 @@
    :var-type "function",
    :arglists ([value]),
    :doc
-   "Returns a new colorspace option for ImageMagick/GraphicsMagick. See IM/GM documentation.\n\nTODO: add docstring.",
+   "Creates a new colorspace option for use in a command. See IM/GM documentation for usage.\n\nTODO: add docstring.",
    :name "colorspace"}
   {:arglists ([cmd]),
    :name "command",
    :namespace "im4clj.core",
    :source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/commands.clj#L14",
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj#L14",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/commands.clj",
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/command",
    :doc
@@ -217,9 +354,45 @@
    :var-type "function",
    :line 14,
    :file "src/im4clj/commands.clj"}
+  {:file "src/im4clj/commands.clj",
+   :raw-source-url
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
+   :source-url nil,
+   :wiki-url
+   "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/compare",
+   :namespace "im4clj.core",
+   :var-type "function",
+   :arglists ([& opts]),
+   :doc
+   "Run a compare command with the given options. See IM/GM documentation for usage.\n\nTODO: add example usage.",
+   :name "compare"}
+  {:file "src/im4clj/commands.clj",
+   :raw-source-url
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
+   :source-url nil,
+   :wiki-url
+   "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/composite",
+   :namespace "im4clj.core",
+   :var-type "function",
+   :arglists ([& opts]),
+   :doc
+   "Run a composite command with the given options. See IM/GM documentation for usage.\n\nTODO: add example usage.",
+   :name "composite"}
+  {:file "src/im4clj/commands.clj",
+   :raw-source-url
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
+   :source-url nil,
+   :wiki-url
+   "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/conjure",
+   :namespace "im4clj.core",
+   :var-type "function",
+   :arglists ([& opts]),
+   :doc
+   "Run a conjure command with the given options. See IM/GM documentation for usage.\n\nTODO: add example usage.",
+   :name "conjure"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/options.clj",
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/contrast",
@@ -227,25 +400,23 @@
    :var-type "function",
    :arglists ([]),
    :doc
-   "Returns a new contrast option for ImageMagick/GraphicsMagick. See IM/GM documentation.\n\nTODO: add docstring.",
+   "Creates a new contrast option for use in a command. See IM/GM documentation for usage.\n\nTODO: add docstring.",
    :name "contrast"}
-  {:arglists ([& opts]),
-   :name "convert",
-   :namespace "im4clj.core",
-   :source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/commands.clj#L27",
+  {:file "src/im4clj/commands.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/commands.clj",
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
+   :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/convert",
-   :doc
-   "Run a convert command with the given options.\n\n Example Usage:\n\n (convert \"input.jpg\" (resize 640 480) \"output.jpg\")\n",
+   :namespace "im4clj.core",
    :var-type "function",
-   :line 27,
-   :file "src/im4clj/commands.clj"}
+   :arglists ([& opts]),
+   :doc
+   "Run a convert command with the given options. See IM/GM documentation for usage.\n\nExample Usage:\n\n(convert \"input.jpg\" (resize 640 480) \"output.jpg\")",
+   :name "convert"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/options.clj",
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/crop",
@@ -253,11 +424,11 @@
    :var-type "function",
    :arglists ([width height [offset-x offset-y] ? special?]),
    :doc
-   "Returns a new crop option for ImageMagick/GraphicsMagick. See IM/GM documentation.\n\nTODO: add docstring.",
+   "Creates a new crop option for use in a command. See IM/GM documentation for usage.\n\nTODO: add docstring.",
    :name "crop"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/options.clj",
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/define",
@@ -265,11 +436,11 @@
    :var-type "function",
    :arglists ([key] [key value]),
    :doc
-   "Returns a new define option for ImageMagick/GraphicsMagick. See IM/GM documentation.\n\nTODO: add docstring.",
+   "Creates a new define option for use in a command. See IM/GM documentation for usage.\n\nTODO: add docstring.",
    :name "define"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/options.clj",
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/depth",
@@ -277,11 +448,23 @@
    :var-type "function",
    :arglists ([value]),
    :doc
-   "Returns a new depth option for ImageMagick/GraphicsMagick. See IM/GM documentation.\n\nTODO: add docstring.",
+   "Creates a new depth option for use in a command. See IM/GM documentation for usage.\n\nTODO: add docstring.",
    :name "depth"}
+  {:file "src/im4clj/commands.clj",
+   :raw-source-url
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
+   :source-url nil,
+   :wiki-url
+   "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/display",
+   :namespace "im4clj.core",
+   :var-type "function",
+   :arglists ([& opts]),
+   :doc
+   "Run a display command with the given options. See IM/GM documentation for usage.\n\nTODO: add example usage.",
+   :name "display"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/options.clj",
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/draw",
@@ -289,11 +472,11 @@
    :var-type "function",
    :arglists ([string]),
    :doc
-   "Returns a new draw option for ImageMagick/GraphicsMagick. See IM/GM documentation.\n\nTODO: add docstring.",
+   "Creates a new draw option for use in a command. See IM/GM documentation for usage.\n\nTODO: add docstring.",
    :name "draw"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/options.clj",
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/flip",
@@ -301,11 +484,11 @@
    :var-type "function",
    :arglists ([]),
    :doc
-   "Returns a new flip option for ImageMagick/GraphicsMagick. See IM/GM documentation.\n\nTODO: add docstring.",
+   "Creates a new flip option for use in a command. See IM/GM documentation for usage.\n\nTODO: add docstring.",
    :name "flip"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/options.clj",
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/flop",
@@ -313,11 +496,11 @@
    :var-type "function",
    :arglists ([]),
    :doc
-   "Returns a new flop option for ImageMagick/GraphicsMagick. See IM/GM documentation.\n\nTODO: add docstring.",
+   "Creates a new flop option for use in a command. See IM/GM documentation for usage.\n\nTODO: add docstring.",
    :name "flop"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/options.clj",
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/font",
@@ -325,11 +508,11 @@
    :var-type "function",
    :arglists ([name]),
    :doc
-   "Returns a new font option for ImageMagick/GraphicsMagick. See IM/GM documentation.\n\nTODO: add docstring.",
+   "Creates a new font option for use in a command. See IM/GM documentation for usage.\n\nTODO: add docstring.",
    :name "font"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/options.clj",
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/gaussian",
@@ -337,11 +520,35 @@
    :var-type "function",
    :arglists ([radius] [radius sigma]),
    :doc
-   "Returns a new gaussian option for ImageMagick/GraphicsMagick. See IM/GM documentation.\n\nTODO: add docstring.",
+   "Creates a new gaussian option for use in a command. See IM/GM documentation for usage.\n\nTODO: add docstring.",
    :name "gaussian"}
+  {:file "src/im4clj/commands.clj",
+   :raw-source-url
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
+   :source-url nil,
+   :wiki-url
+   "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/identify",
+   :namespace "im4clj.core",
+   :var-type "function",
+   :arglists ([& opts]),
+   :doc
+   "Run a identify command with the given options. See IM/GM documentation for usage.\n\nTODO: add example usage.",
+   :name "identify"}
+  {:file "src/im4clj/commands.clj",
+   :raw-source-url
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
+   :source-url nil,
+   :wiki-url
+   "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/import",
+   :namespace "im4clj.core",
+   :var-type "function",
+   :arglists ([& opts]),
+   :doc
+   "Run a import command with the given options. See IM/GM documentation for usage.\n\nTODO: add example usage.",
+   :name "import"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/options.clj",
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/intent",
@@ -349,11 +556,11 @@
    :var-type "function",
    :arglists ([type]),
    :doc
-   "Returns a new intent option for ImageMagick/GraphicsMagick. See IM/GM documentation.\n\nTODO: add docstring.",
+   "Creates a new intent option for use in a command. See IM/GM documentation for usage.\n\nTODO: add docstring.",
    :name "intent"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/options.clj",
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/limit",
@@ -361,11 +568,35 @@
    :var-type "function",
    :arglists ([type value]),
    :doc
-   "Returns a new limit option for ImageMagick/GraphicsMagick. See IM/GM documentation.\n\nTODO: add docstring.",
+   "Creates a new limit option for use in a command. See IM/GM documentation for usage.\n\nTODO: add docstring.",
    :name "limit"}
+  {:file "src/im4clj/commands.clj",
+   :raw-source-url
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
+   :source-url nil,
+   :wiki-url
+   "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/mogrify",
+   :namespace "im4clj.core",
+   :var-type "function",
+   :arglists ([& opts]),
+   :doc
+   "Run a mogrify command with the given options. See IM/GM documentation for usage.\n\nTODO: add example usage.",
+   :name "mogrify"}
+  {:file "src/im4clj/commands.clj",
+   :raw-source-url
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
+   :source-url nil,
+   :wiki-url
+   "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/montage",
+   :namespace "im4clj.core",
+   :var-type "function",
+   :arglists ([& opts]),
+   :doc
+   "Run a montage command with the given options. See IM/GM documentation for usage.\n\nTODO: add example usage.",
+   :name "montage"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/options.clj",
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/quality",
@@ -373,11 +604,11 @@
    :var-type "function",
    :arglists ([value]),
    :doc
-   "Returns a new quality option for ImageMagick/GraphicsMagick. See IM/GM documentation.\n\nTODO: add docstring.",
+   "Creates a new quality option for use in a command. See IM/GM documentation for usage.\n\nTODO: add docstring.",
    :name "quality"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/options.clj",
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/resize",
@@ -385,11 +616,11 @@
    :var-type "function",
    :arglists ([width] [width height]),
    :doc
-   "Returns a new resize option for ImageMagick/GraphicsMagick. See IM/GM documentation.\n\nresize an image.",
+   "Creates a new resize option for use in a command. See IM/GM documentation for usage.\n\nresize an image.",
    :name "resize"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/options.clj",
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/rotate",
@@ -397,7 +628,7 @@
    :var-type "function",
    :arglists ([degrees]),
    :doc
-   "Returns a new rotate option for ImageMagick/GraphicsMagick. See IM/GM documentation.\n\nTODO: add docstring.",
+   "Creates a new rotate option for use in a command. See IM/GM documentation for usage.\n\nTODO: add docstring.",
    :name "rotate"}
   {:arglists ([cmd & opts]),
    :name "run",
@@ -415,7 +646,7 @@
    :file "src/im4clj/run.clj"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/options.clj",
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/sharpen",
@@ -423,8 +654,20 @@
    :var-type "function",
    :arglists ([radius] [radius sigma]),
    :doc
-   "Returns a new sharpen option for ImageMagick/GraphicsMagick. See IM/GM documentation.\n\nTODO: add docstring.",
+   "Creates a new sharpen option for use in a command. See IM/GM documentation for usage.\n\nTODO: add docstring.",
    :name "sharpen"}
+  {:file "src/im4clj/commands.clj",
+   :raw-source-url
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
+   :source-url nil,
+   :wiki-url
+   "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/stream",
+   :namespace "im4clj.core",
+   :var-type "function",
+   :arglists ([& opts]),
+   :doc
+   "Run a stream command with the given options. See IM/GM documentation for usage.\n\nTODO: add example usage.\n\nImageMagick only.",
+   :name "stream"}
   {:arglists ([& args]),
    :name "stringify",
    :namespace "im4clj.core",
@@ -453,7 +696,7 @@
    :name "stringify-method"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/options.clj",
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/text-font",
@@ -461,11 +704,11 @@
    :var-type "function",
    :arglists ([name]),
    :doc
-   "Returns a new text-font option for ImageMagick/GraphicsMagick. See IM/GM documentation.\n\nTODO: add docstring.",
+   "Creates a new text-font option for use in a command. See IM/GM documentation for usage.\n\nTODO: add docstring.",
    :name "text-font"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/options.clj",
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/unsharp",
@@ -473,7 +716,7 @@
    :var-type "function",
    :arglists ([]),
    :doc
-   "Returns a new unsharp option for ImageMagick/GraphicsMagick. See IM/GM documentation.\n\nTODO: add docstring.",
+   "Creates a new unsharp option for use in a command. See IM/GM documentation for usage.\n\nTODO: add docstring.",
    :name "unsharp"}
   {:arglists ([]),
    :name "use-gm",
@@ -702,9 +945,23 @@
    :var-type "function",
    :line 21,
    :file "src/im4clj/im4java.clj"}
+  {:arglists ([& body]),
+   :name "magick",
+   :namespace "im4clj.magick",
+   :source-url
+   "https://github.com/neatonk/im4clj/9b81a1ed5d99a736b24dea215478893219564642/src/im4clj/magick.clj#L20",
+   :raw-source-url
+   "https://github.com/neatonk/im4clj/9b81a1ed5d99a736b24dea215478893219564642/src/im4clj/magick.clj",
+   :wiki-url
+   "http://neatonk.github.com/im4clj//im4clj.magick-api.html#im4clj.magick/magick",
+   :doc
+   "Access to all of im4clj's goodness without polluting our current namespace.\n\n Example Usage:\n\n (magick (convert input-path (resize 100) output-path))\n",
+   :var-type "macro",
+   :line 20,
+   :file "src/im4clj/magick.clj"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/options.clj",
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.options-api.html#im4clj.options/border",
@@ -712,11 +969,11 @@
    :var-type "function",
    :arglists ([width height]),
    :doc
-   "Returns a new border option for ImageMagick/GraphicsMagick. See IM/GM documentation.\n\nTODO: add docstring.",
+   "Creates a new border option for use in a command. See IM/GM documentation for usage.\n\nTODO: add docstring.",
    :name "border"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/options.clj",
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.options-api.html#im4clj.options/bordercolor",
@@ -724,11 +981,11 @@
    :var-type "function",
    :arglists ([color]),
    :doc
-   "Returns a new bordercolor option for ImageMagick/GraphicsMagick. See IM/GM documentation.\n\nTODO: add docstring.",
+   "Creates a new bordercolor option for use in a command. See IM/GM documentation for usage.\n\nTODO: add docstring.",
    :name "bordercolor"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/options.clj",
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.options-api.html#im4clj.options/borderwidth",
@@ -736,11 +993,11 @@
    :var-type "function",
    :arglists ([width height [offset-x offset-y] ? special?]),
    :doc
-   "Returns a new borderwidth option for ImageMagick/GraphicsMagick. See IM/GM documentation.\n\nTODO: add docstring.",
+   "Creates a new borderwidth option for use in a command. See IM/GM documentation for usage.\n\nTODO: add docstring.",
    :name "borderwidth"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/options.clj",
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.options-api.html#im4clj.options/colorspace",
@@ -748,11 +1005,11 @@
    :var-type "function",
    :arglists ([value]),
    :doc
-   "Returns a new colorspace option for ImageMagick/GraphicsMagick. See IM/GM documentation.\n\nTODO: add docstring.",
+   "Creates a new colorspace option for use in a command. See IM/GM documentation for usage.\n\nTODO: add docstring.",
    :name "colorspace"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/options.clj",
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.options-api.html#im4clj.options/contrast",
@@ -760,11 +1017,11 @@
    :var-type "function",
    :arglists ([]),
    :doc
-   "Returns a new contrast option for ImageMagick/GraphicsMagick. See IM/GM documentation.\n\nTODO: add docstring.",
+   "Creates a new contrast option for use in a command. See IM/GM documentation for usage.\n\nTODO: add docstring.",
    :name "contrast"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/options.clj",
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.options-api.html#im4clj.options/crop",
@@ -772,11 +1029,11 @@
    :var-type "function",
    :arglists ([width height [offset-x offset-y] ? special?]),
    :doc
-   "Returns a new crop option for ImageMagick/GraphicsMagick. See IM/GM documentation.\n\nTODO: add docstring.",
+   "Creates a new crop option for use in a command. See IM/GM documentation for usage.\n\nTODO: add docstring.",
    :name "crop"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/options.clj",
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.options-api.html#im4clj.options/define",
@@ -784,11 +1041,11 @@
    :var-type "function",
    :arglists ([key] [key value]),
    :doc
-   "Returns a new define option for ImageMagick/GraphicsMagick. See IM/GM documentation.\n\nTODO: add docstring.",
+   "Creates a new define option for use in a command. See IM/GM documentation for usage.\n\nTODO: add docstring.",
    :name "define"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/options.clj",
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.options-api.html#im4clj.options/depth",
@@ -796,11 +1053,11 @@
    :var-type "function",
    :arglists ([value]),
    :doc
-   "Returns a new depth option for ImageMagick/GraphicsMagick. See IM/GM documentation.\n\nTODO: add docstring.",
+   "Creates a new depth option for use in a command. See IM/GM documentation for usage.\n\nTODO: add docstring.",
    :name "depth"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/options.clj",
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.options-api.html#im4clj.options/draw",
@@ -808,11 +1065,11 @@
    :var-type "function",
    :arglists ([string]),
    :doc
-   "Returns a new draw option for ImageMagick/GraphicsMagick. See IM/GM documentation.\n\nTODO: add docstring.",
+   "Creates a new draw option for use in a command. See IM/GM documentation for usage.\n\nTODO: add docstring.",
    :name "draw"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/options.clj",
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.options-api.html#im4clj.options/flip",
@@ -820,11 +1077,11 @@
    :var-type "function",
    :arglists ([]),
    :doc
-   "Returns a new flip option for ImageMagick/GraphicsMagick. See IM/GM documentation.\n\nTODO: add docstring.",
+   "Creates a new flip option for use in a command. See IM/GM documentation for usage.\n\nTODO: add docstring.",
    :name "flip"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/options.clj",
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.options-api.html#im4clj.options/flop",
@@ -832,11 +1089,11 @@
    :var-type "function",
    :arglists ([]),
    :doc
-   "Returns a new flop option for ImageMagick/GraphicsMagick. See IM/GM documentation.\n\nTODO: add docstring.",
+   "Creates a new flop option for use in a command. See IM/GM documentation for usage.\n\nTODO: add docstring.",
    :name "flop"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/options.clj",
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.options-api.html#im4clj.options/font",
@@ -844,11 +1101,11 @@
    :var-type "function",
    :arglists ([name]),
    :doc
-   "Returns a new font option for ImageMagick/GraphicsMagick. See IM/GM documentation.\n\nTODO: add docstring.",
+   "Creates a new font option for use in a command. See IM/GM documentation for usage.\n\nTODO: add docstring.",
    :name "font"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/options.clj",
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.options-api.html#im4clj.options/gaussian",
@@ -856,11 +1113,11 @@
    :var-type "function",
    :arglists ([radius] [radius sigma]),
    :doc
-   "Returns a new gaussian option for ImageMagick/GraphicsMagick. See IM/GM documentation.\n\nTODO: add docstring.",
+   "Creates a new gaussian option for use in a command. See IM/GM documentation for usage.\n\nTODO: add docstring.",
    :name "gaussian"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/options.clj",
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.options-api.html#im4clj.options/intent",
@@ -868,11 +1125,11 @@
    :var-type "function",
    :arglists ([type]),
    :doc
-   "Returns a new intent option for ImageMagick/GraphicsMagick. See IM/GM documentation.\n\nTODO: add docstring.",
+   "Creates a new intent option for use in a command. See IM/GM documentation for usage.\n\nTODO: add docstring.",
    :name "intent"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/options.clj",
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.options-api.html#im4clj.options/limit",
@@ -880,11 +1137,11 @@
    :var-type "function",
    :arglists ([type value]),
    :doc
-   "Returns a new limit option for ImageMagick/GraphicsMagick. See IM/GM documentation.\n\nTODO: add docstring.",
+   "Creates a new limit option for use in a command. See IM/GM documentation for usage.\n\nTODO: add docstring.",
    :name "limit"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/options.clj",
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.options-api.html#im4clj.options/quality",
@@ -892,11 +1149,11 @@
    :var-type "function",
    :arglists ([value]),
    :doc
-   "Returns a new quality option for ImageMagick/GraphicsMagick. See IM/GM documentation.\n\nTODO: add docstring.",
+   "Creates a new quality option for use in a command. See IM/GM documentation for usage.\n\nTODO: add docstring.",
    :name "quality"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/options.clj",
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.options-api.html#im4clj.options/resize",
@@ -904,11 +1161,11 @@
    :var-type "function",
    :arglists ([width] [width height]),
    :doc
-   "Returns a new resize option for ImageMagick/GraphicsMagick. See IM/GM documentation.\n\nresize an image.",
+   "Creates a new resize option for use in a command. See IM/GM documentation for usage.\n\nresize an image.",
    :name "resize"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/options.clj",
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.options-api.html#im4clj.options/rotate",
@@ -916,11 +1173,11 @@
    :var-type "function",
    :arglists ([degrees]),
    :doc
-   "Returns a new rotate option for ImageMagick/GraphicsMagick. See IM/GM documentation.\n\nTODO: add docstring.",
+   "Creates a new rotate option for use in a command. See IM/GM documentation for usage.\n\nTODO: add docstring.",
    :name "rotate"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/options.clj",
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.options-api.html#im4clj.options/sharpen",
@@ -928,11 +1185,11 @@
    :var-type "function",
    :arglists ([radius] [radius sigma]),
    :doc
-   "Returns a new sharpen option for ImageMagick/GraphicsMagick. See IM/GM documentation.\n\nTODO: add docstring.",
+   "Creates a new sharpen option for use in a command. See IM/GM documentation for usage.\n\nTODO: add docstring.",
    :name "sharpen"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/options.clj",
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.options-api.html#im4clj.options/text-font",
@@ -940,11 +1197,11 @@
    :var-type "function",
    :arglists ([name]),
    :doc
-   "Returns a new text-font option for ImageMagick/GraphicsMagick. See IM/GM documentation.\n\nTODO: add docstring.",
+   "Creates a new text-font option for use in a command. See IM/GM documentation for usage.\n\nTODO: add docstring.",
    :name "text-font"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/options.clj",
+   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.options-api.html#im4clj.options/unsharp",
@@ -952,7 +1209,7 @@
    :var-type "function",
    :arglists ([]),
    :doc
-   "Returns a new unsharp option for ImageMagick/GraphicsMagick. See IM/GM documentation.\n\nTODO: add docstring.",
+   "Creates a new unsharp option for use in a command. See IM/GM documentation for usage.\n\nTODO: add docstring.",
    :name "unsharp"}
   {:arglists ([cmd & opts]),
    :name "run",
