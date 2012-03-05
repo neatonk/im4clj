@@ -138,6 +138,8 @@
   (format "Creates a new %s option for use in a command. See IM/GM documentation for usage." cmd))
 
 (defn- intern-options
+  "Intern all im4clj command fn's in the current namespace or the ns given. See
+im4clj.options."
   ([] (intern-options *ns*))
   ([ns]
      (doseq [[opt opt-meta] option-specs]
@@ -146,8 +148,7 @@
              opt (with-meta opt
                    (assoc opt-meta
                      :doc doc
-                     :file "im4clj/options.clj"
-                     :type ::option))]
+                     :file "im4clj/options.clj"))]
          (intern ns opt (partial option opt))))))
 
 (intern-options)

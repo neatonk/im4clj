@@ -59,9 +59,11 @@
 
 (defn- command-docstr
   [cmd]
-  (format "Run a %s command with the given options. See IM/GM documentation for details." cmd))
+  (format "Run a %s command with the given options. See IM/GM documentation for usage." cmd))
 
 (defn- intern-commands
+  "Intern all im4clj command fn's in the current namespace or the ns given. See
+im4clj.commands."
   ([] (intern-commands *ns*))
   ([ns]
      (doseq [[cmd cmd-meta] command-specs]
@@ -71,8 +73,7 @@
                    (assoc cmd-meta
                      :doc doc
                      :arglists '([& opts])
-                     :file "im4clj/commands.clj"
-                     :type ::command))]
+                     :file "im4clj/commands.clj"))]
          (intern ns cmd
                  (fn [& opts]
                    (let [cmd-str (command :convert)]
