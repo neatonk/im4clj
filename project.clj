@@ -9,5 +9,5 @@
   :autodoc {:name "im4clj",
             :page-title "im4clj API Documentation"
             :copyright "Copyright 2012, deeperbydesign, inc."
-            :web-src-dir "https://github.com/neatonk/im4clj/"
+            :web-src-dir "http://github.com/neatonk/im4clj/blob/"
             :web-home "http://neatonk.github.com/im4clj/"})

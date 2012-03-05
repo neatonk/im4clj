@@ -1,25 +1,25 @@
 {:namespaces
  ({:source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
+   "http://github.com/neatonk/im4clj/blob/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
    :wiki-url
    "http://neatonk.github.com/im4clj/im4clj.commands-api.html",
    :name "im4clj.commands",
    :author "Kevin Neaton",
    :doc "Command fn's"}
   {:source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj",
+   "http://github.com/neatonk/im4clj/blob/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj",
    :wiki-url "http://neatonk.github.com/im4clj/im4clj.config-api.html",
    :name "im4clj.config",
    :author "Kevin Neaton",
    :doc "Configure im4clj"}
   {:source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/core.clj",
+   "http://github.com/neatonk/im4clj/blob/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/core.clj",
    :wiki-url "http://neatonk.github.com/im4clj/im4clj.core-api.html",
    :name "im4clj.core",
    :author "Kevin Neaton",
    :doc "ImageMagick for Clojure."}
   {:source-url
-   "https://github.com/neatonk/im4clj/031d9655cc06c8c63eda27402d35e00f64eafbd5/src/im4clj/geometry.clj",
+   "http://github.com/neatonk/im4clj/blob/031d9655cc06c8c63eda27402d35e00f64eafbd5/src/im4clj/geometry.clj",
    :wiki-url
    "http://neatonk.github.com/im4clj/im4clj.geometry-api.html",
    :name "im4clj.geometry",
@@ -27,7 +27,7 @@
    :doc
    "Functions used to generate and validate ImageMagick geometry spec strings."}
   {:source-url
-   "https://github.com/neatonk/im4clj/7ced1be7159b6ede72a17887aaeb2aee150ea215/src/im4clj/im4java.clj",
+   "http://github.com/neatonk/im4clj/blob/7ced1be7159b6ede72a17887aaeb2aee150ea215/src/im4clj/im4java.clj",
    :wiki-url
    "http://neatonk.github.com/im4clj/im4clj.im4java-api.html",
    :name "im4clj.im4java",
@@ -35,34 +35,34 @@
    :doc
    "Wrapper functions and utils for running shell commands with im4java."}
   {:source-url
-   "https://github.com/neatonk/im4clj/9b81a1ed5d99a736b24dea215478893219564642/src/im4clj/magick.clj",
+   "http://github.com/neatonk/im4clj/blob/9b81a1ed5d99a736b24dea215478893219564642/src/im4clj/magick.clj",
    :wiki-url "http://neatonk.github.com/im4clj/im4clj.magick-api.html",
    :name "im4clj.magick",
    :author "Kevin Neaton",
    :doc
    "ImageMagick for Clojure. im4clj.magick defines a single public... magick. Use magick to access all of im4clj's goodness without polluting our current namespace."}
   {:source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
+   "http://github.com/neatonk/im4clj/blob/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :wiki-url
    "http://neatonk.github.com/im4clj/im4clj.options-api.html",
    :name "im4clj.options",
    :author "Kevin Neaton",
    :doc "Namespace used to generate option fn's"}
   {:source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/run.clj",
+   "http://github.com/neatonk/im4clj/blob/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/run.clj",
    :wiki-url "http://neatonk.github.com/im4clj/im4clj.run-api.html",
    :name "im4clj.run",
    :author "Kevin Neaton",
    :doc "Stringify and run commands via im4java."}
   {:source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/util/log.clj",
+   "http://github.com/neatonk/im4clj/blob/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/util/log.clj",
    :wiki-url
    "http://neatonk.github.com/im4clj/im4clj.util.log-api.html",
    :name "im4clj.util.log",
    :author "Kevin Neaton",
    :doc "Basic logging util's"}
   {:source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/util/ns.clj",
+   "http://github.com/neatonk/im4clj/blob/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/util/ns.clj",
    :wiki-url
    "http://neatonk.github.com/im4clj/im4clj.util.ns-api.html",
    :name "im4clj.util.ns",
@@ -70,7 +70,7 @@
  :vars
  ({:file "src/im4clj/commands.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.commands-api.html#im4clj.commands/animate",
@@ -84,9 +84,9 @@
    :name "command",
    :namespace "im4clj.commands",
    :source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj#L14",
+   "http://github.com/neatonk/im4clj/blob/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj#L14",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.commands-api.html#im4clj.commands/command",
    :doc
@@ -96,7 +96,7 @@
    :file "src/im4clj/commands.clj"}
   {:file "src/im4clj/commands.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.commands-api.html#im4clj.commands/compare",
@@ -108,7 +108,7 @@
    :name "compare"}
   {:file "src/im4clj/commands.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.commands-api.html#im4clj.commands/composite",
@@ -120,7 +120,7 @@
    :name "composite"}
   {:file "src/im4clj/commands.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.commands-api.html#im4clj.commands/conjure",
@@ -132,7 +132,7 @@
    :name "conjure"}
   {:file "src/im4clj/commands.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.commands-api.html#im4clj.commands/convert",
@@ -144,7 +144,7 @@
    :name "convert"}
   {:file "src/im4clj/commands.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.commands-api.html#im4clj.commands/display",
@@ -156,7 +156,7 @@
    :name "display"}
   {:file "src/im4clj/commands.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.commands-api.html#im4clj.commands/identify",
@@ -168,7 +168,7 @@
    :name "identify"}
   {:file "src/im4clj/commands.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.commands-api.html#im4clj.commands/import",
@@ -180,7 +180,7 @@
    :name "import"}
   {:file "src/im4clj/commands.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.commands-api.html#im4clj.commands/mogrify",
@@ -192,7 +192,7 @@
    :name "mogrify"}
   {:file "src/im4clj/commands.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.commands-api.html#im4clj.commands/montage",
@@ -204,7 +204,7 @@
    :name "montage"}
   {:file "src/im4clj/commands.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.commands-api.html#im4clj.commands/stream",
@@ -218,9 +218,9 @@
    :name "use-gm",
    :namespace "im4clj.config",
    :source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj#L15",
+   "http://github.com/neatonk/im4clj/blob/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj#L15",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj",
+   "http://github.com/neatonk/im4clj/raw/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj",
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.config-api.html#im4clj.config/use-gm",
    :doc "Get the thread-local value of *use-gm*.",
@@ -231,9 +231,9 @@
    :name "use-gm!",
    :namespace "im4clj.config",
    :source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj#L19",
+   "http://github.com/neatonk/im4clj/blob/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj#L19",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj",
+   "http://github.com/neatonk/im4clj/raw/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj",
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.config-api.html#im4clj.config/use-gm!",
    :doc "Set the thread-local value of *use-gm*.",
@@ -244,9 +244,9 @@
    :name "use-gm?",
    :namespace "im4clj.config",
    :source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj#L24",
+   "http://github.com/neatonk/im4clj/blob/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj#L24",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj",
+   "http://github.com/neatonk/im4clj/raw/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj",
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.config-api.html#im4clj.config/use-gm?",
    :doc
@@ -258,9 +258,9 @@
    :name "with-gm",
    :namespace "im4clj.config",
    :source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj#L29",
+   "http://github.com/neatonk/im4clj/blob/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj#L29",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj",
+   "http://github.com/neatonk/im4clj/raw/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj",
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.config-api.html#im4clj.config/with-gm",
    :doc "Evaluates 'body' with *use-gm* bound to true.",
@@ -271,9 +271,9 @@
    :name "with-im",
    :namespace "im4clj.config",
    :source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj#L35",
+   "http://github.com/neatonk/im4clj/blob/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj#L35",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj",
+   "http://github.com/neatonk/im4clj/raw/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj",
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.config-api.html#im4clj.config/with-im",
    :doc "Evaluates 'body' with *use-gm* bound to false.",
@@ -282,7 +282,7 @@
    :file "src/im4clj/config.clj"}
   {:file "src/im4clj/commands.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/animate",
@@ -294,7 +294,7 @@
    :name "animate"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/border",
@@ -306,7 +306,7 @@
    :name "border"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/bordercolor",
@@ -318,7 +318,7 @@
    :name "bordercolor"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/borderwidth",
@@ -330,7 +330,7 @@
    :name "borderwidth"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/colorspace",
@@ -344,9 +344,9 @@
    :name "command",
    :namespace "im4clj.core",
    :source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj#L14",
+   "http://github.com/neatonk/im4clj/blob/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj#L14",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/command",
    :doc
@@ -356,7 +356,7 @@
    :file "src/im4clj/commands.clj"}
   {:file "src/im4clj/commands.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/compare",
@@ -368,7 +368,7 @@
    :name "compare"}
   {:file "src/im4clj/commands.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/composite",
@@ -380,7 +380,7 @@
    :name "composite"}
   {:file "src/im4clj/commands.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/conjure",
@@ -392,7 +392,7 @@
    :name "conjure"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/contrast",
@@ -404,7 +404,7 @@
    :name "contrast"}
   {:file "src/im4clj/commands.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/convert",
@@ -416,7 +416,7 @@
    :name "convert"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/crop",
@@ -428,7 +428,7 @@
    :name "crop"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/define",
@@ -440,7 +440,7 @@
    :name "define"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/depth",
@@ -452,7 +452,7 @@
    :name "depth"}
   {:file "src/im4clj/commands.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/display",
@@ -464,7 +464,7 @@
    :name "display"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/draw",
@@ -476,7 +476,7 @@
    :name "draw"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/flip",
@@ -488,7 +488,7 @@
    :name "flip"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/flop",
@@ -500,7 +500,7 @@
    :name "flop"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/font",
@@ -512,7 +512,7 @@
    :name "font"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/gaussian",
@@ -524,7 +524,7 @@
    :name "gaussian"}
   {:file "src/im4clj/commands.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/identify",
@@ -536,7 +536,7 @@
    :name "identify"}
   {:file "src/im4clj/commands.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/import",
@@ -548,7 +548,7 @@
    :name "import"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/intent",
@@ -560,7 +560,7 @@
    :name "intent"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/limit",
@@ -572,7 +572,7 @@
    :name "limit"}
   {:file "src/im4clj/commands.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/mogrify",
@@ -584,7 +584,7 @@
    :name "mogrify"}
   {:file "src/im4clj/commands.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/montage",
@@ -596,7 +596,7 @@
    :name "montage"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/quality",
@@ -608,7 +608,7 @@
    :name "quality"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/resize",
@@ -620,7 +620,7 @@
    :name "resize"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/rotate",
@@ -634,9 +634,9 @@
    :name "run",
    :namespace "im4clj.core",
    :source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/run.clj#L32",
+   "http://github.com/neatonk/im4clj/blob/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/run.clj#L32",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/run.clj",
+   "http://github.com/neatonk/im4clj/raw/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/run.clj",
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/run",
    :doc
@@ -646,7 +646,7 @@
    :file "src/im4clj/run.clj"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/sharpen",
@@ -658,7 +658,7 @@
    :name "sharpen"}
   {:file "src/im4clj/commands.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/stream",
@@ -672,9 +672,9 @@
    :name "stringify",
    :namespace "im4clj.core",
    :source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/run.clj#L22",
+   "http://github.com/neatonk/im4clj/blob/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/run.clj#L22",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/run.clj",
+   "http://github.com/neatonk/im4clj/raw/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/run.clj",
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/stringify",
    :doc
@@ -684,9 +684,9 @@
    :file "src/im4clj/run.clj"}
   {:file "src/im4clj/run.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/run.clj",
+   "http://github.com/neatonk/im4clj/raw/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/run.clj",
    :source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/run.clj#L14",
+   "http://github.com/neatonk/im4clj/blob/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/run.clj#L14",
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/stringify-method",
    :namespace "im4clj.core",
@@ -696,7 +696,7 @@
    :name "stringify-method"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/text-font",
@@ -708,7 +708,7 @@
    :name "text-font"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/unsharp",
@@ -722,9 +722,9 @@
    :name "use-gm",
    :namespace "im4clj.core",
    :source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj#L15",
+   "http://github.com/neatonk/im4clj/blob/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj#L15",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj",
+   "http://github.com/neatonk/im4clj/raw/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj",
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/use-gm",
    :doc "Get the thread-local value of *use-gm*.",
@@ -735,9 +735,9 @@
    :name "use-gm!",
    :namespace "im4clj.core",
    :source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj#L19",
+   "http://github.com/neatonk/im4clj/blob/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj#L19",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj",
+   "http://github.com/neatonk/im4clj/raw/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj",
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/use-gm!",
    :doc "Set the thread-local value of *use-gm*.",
@@ -748,9 +748,9 @@
    :name "use-gm?",
    :namespace "im4clj.core",
    :source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj#L24",
+   "http://github.com/neatonk/im4clj/blob/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj#L24",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj",
+   "http://github.com/neatonk/im4clj/raw/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj",
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/use-gm?",
    :doc
@@ -762,9 +762,9 @@
    :name "with-gm",
    :namespace "im4clj.core",
    :source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj#L29",
+   "http://github.com/neatonk/im4clj/blob/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj#L29",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj",
+   "http://github.com/neatonk/im4clj/raw/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj",
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/with-gm",
    :doc "Evaluates 'body' with *use-gm* bound to true.",
@@ -775,9 +775,9 @@
    :name "with-im",
    :namespace "im4clj.core",
    :source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj#L35",
+   "http://github.com/neatonk/im4clj/blob/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj#L35",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj",
+   "http://github.com/neatonk/im4clj/raw/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj",
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.core-api.html#im4clj.core/with-im",
    :doc "Evaluates 'body' with *use-gm* bound to false.",
@@ -788,9 +788,9 @@
    :name "geometry-spec",
    :namespace "im4clj.geometry",
    :source-url
-   "https://github.com/neatonk/im4clj/031d9655cc06c8c63eda27402d35e00f64eafbd5/src/im4clj/geometry.clj#L56",
+   "http://github.com/neatonk/im4clj/blob/031d9655cc06c8c63eda27402d35e00f64eafbd5/src/im4clj/geometry.clj#L56",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/031d9655cc06c8c63eda27402d35e00f64eafbd5/src/im4clj/geometry.clj",
+   "http://github.com/neatonk/im4clj/raw/031d9655cc06c8c63eda27402d35e00f64eafbd5/src/im4clj/geometry.clj",
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.geometry-api.html#im4clj.geometry/geometry-spec",
    :doc "Image size and offset.",
@@ -801,9 +801,9 @@
    :name "offset",
    :namespace "im4clj.geometry",
    :source-url
-   "https://github.com/neatonk/im4clj/031d9655cc06c8c63eda27402d35e00f64eafbd5/src/im4clj/geometry.clj#L28",
+   "http://github.com/neatonk/im4clj/blob/031d9655cc06c8c63eda27402d35e00f64eafbd5/src/im4clj/geometry.clj#L28",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/031d9655cc06c8c63eda27402d35e00f64eafbd5/src/im4clj/geometry.clj",
+   "http://github.com/neatonk/im4clj/raw/031d9655cc06c8c63eda27402d35e00f64eafbd5/src/im4clj/geometry.clj",
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.geometry-api.html#im4clj.geometry/offset",
    :doc "Specify the image offset in pixels from top left.",
@@ -814,9 +814,9 @@
    :name "signed-string",
    :namespace "im4clj.geometry",
    :source-url
-   "https://github.com/neatonk/im4clj/031d9655cc06c8c63eda27402d35e00f64eafbd5/src/im4clj/geometry.clj#L13",
+   "http://github.com/neatonk/im4clj/blob/031d9655cc06c8c63eda27402d35e00f64eafbd5/src/im4clj/geometry.clj#L13",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/031d9655cc06c8c63eda27402d35e00f64eafbd5/src/im4clj/geometry.clj",
+   "http://github.com/neatonk/im4clj/raw/031d9655cc06c8c63eda27402d35e00f64eafbd5/src/im4clj/geometry.clj",
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.geometry-api.html#im4clj.geometry/signed-string",
    :doc "Converts an integer to a signed string.",
@@ -827,9 +827,9 @@
    :name "size",
    :namespace "im4clj.geometry",
    :source-url
-   "https://github.com/neatonk/im4clj/031d9655cc06c8c63eda27402d35e00f64eafbd5/src/im4clj/geometry.clj#L22",
+   "http://github.com/neatonk/im4clj/blob/031d9655cc06c8c63eda27402d35e00f64eafbd5/src/im4clj/geometry.clj#L22",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/031d9655cc06c8c63eda27402d35e00f64eafbd5/src/im4clj/geometry.clj",
+   "http://github.com/neatonk/im4clj/raw/031d9655cc06c8c63eda27402d35e00f64eafbd5/src/im4clj/geometry.clj",
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.geometry-api.html#im4clj.geometry/size",
    :doc "Specify the image width and height in pixels or percentages.",
@@ -840,9 +840,9 @@
    :name "special-char?",
    :namespace "im4clj.geometry",
    :source-url
-   "https://github.com/neatonk/im4clj/031d9655cc06c8c63eda27402d35e00f64eafbd5/src/im4clj/geometry.clj#L37",
+   "http://github.com/neatonk/im4clj/blob/031d9655cc06c8c63eda27402d35e00f64eafbd5/src/im4clj/geometry.clj#L37",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/031d9655cc06c8c63eda27402d35e00f64eafbd5/src/im4clj/geometry.clj",
+   "http://github.com/neatonk/im4clj/raw/031d9655cc06c8c63eda27402d35e00f64eafbd5/src/im4clj/geometry.clj",
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.geometry-api.html#im4clj.geometry/special-char?",
    :doc
@@ -852,9 +852,9 @@
    :file "src/im4clj/geometry.clj"}
   {:file "src/im4clj/geometry.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/031d9655cc06c8c63eda27402d35e00f64eafbd5/src/im4clj/geometry.clj",
+   "http://github.com/neatonk/im4clj/raw/031d9655cc06c8c63eda27402d35e00f64eafbd5/src/im4clj/geometry.clj",
    :source-url
-   "https://github.com/neatonk/im4clj/031d9655cc06c8c63eda27402d35e00f64eafbd5/src/im4clj/geometry.clj#L34",
+   "http://github.com/neatonk/im4clj/blob/031d9655cc06c8c63eda27402d35e00f64eafbd5/src/im4clj/geometry.clj#L34",
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.geometry-api.html#im4clj.geometry/special-chars",
    :namespace "im4clj.geometry",
@@ -867,9 +867,9 @@
    :name "valid-geometry-spec?",
    :namespace "im4clj.geometry",
    :source-url
-   "https://github.com/neatonk/im4clj/031d9655cc06c8c63eda27402d35e00f64eafbd5/src/im4clj/geometry.clj#L51",
+   "http://github.com/neatonk/im4clj/blob/031d9655cc06c8c63eda27402d35e00f64eafbd5/src/im4clj/geometry.clj#L51",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/031d9655cc06c8c63eda27402d35e00f64eafbd5/src/im4clj/geometry.clj",
+   "http://github.com/neatonk/im4clj/raw/031d9655cc06c8c63eda27402d35e00f64eafbd5/src/im4clj/geometry.clj",
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.geometry-api.html#im4clj.geometry/valid-geometry-spec?",
    :doc
@@ -881,9 +881,9 @@
    :name "command",
    :namespace "im4clj.im4java",
    :source-url
-   "https://github.com/neatonk/im4clj/7ced1be7159b6ede72a17887aaeb2aee150ea215/src/im4clj/im4java.clj#L28",
+   "http://github.com/neatonk/im4clj/blob/7ced1be7159b6ede72a17887aaeb2aee150ea215/src/im4clj/im4java.clj#L28",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/7ced1be7159b6ede72a17887aaeb2aee150ea215/src/im4clj/im4java.clj",
+   "http://github.com/neatonk/im4clj/raw/7ced1be7159b6ede72a17887aaeb2aee150ea215/src/im4clj/im4java.clj",
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.im4java-api.html#im4clj.im4java/command",
    :doc
@@ -895,9 +895,9 @@
    :name "operation",
    :namespace "im4clj.im4java",
    :source-url
-   "https://github.com/neatonk/im4clj/7ced1be7159b6ede72a17887aaeb2aee150ea215/src/im4clj/im4java.clj#L35",
+   "http://github.com/neatonk/im4clj/blob/7ced1be7159b6ede72a17887aaeb2aee150ea215/src/im4clj/im4java.clj#L35",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/7ced1be7159b6ede72a17887aaeb2aee150ea215/src/im4clj/im4java.clj",
+   "http://github.com/neatonk/im4clj/raw/7ced1be7159b6ede72a17887aaeb2aee150ea215/src/im4clj/im4java.clj",
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.im4java-api.html#im4clj.im4java/operation",
    :doc
@@ -909,9 +909,9 @@
    :name "run",
    :namespace "im4clj.im4java",
    :source-url
-   "https://github.com/neatonk/im4clj/7ced1be7159b6ede72a17887aaeb2aee150ea215/src/im4clj/im4java.clj#L48",
+   "http://github.com/neatonk/im4clj/blob/7ced1be7159b6ede72a17887aaeb2aee150ea215/src/im4clj/im4java.clj#L48",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/7ced1be7159b6ede72a17887aaeb2aee150ea215/src/im4clj/im4java.clj",
+   "http://github.com/neatonk/im4clj/raw/7ced1be7159b6ede72a17887aaeb2aee150ea215/src/im4clj/im4java.clj",
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.im4java-api.html#im4clj.im4java/run",
    :doc
@@ -923,9 +923,9 @@
    :name "search-path",
    :namespace "im4clj.im4java",
    :source-url
-   "https://github.com/neatonk/im4clj/7ced1be7159b6ede72a17887aaeb2aee150ea215/src/im4clj/im4java.clj#L17",
+   "http://github.com/neatonk/im4clj/blob/7ced1be7159b6ede72a17887aaeb2aee150ea215/src/im4clj/im4java.clj#L17",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/7ced1be7159b6ede72a17887aaeb2aee150ea215/src/im4clj/im4java.clj",
+   "http://github.com/neatonk/im4clj/raw/7ced1be7159b6ede72a17887aaeb2aee150ea215/src/im4clj/im4java.clj",
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.im4java-api.html#im4clj.im4java/search-path",
    :doc "Get the system search path used by im4java.",
@@ -936,9 +936,9 @@
    :name "search-path!",
    :namespace "im4clj.im4java",
    :source-url
-   "https://github.com/neatonk/im4clj/7ced1be7159b6ede72a17887aaeb2aee150ea215/src/im4clj/im4java.clj#L21",
+   "http://github.com/neatonk/im4clj/blob/7ced1be7159b6ede72a17887aaeb2aee150ea215/src/im4clj/im4java.clj#L21",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/7ced1be7159b6ede72a17887aaeb2aee150ea215/src/im4clj/im4java.clj",
+   "http://github.com/neatonk/im4clj/raw/7ced1be7159b6ede72a17887aaeb2aee150ea215/src/im4clj/im4java.clj",
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.im4java-api.html#im4clj.im4java/search-path!",
    :doc "Set the system search path used by im4java.",
@@ -949,9 +949,9 @@
    :name "magick",
    :namespace "im4clj.magick",
    :source-url
-   "https://github.com/neatonk/im4clj/9b81a1ed5d99a736b24dea215478893219564642/src/im4clj/magick.clj#L20",
+   "http://github.com/neatonk/im4clj/blob/9b81a1ed5d99a736b24dea215478893219564642/src/im4clj/magick.clj#L20",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/9b81a1ed5d99a736b24dea215478893219564642/src/im4clj/magick.clj",
+   "http://github.com/neatonk/im4clj/raw/9b81a1ed5d99a736b24dea215478893219564642/src/im4clj/magick.clj",
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.magick-api.html#im4clj.magick/magick",
    :doc
@@ -961,7 +961,7 @@
    :file "src/im4clj/magick.clj"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.options-api.html#im4clj.options/border",
@@ -973,7 +973,7 @@
    :name "border"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.options-api.html#im4clj.options/bordercolor",
@@ -985,7 +985,7 @@
    :name "bordercolor"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.options-api.html#im4clj.options/borderwidth",
@@ -997,7 +997,7 @@
    :name "borderwidth"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.options-api.html#im4clj.options/colorspace",
@@ -1009,7 +1009,7 @@
    :name "colorspace"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.options-api.html#im4clj.options/contrast",
@@ -1021,7 +1021,7 @@
    :name "contrast"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.options-api.html#im4clj.options/crop",
@@ -1033,7 +1033,7 @@
    :name "crop"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.options-api.html#im4clj.options/define",
@@ -1045,7 +1045,7 @@
    :name "define"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.options-api.html#im4clj.options/depth",
@@ -1057,7 +1057,7 @@
    :name "depth"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.options-api.html#im4clj.options/draw",
@@ -1069,7 +1069,7 @@
    :name "draw"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.options-api.html#im4clj.options/flip",
@@ -1081,7 +1081,7 @@
    :name "flip"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.options-api.html#im4clj.options/flop",
@@ -1093,7 +1093,7 @@
    :name "flop"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.options-api.html#im4clj.options/font",
@@ -1105,7 +1105,7 @@
    :name "font"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.options-api.html#im4clj.options/gaussian",
@@ -1117,7 +1117,7 @@
    :name "gaussian"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.options-api.html#im4clj.options/intent",
@@ -1129,7 +1129,7 @@
    :name "intent"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.options-api.html#im4clj.options/limit",
@@ -1141,7 +1141,7 @@
    :name "limit"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.options-api.html#im4clj.options/quality",
@@ -1153,7 +1153,7 @@
    :name "quality"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.options-api.html#im4clj.options/resize",
@@ -1165,7 +1165,7 @@
    :name "resize"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.options-api.html#im4clj.options/rotate",
@@ -1177,7 +1177,7 @@
    :name "rotate"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.options-api.html#im4clj.options/sharpen",
@@ -1189,7 +1189,7 @@
    :name "sharpen"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.options-api.html#im4clj.options/text-font",
@@ -1201,7 +1201,7 @@
    :name "text-font"}
   {:file "src/im4clj/options.clj",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
+   "http://github.com/neatonk/im4clj/raw/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/options.clj",
    :source-url nil,
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.options-api.html#im4clj.options/unsharp",
@@ -1215,9 +1215,9 @@
    :name "run",
    :namespace "im4clj.run",
    :source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/run.clj#L32",
+   "http://github.com/neatonk/im4clj/blob/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/run.clj#L32",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/run.clj",
+   "http://github.com/neatonk/im4clj/raw/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/run.clj",
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.run-api.html#im4clj.run/run",
    :doc
@@ -1229,9 +1229,9 @@
    :name "stringify",
    :namespace "im4clj.run",
    :source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/run.clj#L22",
+   "http://github.com/neatonk/im4clj/blob/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/run.clj#L22",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/run.clj",
+   "http://github.com/neatonk/im4clj/raw/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/run.clj",
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.run-api.html#im4clj.run/stringify",
    :doc
@@ -1243,9 +1243,9 @@
    :name "debug",
    :namespace "im4clj.util.log",
    :source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/util/log.clj#L15",
+   "http://github.com/neatonk/im4clj/blob/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/util/log.clj#L15",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/util/log.clj",
+   "http://github.com/neatonk/im4clj/raw/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/util/log.clj",
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.util.log-api.html#im4clj.util.log/debug",
    :doc "Print a debug message to *out* when *debug* is true.",
@@ -1256,9 +1256,9 @@
    :name "progress",
    :namespace "im4clj.util.log",
    :source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/util/log.clj#L30",
+   "http://github.com/neatonk/im4clj/blob/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/util/log.clj#L30",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/util/log.clj",
+   "http://github.com/neatonk/im4clj/raw/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/util/log.clj",
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.util.log-api.html#im4clj.util.log/progress",
    :doc
@@ -1270,9 +1270,9 @@
    :name "with-debug",
    :namespace "im4clj.util.log",
    :source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/util/log.clj#L22",
+   "http://github.com/neatonk/im4clj/blob/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/util/log.clj#L22",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/util/log.clj",
+   "http://github.com/neatonk/im4clj/raw/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/util/log.clj",
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.util.log-api.html#im4clj.util.log/with-debug",
    :doc "Print debug messages.",
@@ -1283,9 +1283,9 @@
    :name "with-progress",
    :namespace "im4clj.util.log",
    :source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/util/log.clj#L36",
+   "http://github.com/neatonk/im4clj/blob/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/util/log.clj#L36",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/util/log.clj",
+   "http://github.com/neatonk/im4clj/raw/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/util/log.clj",
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.util.log-api.html#im4clj.util.log/with-progress",
    :doc "Report progress.",
@@ -1296,9 +1296,9 @@
    :name "immigrate",
    :namespace "im4clj.util.ns",
    :source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/util/ns.clj#L4",
+   "http://github.com/neatonk/im4clj/blob/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/util/ns.clj#L4",
    :raw-source-url
-   "https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/util/ns.clj",
+   "http://github.com/neatonk/im4clj/raw/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/util/ns.clj",
    :wiki-url
    "http://neatonk.github.com/im4clj//im4clj.util.ns-api.html#im4clj.util.ns/immigrate",
    :doc
