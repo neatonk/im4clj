@@ -35,7 +35,7 @@ namespace.
     <div class="NamespaceTOC">
       <span class="toc-header">Namespaces</span>
       <ul id="left-sidebar-list">
-        <li><a href="im4clj.commands-api.html" class="wiki_link">im4clj.commands</a></li><li><a href="im4clj.config-api.html" class="wiki_link">im4clj.config</a></li><li><a href="im4clj.core-api.html" class="wiki_link">im4clj.core</a></li><li><a href="im4clj.geometry-api.html" class="wiki_link">im4clj.geometry</a></li><li><a href="im4clj.im4java-api.html" class="wiki_link">im4clj.im4java</a></li><li><a href="im4clj.options-api.html" class="wiki_link">im4clj.options</a></li><li><a href="im4clj.run-api.html" class="wiki_link">im4clj.run</a></li><li><a href="im4clj.util.log-api.html" class="wiki_link">im4clj.util.log</a></li><li><a href="im4clj.util.ns-api.html" class="wiki_link">im4clj.util.ns</a></li>
+        <li><a href="im4clj.commands-api.html" class="wiki_link">im4clj.commands</a></li><li><a href="im4clj.config-api.html" class="wiki_link">im4clj.config</a></li><li><a href="im4clj.core-api.html" class="wiki_link">im4clj.core</a></li><li><a href="im4clj.geometry-api.html" class="wiki_link">im4clj.geometry</a></li><li><a href="im4clj.im4java-api.html" class="wiki_link">im4clj.im4java</a></li><li><a href="im4clj.magick-api.html" class="wiki_link">im4clj.magick</a></li><li><a href="im4clj.options-api.html" class="wiki_link">im4clj.options</a></li><li><a href="im4clj.run-api.html" class="wiki_link">im4clj.run</a></li><li><a href="im4clj.util.log-api.html" class="wiki_link">im4clj.util.log</a></li><li><a href="im4clj.util.ns-api.html" class="wiki_link">im4clj.util.ns</a></li>
       </ul>
     </div>
     
@@ -52,6 +52,8 @@ namespace.
   <div style="margin-left: 1em;" class="toc-section">
     <a href="#toc0">Overview</a>
     <div style="margin-left: 1em;" class="toc-entry">
+      <a href="#im4clj.core/animate">animate</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#im4clj.core/border">border</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#im4clj.core/bordercolor">bordercolor</a>
@@ -61,6 +63,12 @@ namespace.
       <a href="#im4clj.core/colorspace">colorspace</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#im4clj.core/command">command</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#im4clj.core/compare">compare</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#im4clj.core/composite">composite</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#im4clj.core/conjure">conjure</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#im4clj.core/contrast">contrast</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
@@ -72,6 +80,8 @@ namespace.
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#im4clj.core/depth">depth</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#im4clj.core/display">display</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#im4clj.core/draw">draw</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#im4clj.core/flip">flip</a>
@@ -82,9 +92,17 @@ namespace.
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#im4clj.core/gaussian">gaussian</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#im4clj.core/identify">identify</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#im4clj.core/import">import</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#im4clj.core/intent">intent</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#im4clj.core/limit">limit</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#im4clj.core/mogrify">mogrify</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#im4clj.core/montage">montage</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#im4clj.core/quality">quality</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
@@ -95,6 +113,8 @@ namespace.
       <a href="#im4clj.core/run">run</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#im4clj.core/sharpen">sharpen</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#im4clj.core/stream">stream</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#im4clj.core/stringify">stringify</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
@@ -133,11 +153,24 @@ namespace.
 <div id="var-entry">
   <br />
   <hr />
+  <h2 id="im4clj.core/animate">animate</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (animate &amp; opts)
+</pre>
+  <pre id="var-docstr">Run a animate command with the given options. See IM/GM documentation for usage.
+
+TODO: add example usage.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
   <h2 id="im4clj.core/border">border</h2>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (border width height)
 </pre>
-  <pre id="var-docstr">Returns a new border option for ImageMagick/GraphicsMagick. See IM/GM documentation.
+  <pre id="var-docstr">Creates a new border option for use in a command. See IM/GM documentation for usage.
 
 TODO: add docstring.</pre>
   
@@ -150,7 +183,7 @@ TODO: add docstring.</pre>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (bordercolor color)
 </pre>
-  <pre id="var-docstr">Returns a new bordercolor option for ImageMagick/GraphicsMagick. See IM/GM documentation.
+  <pre id="var-docstr">Creates a new bordercolor option for use in a command. See IM/GM documentation for usage.
 
 TODO: add docstring.</pre>
   
@@ -163,7 +196,7 @@ TODO: add docstring.</pre>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (borderwidth width height [offset-x offset-y] ? special?)
 </pre>
-  <pre id="var-docstr">Returns a new borderwidth option for ImageMagick/GraphicsMagick. See IM/GM documentation.
+  <pre id="var-docstr">Creates a new borderwidth option for use in a command. See IM/GM documentation for usage.
 
 TODO: add docstring.</pre>
   
@@ -176,7 +209,7 @@ TODO: add docstring.</pre>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (colorspace value)
 </pre>
-  <pre id="var-docstr">Returns a new colorspace option for ImageMagick/GraphicsMagick. See IM/GM documentation.
+  <pre id="var-docstr">Creates a new colorspace option for use in a command. See IM/GM documentation for usage.
 
 TODO: add docstring.</pre>
   
@@ -199,7 +232,46 @@ TODO: add docstring.</pre>
 </pre>
   
   
-  <a href="https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/commands.clj#L14" id="var-source">Source</a>
+  <a href="https://github.com/neatonk/im4clj/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj#L14" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="im4clj.core/compare">compare</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (compare &amp; opts)
+</pre>
+  <pre id="var-docstr">Run a compare command with the given options. See IM/GM documentation for usage.
+
+TODO: add example usage.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="im4clj.core/composite">composite</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (composite &amp; opts)
+</pre>
+  <pre id="var-docstr">Run a composite command with the given options. See IM/GM documentation for usage.
+
+TODO: add example usage.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="im4clj.core/conjure">conjure</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (conjure &amp; opts)
+</pre>
+  <pre id="var-docstr">Run a conjure command with the given options. See IM/GM documentation for usage.
+
+TODO: add example usage.</pre>
+  
+  
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -207,7 +279,7 @@ TODO: add docstring.</pre>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (contrast)
 </pre>
-  <pre id="var-docstr">Returns a new contrast option for ImageMagick/GraphicsMagick. See IM/GM documentation.
+  <pre id="var-docstr">Creates a new contrast option for use in a command. See IM/GM documentation for usage.
 
 TODO: add docstring.</pre>
   
@@ -220,15 +292,14 @@ TODO: add docstring.</pre>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (convert &amp; opts)
 </pre>
-  <pre id="var-docstr">Run a convert command with the given options.
+  <pre id="var-docstr">Run a convert command with the given options. See IM/GM documentation for usage.
 
- Example Usage:
+Example Usage:
 
- (convert "input.jpg" (resize 640 480) "output.jpg")
-</pre>
+(convert "input.jpg" (resize 640 480) "output.jpg")</pre>
   
   
-  <a href="https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/commands.clj#L27" id="var-source">Source</a>
+  
 </div><div id="var-entry">
   <br />
   <hr />
@@ -236,7 +307,7 @@ TODO: add docstring.</pre>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (crop width height [offset-x offset-y] ? special?)
 </pre>
-  <pre id="var-docstr">Returns a new crop option for ImageMagick/GraphicsMagick. See IM/GM documentation.
+  <pre id="var-docstr">Creates a new crop option for use in a command. See IM/GM documentation for usage.
 
 TODO: add docstring.</pre>
   
@@ -250,7 +321,7 @@ TODO: add docstring.</pre>
   <pre id="var-usage">Usage: (define key)
        (define key value)
 </pre>
-  <pre id="var-docstr">Returns a new define option for ImageMagick/GraphicsMagick. See IM/GM documentation.
+  <pre id="var-docstr">Creates a new define option for use in a command. See IM/GM documentation for usage.
 
 TODO: add docstring.</pre>
   
@@ -263,9 +334,22 @@ TODO: add docstring.</pre>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (depth value)
 </pre>
-  <pre id="var-docstr">Returns a new depth option for ImageMagick/GraphicsMagick. See IM/GM documentation.
+  <pre id="var-docstr">Creates a new depth option for use in a command. See IM/GM documentation for usage.
 
 TODO: add docstring.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="im4clj.core/display">display</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (display &amp; opts)
+</pre>
+  <pre id="var-docstr">Run a display command with the given options. See IM/GM documentation for usage.
+
+TODO: add example usage.</pre>
   
   
   
@@ -276,7 +360,7 @@ TODO: add docstring.</pre>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (draw string)
 </pre>
-  <pre id="var-docstr">Returns a new draw option for ImageMagick/GraphicsMagick. See IM/GM documentation.
+  <pre id="var-docstr">Creates a new draw option for use in a command. See IM/GM documentation for usage.
 
 TODO: add docstring.</pre>
   
@@ -289,7 +373,7 @@ TODO: add docstring.</pre>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (flip)
 </pre>
-  <pre id="var-docstr">Returns a new flip option for ImageMagick/GraphicsMagick. See IM/GM documentation.
+  <pre id="var-docstr">Creates a new flip option for use in a command. See IM/GM documentation for usage.
 
 TODO: add docstring.</pre>
   
@@ -302,7 +386,7 @@ TODO: add docstring.</pre>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (flop)
 </pre>
-  <pre id="var-docstr">Returns a new flop option for ImageMagick/GraphicsMagick. See IM/GM documentation.
+  <pre id="var-docstr">Creates a new flop option for use in a command. See IM/GM documentation for usage.
 
 TODO: add docstring.</pre>
   
@@ -315,7 +399,7 @@ TODO: add docstring.</pre>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (font name)
 </pre>
-  <pre id="var-docstr">Returns a new font option for ImageMagick/GraphicsMagick. See IM/GM documentation.
+  <pre id="var-docstr">Creates a new font option for use in a command. See IM/GM documentation for usage.
 
 TODO: add docstring.</pre>
   
@@ -329,9 +413,35 @@ TODO: add docstring.</pre>
   <pre id="var-usage">Usage: (gaussian radius)
        (gaussian radius sigma)
 </pre>
-  <pre id="var-docstr">Returns a new gaussian option for ImageMagick/GraphicsMagick. See IM/GM documentation.
+  <pre id="var-docstr">Creates a new gaussian option for use in a command. See IM/GM documentation for usage.
 
 TODO: add docstring.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="im4clj.core/identify">identify</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (identify &amp; opts)
+</pre>
+  <pre id="var-docstr">Run a identify command with the given options. See IM/GM documentation for usage.
+
+TODO: add example usage.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="im4clj.core/import">import</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (import &amp; opts)
+</pre>
+  <pre id="var-docstr">Run a import command with the given options. See IM/GM documentation for usage.
+
+TODO: add example usage.</pre>
   
   
   
@@ -342,7 +452,7 @@ TODO: add docstring.</pre>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (intent type)
 </pre>
-  <pre id="var-docstr">Returns a new intent option for ImageMagick/GraphicsMagick. See IM/GM documentation.
+  <pre id="var-docstr">Creates a new intent option for use in a command. See IM/GM documentation for usage.
 
 TODO: add docstring.</pre>
   
@@ -355,9 +465,35 @@ TODO: add docstring.</pre>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (limit type value)
 </pre>
-  <pre id="var-docstr">Returns a new limit option for ImageMagick/GraphicsMagick. See IM/GM documentation.
+  <pre id="var-docstr">Creates a new limit option for use in a command. See IM/GM documentation for usage.
 
 TODO: add docstring.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="im4clj.core/mogrify">mogrify</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (mogrify &amp; opts)
+</pre>
+  <pre id="var-docstr">Run a mogrify command with the given options. See IM/GM documentation for usage.
+
+TODO: add example usage.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="im4clj.core/montage">montage</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (montage &amp; opts)
+</pre>
+  <pre id="var-docstr">Run a montage command with the given options. See IM/GM documentation for usage.
+
+TODO: add example usage.</pre>
   
   
   
@@ -368,7 +504,7 @@ TODO: add docstring.</pre>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (quality value)
 </pre>
-  <pre id="var-docstr">Returns a new quality option for ImageMagick/GraphicsMagick. See IM/GM documentation.
+  <pre id="var-docstr">Creates a new quality option for use in a command. See IM/GM documentation for usage.
 
 TODO: add docstring.</pre>
   
@@ -382,7 +518,7 @@ TODO: add docstring.</pre>
   <pre id="var-usage">Usage: (resize width)
        (resize width height)
 </pre>
-  <pre id="var-docstr">Returns a new resize option for ImageMagick/GraphicsMagick. See IM/GM documentation.
+  <pre id="var-docstr">Creates a new resize option for use in a command. See IM/GM documentation for usage.
 
 resize an image.</pre>
   
@@ -395,7 +531,7 @@ resize an image.</pre>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (rotate degrees)
 </pre>
-  <pre id="var-docstr">Returns a new rotate option for ImageMagick/GraphicsMagick. See IM/GM documentation.
+  <pre id="var-docstr">Creates a new rotate option for use in a command. See IM/GM documentation for usage.
 
 TODO: add docstring.</pre>
   
@@ -429,9 +565,24 @@ TODO: add docstring.</pre>
   <pre id="var-usage">Usage: (sharpen radius)
        (sharpen radius sigma)
 </pre>
-  <pre id="var-docstr">Returns a new sharpen option for ImageMagick/GraphicsMagick. See IM/GM documentation.
+  <pre id="var-docstr">Creates a new sharpen option for use in a command. See IM/GM documentation for usage.
 
 TODO: add docstring.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="im4clj.core/stream">stream</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (stream &amp; opts)
+</pre>
+  <pre id="var-docstr">Run a stream command with the given options. See IM/GM documentation for usage.
+
+TODO: add example usage.
+
+ImageMagick only.</pre>
   
   
   
@@ -466,7 +617,7 @@ methods.</pre>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (text-font name)
 </pre>
-  <pre id="var-docstr">Returns a new text-font option for ImageMagick/GraphicsMagick. See IM/GM documentation.
+  <pre id="var-docstr">Creates a new text-font option for use in a command. See IM/GM documentation for usage.
 
 TODO: add docstring.</pre>
   
@@ -479,7 +630,7 @@ TODO: add docstring.</pre>
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (unsharp)
 </pre>
-  <pre id="var-docstr">Returns a new unsharp option for ImageMagick/GraphicsMagick. See IM/GM documentation.
+  <pre id="var-docstr">Creates a new unsharp option for use in a command. See IM/GM documentation for usage.
 
 TODO: add docstring.</pre>
   

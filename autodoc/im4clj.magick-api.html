@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>im4clj.config - im4clj API documentation</title>
+    <title>im4clj.magick - im4clj API documentation</title>
     <link href="static/favicon.png" rel="icon" />
     <link href="static/favicon.png" rel="shortcut icon" />
     <link media="all" type="text/css" href="static/clojure.css" rel="stylesheet" />
@@ -52,28 +52,20 @@ namespace.
   <div style="margin-left: 1em;" class="toc-section">
     <a href="#toc0">Overview</a>
     <div style="margin-left: 1em;" class="toc-entry">
-      <a href="#im4clj.config/use-gm">use-gm</a>
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#im4clj.config/use-gm!">use-gm!</a>
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#im4clj.config/use-gm?">use-gm?</a>
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#im4clj.config/with-gm">with-gm</a>
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#im4clj.config/with-im">with-im</a>
+      <a href="#im4clj.magick/magick">magick</a>
     </div>
     <br />
   </div>
 </div>
 </div>
-                <div id="content-tag"><h1 id="overview">API for <span id="namespace-name">im4clj.config</span>
+                <div id="content-tag"><h1 id="overview">API for <span id="namespace-name">im4clj.magick</span>
   - <span id="header-project">im4clj</span> <span id="header-version"></span>
   </h1>
 <span id="author-line">by <span id="author-name">Kevin Neaton</span><br /></span>
-<br />Full namespace name: <span id="long-name">im4clj.config</span>
+<br />Full namespace name: <span id="long-name">im4clj.magick</span>
 <p></p>
 <h2>Overview</h2>
-<pre id="namespace-docstr">Configure im4clj</pre>
+<pre id="namespace-docstr">ImageMagick for Clojure. im4clj.magick defines a single public... magick. Use magick to access all of im4clj's goodness without polluting our current namespace.</pre>
 
 
 <br />
@@ -81,60 +73,19 @@ namespace.
 <div id="var-entry">
   <br />
   <hr />
-  <h2 id="im4clj.config/use-gm">use-gm</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (use-gm)
-</pre>
-  <pre id="var-docstr">Get the thread-local value of *use-gm*.</pre>
-  
-  
-  <a href="https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj#L15" id="var-source">Source</a>
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="im4clj.config/use-gm!">use-gm!</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (use-gm!)
-       (use-gm! bool)
-</pre>
-  <pre id="var-docstr">Set the thread-local value of *use-gm*.</pre>
-  
-  
-  <a href="https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj#L19" id="var-source">Source</a>
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="im4clj.config/use-gm?">use-gm?</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (use-gm?)
-</pre>
-  <pre id="var-docstr">Predicate. Returns true if *use-gm* is bound to true. Use with-gm and with-im
-for binding.</pre>
-  
-  
-  <a href="https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj#L24" id="var-source">Source</a>
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="im4clj.config/with-gm">with-gm</h2>
+  <h2 id="im4clj.magick/magick">magick</h2>
   <span id="var-type">macro</span><br />
-  <pre id="var-usage">Usage: (with-gm &amp; body)
+  <pre id="var-usage">Usage: (magick &amp; body)
 </pre>
-  <pre id="var-docstr">Evaluates 'body' with *use-gm* bound to true.</pre>
-  
-  
-  <a href="https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj#L29" id="var-source">Source</a>
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="im4clj.config/with-im">with-im</h2>
-  <span id="var-type">macro</span><br />
-  <pre id="var-usage">Usage: (with-im &amp; body)
+  <pre id="var-docstr">Access to all of im4clj's goodness without polluting our current namespace.
+
+ Example Usage:
+
+ (magick (convert input-path (resize 100) output-path))
 </pre>
-  <pre id="var-docstr">Evaluates 'body' with *use-gm* bound to false.</pre>
   
   
-  <a href="https://github.com/neatonk/im4clj/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj#L35" id="var-source">Source</a>
+  <a href="https://github.com/neatonk/im4clj/9b81a1ed5d99a736b24dea215478893219564642/src/im4clj/magick.clj#L20" id="var-source">Source</a>
 </div>
 
 
