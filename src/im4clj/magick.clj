@@ -27,7 +27,7 @@
     (flatten (concat commands options aliases))))
 
 (defmacro magick
-  "Access to all of im4clj's goodness without polluting our current namespace.
+  "Access to all of im4clj's goodness without polluting your current namespace.
 
    Example Usage:
 
