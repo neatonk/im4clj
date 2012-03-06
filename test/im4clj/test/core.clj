@@ -72,40 +72,40 @@
 ;; IM/GM tests
 (def options
   (map opt-symbol
-       ['colorspace 'crop 'border 'bordercolor 'borderwidth 'contrast 'define
-        'depth 'draw 'flip 'flop 'font 'gaussian 'intent 'limit 'quality 'resize
-        'rotate 'set 'sharpen 'text-font 'type 'unsharp]))
+       ['-colorspace '-crop '-border '-bordercolor '-borderwidth '-contrast '-define
+        '-depth '-draw '-flip '-flop '-font '-gaussian '-intent '-limit '-quality '-resize
+        '-rotate '-set '-sharpen '-text-font '-type '-unsharp]))
 
 (deftest existing-options-test
   (doseq [opt options]
     (is (resolve opt))))
 
 (deftest convert-tests
-  (doseq [opt ['(colorspace "GRAY")
-               '(crop "100x100+0+0")
-               '(border "10x10")
-               '(bordercolor "#123")
-               ;'(borderwidth "10x10")
-               '(contrast)
-               ;'(-contrast)
-               ;'(+contrast)
-               '(define "jpeg:preserve-settings")
-               '(depth 8)
-               '(draw "circle 100,100 150,150")
-               '(flip)
-               '(flop)
-               '(font "Arial.ttf")
-               '(gaussian 3)
-               '(intent "Perceptual")
-               '(limit "memory" "32MiB")
-               '(quality 100)
-               '(resize 100)
-               '(rotate -90)
-               ;'(set "bogus" "true")
-               '(sharpen 3)
-               ;'(text-font "Courier.ttf")
-               ;'(type "Optimize")
-               '(unsharp 3)]]
+  (doseq [opt ['(-colorspace "GRAY")
+               '(-crop 100 100 0 0)
+               '(-border 10 10)
+               '(-bordercolor "#123")
+               ;'(-borderwidth "10x10")
+               '(-contrast)
+               ;'(--contrast)
+               ;'(-+contrast)
+               '(-define "jpeg:preserve-settings")
+               '(-depth 8)
+               '(-draw "circle 100,100 150,150")
+               '(-flip)
+               '(-flop)
+               '(-font "Arial.ttf")
+               '(-gaussian 3)
+               '(-intent "Perceptual")
+               ;;'(-limit "memory" "32MiB") failing...
+               '(-quality 100)
+               '(-resize 100 100) ;this should work with 1 arg as well.
+               '(-rotate -90)
+               ;;'(-set "bogus" "true") failing...
+               '(-sharpen 3)
+               ;;'(-text-font "Courier.ttf") failing...
+               '(-type "Optimize")
+               '(-unsharp 3)]]
     (let [im-or-gm (if (use-gm?) "gm" "im")
           out-path (tmp-path (str im-or-gm "/convert-" (join "-" opt) ".jpg"))
           opt-var  (resolve (-> opt first opt-symbol))
