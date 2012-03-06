@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>im4clj.util.ns - im4clj API documentation</title>
+    <title>im4clj.defoptions - im4clj API documentation</title>
     <link href="static/favicon.png" rel="icon" />
     <link href="static/favicon.png" rel="shortcut icon" />
     <link media="all" type="text/css" href="static/clojure.css" rel="stylesheet" />
@@ -52,20 +52,22 @@ namespace.
   <div style="margin-left: 1em;" class="toc-section">
     <a href="#toc0">Overview</a>
     <div style="margin-left: 1em;" class="toc-entry">
-      <a href="#im4clj.util.ns/immigrate">immigrate</a>
+      <a href="#im4clj.defoptions/defoption">defoption</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#im4clj.defoptions/defoptions">defoptions</a>
     </div>
     <br />
   </div>
 </div>
 </div>
-                <div id="content-tag"><h1 id="overview">API for <span id="namespace-name">im4clj.util.ns</span>
+                <div id="content-tag"><h1 id="overview">API for <span id="namespace-name">im4clj.defoptions</span>
   - <span id="header-project">im4clj</span> <span id="header-version"></span>
   </h1>
-
-<br />Full namespace name: <span id="long-name">im4clj.util.ns</span>
+<span id="author-line">by <span id="author-name">Kevin Neaton</span><br /></span>
+<br />Full namespace name: <span id="long-name">im4clj.defoptions</span>
 <p></p>
 <h2>Overview</h2>
-<pre id="namespace-docstr">Namespace utilities</pre>
+<pre id="namespace-docstr">Macros used internally to define the option-fn's used by im4clj.</pre>
 
 
 <br />
@@ -73,17 +75,33 @@ namespace.
 <div id="var-entry">
   <br />
   <hr />
-  <h2 id="im4clj.util.ns/immigrate">immigrate</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (immigrate &amp; ns-names)
+  <h2 id="im4clj.defoptions/defoption">defoption</h2>
+  <span id="var-type">macro</span><br />
+  <pre id="var-usage">Usage: (defoption opt argspec attr-map)
 </pre>
-  <pre id="var-docstr">Create a public var in this namespace for each public var in the
-namespaces named by ns-names. The created vars have the same name, value
-and metadata as the original except that their :ns metadata value is this
-namespace.</pre>
+  <pre id="var-docstr">Define a new option-fn.
+
+TODO:
+- implement pre and post conditions.
+- Handle nested optional params in argspec. See -modulate.
+- implement +options.</pre>
   
   
-  <a href="http://github.com/neatonk/im4clj/blob/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/util/ns.clj#L4" id="var-source">Source</a>
+  <a href="http://github.com/neatonk/im4clj/blob/77b541fdee0af63dc797880f8409165d769cc806/src/im4clj/defoptions.clj#L30" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="im4clj.defoptions/defoptions">defoptions</h2>
+  <span id="var-type">macro</span><br />
+  <pre id="var-usage">Usage: (defoptions attr-map &amp; specs)
+</pre>
+  <pre id="var-docstr">Define a bunch of option-fn's with the given attributes.
+
+TODO:
+- alias -options. eg. -adjoin =&gt; adjoin</pre>
+  
+  
+  <a href="http://github.com/neatonk/im4clj/blob/77b541fdee0af63dc797880f8409165d769cc806/src/im4clj/defoptions.clj#L46" id="var-source">Source</a>
 </div>
 
 
