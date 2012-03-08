@@ -11,7 +11,7 @@
   im4clj.magick
   (:require [im4clj commands options]))
 
-(defn minus-option-aliases
+(defn- alias-options
   [env]
   (reduce (fn [keep [k v]]
             (let [[minus? & newk] (name k)]
@@ -23,11 +23,11 @@
 (def ^:private magick-bindings
   (let [commands (ns-publics 'im4clj.commands)
         options (ns-publics 'im4clj.options)
-        aliases (minus-option-aliases options)]
+        aliases (alias-options options)]
     (flatten (concat commands options aliases))))
 
 (defmacro magick
-  "Access to all of im4clj's goodness without polluting your current namespace.
+  "Access all of im4clj's goodness without polluting the current namespace.
 
    Example Usage:
 
@@ -36,3 +36,11 @@
   [& body]
   `(let [~@magick-bindings]
      ~@body))
+
+(defmacro defn-magick
+  "Same as defn, with all of the bindings of magick inside."
+  {:arglists '([name doc-string? attr-map? [params*] body]
+                 [name doc-string? attr-map? ([params*] body)+ attr-map?])
+   :see-also 'magick}
+  [& defn-form]
+  `(magick (defn ~@defn-form)))
