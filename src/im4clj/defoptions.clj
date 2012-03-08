@@ -8,7 +8,8 @@
 
 (ns ^{:doc "Macros used internally to define the option-fn's used by im4clj."
       :author "Kevin Neaton"}
-  im4clj.defoptions)
+  im4clj.defoptions
+  (:use [clojure.walk]))
 
 (defn- expand-argspec
   [argspec]
@@ -27,6 +28,10 @@
     `([] ~optstr)
     `([~@params] (list ~optstr (str ~@(flatten spec))))))
 
+(defn- mk-gensym-param-map
+  [params]
+  (zipmap params (map gensym params)))
+
 (defmacro defoption
   "Define a new option-fn.
 
@@ -38,8 +43,13 @@
   (let [argspecs (expand-argspec argspec)
         arglists (mk-fn-arglists argspecs)
         pre-post (select-keys attr-map [:pre :post])
-        attr-map (dissoc attr-map :pre :post)
-        fn-tail  (map (partial mk-fn-clause (name opt)) argspecs arglists)]
+        attr-map (-> attr-map
+                     (dissoc :pre :post)
+                     (assoc :arglists `(quote ~arglists)))
+        gensyms  (mk-gensym-param-map (-> arglists flatten set))
+        fn-tail  (map (partial mk-fn-clause (name opt))
+                      (prewalk-replace gensyms argspecs)
+                      (prewalk-replace gensyms arglists))]
 
     `(defn ~opt ~attr-map ~@fn-tail)))
 
