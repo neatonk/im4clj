@@ -38,7 +38,13 @@
      ~@body))
 
 (defmacro defn-magick
-  "Same as defn, with all of the bindings of magick inside."
+  "Same as defn, but with all of the bindings of magick inside.
+
+   Example Usage:
+
+   (defn-magick [input-path output-path]
+     (convert input-path (resize 100) output-path))
+  "
   {:arglists '([name doc-string? attr-map? [params*] body]
                  [name doc-string? attr-map? ([params*] body)+ attr-map?])
    :see-also 'magick}
