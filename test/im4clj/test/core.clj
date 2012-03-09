@@ -7,38 +7,11 @@
 ;   You must not remove this notice, or any other, from this software.
 
 (ns im4clj.test.core
+  (:refer-clojure :exclude [import compare])
   (:use [im4clj.core]
+        [im4clj.test-common]
         [clojure.test]
-        [clojure.string :only [join]]
-        [clojure.java.io :only [file]]))
-
-(def test-image "test/test-image.jpg")
-
-(def tmp-dir "test/tmp")
-(def tmp-dir-im (str tmp-dir "/im"))
-(def tmp-dir-gm (str tmp-dir "/gm"))
-
-(defn tmp-path
-  [file-name]
-  (str tmp-dir "/" file-name))
-
-(defn exists?
-  [path]
-  (-> path file .exists))
-
-(defn ensure-tmp-dirs
-  []
-  (when-not (exists? tmp-dir)
-    (-> tmp-dir file .mkdir))
-  (when-not (exists? tmp-dir-im)
-    (-> tmp-dir-im file .mkdir))
-  (when-not (exists? tmp-dir-gm)
-    (-> tmp-dir-gm file .mkdir)))
-
-(defn cleanup-tmp-dir []
-  (doseq [f (-> tmp-dir file file-seq)]
-    (when-not (.isDirectory f)
-      (.delete f))))
+        [clojure.string :only [join]]))
 
 ;; (defn fixture-setup-tmp-dirs [f]
 ;;   (ensure-tmp-dirs)
