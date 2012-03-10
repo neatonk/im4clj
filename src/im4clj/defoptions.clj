@@ -11,11 +11,17 @@
   im4clj.defoptions
   (:use [clojure.walk]))
 
+(defn- normalize-argspec
+  [argspec]
+  (if (vector? (first argspec))
+    (cons "" argspec)
+    argspec))
+
 (defn- expand-argspec
   [argspec]
   (let [[base opts] (partition-by vector? argspec)]
     (for [n (range (+ 1 (count opts)))]
-      (cons base (take n opts)))))
+      (concat base (take n opts)))))
 
 (defn- mk-fn-arglists
   [argspecs]
@@ -32,15 +38,38 @@
   [params]
   (zipmap params (map gensym params)))
 
+(defn- nested-argspec?
+  "Predicate. Returns true if argspec contains nested optional-form(s)."
+  [argspec]
+  (when (not (empty? argspec))
+    (->> argspec
+         (filter vector?)
+         (map (partial some vector?))
+         (some true?))))
+
+(defn- valid-argspec?
+  [argspec]
+  "Predicate. Returns true is the argspec is valid."
+  (not (nested-argspec? argspec)))
+
 (defmacro defoption
-  "Define a new option-fn.
+  "Define a new option-fn. Takes a symbol, one or more argspecs, and an attr-map.
+
+   argspec => [required-form [optional-form]+]
+   required-form => constant-or-symbol+
+   optional-form => constant-or-symbol+
+
+   e.g. [width \"x\" height [\"+\" x \"+\" y] [special]]
 
    TODO:
    - implement pre and post conditions.
-   - Handle nested optional params in argspec. See -modulate.
    - implement +options."
   [opt argspec attr-map]
-  (let [argspecs (expand-argspec argspec)
+  (assert (valid-argspec? argspec)
+          (throw (IllegalArgumentException.
+                  (format  "defoption recieved an invalid argspec: %s %s"
+                  opt argspec))))
+  (let [argspecs (-> argspec normalize-argspec expand-argspec)
         arglists (mk-fn-arglists argspecs)
         pre-post (select-keys attr-map [:pre :post])
         attr-map (-> attr-map
@@ -50,7 +79,6 @@
         fn-tail  (map (partial mk-fn-clause (name opt))
                       (prewalk-replace gensyms argspecs)
                       (prewalk-replace gensyms arglists))]
-
     `(defn ~opt ~attr-map ~@fn-tail)))
 
 (defmacro defoptions

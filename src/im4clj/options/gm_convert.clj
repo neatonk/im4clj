@@ -245,7 +245,7 @@
   -minify [factor]
   {:doc "minify the image"}
 
-  -modulate [brightness ["," saturation ["," hue]]]
+  -modulate [brightness ["," saturation] ["," hue]]
   {:doc "vary the brightness, saturation, and hue of an image"}
 
   -monitor []
