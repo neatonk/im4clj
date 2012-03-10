@@ -1,6 +1,5 @@
 (ns im4clj.options.gm-convert
-  (:use [im4clj.defoptions :only [defoptions]]
-        [im4clj.geometry :only [special-char?]]))
+  (:use [im4clj.defoptions :only [defoptions]]))
 
 (defoptions
   {:command "gm convert"
@@ -180,7 +179,7 @@
 
   -geometry [width "x" height ["+" x "+" y] [special]]
   {:doc "preferred size and location of the Image window."
-   :pre [(special-char? special)]}
+   :pre [(#{"%" "@" "!" "^" "<" ">"} special)]}
 
   -gravity [type]
   {:doc "direction primitive  gravitates to when annotating the image."}
