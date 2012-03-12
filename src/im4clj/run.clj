@@ -12,7 +12,7 @@
   (:require [im4clj.im4java :as im4java]))
 
 (defmulti stringify-method
-  "Method used by im4clj.core/stringify."
+  "Method used by stringify."
   type)
 
 (defmethod stringify-method java.lang.String [s] s)
@@ -27,7 +27,10 @@
   [& args]
   {:post [(coll? %)
           (every? string? %)]}
-  (->> args flatten (map stringify-method)))
+  (->> args (map stringify-method) flatten))
+
+(defmethod stringify-method clojure.lang.IPersistentCollection [coll] (apply stringify coll))
+
 
 (defn run
   "Run a command by name with the given opts. Accepts any 'stringify-able'

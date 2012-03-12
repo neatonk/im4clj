@@ -32,10 +32,9 @@
 
 ;; commands
 (deftest command-test
-  (let [im-convert-cmd (stringify (command :convert))
-        gm-convert-cmd (stringify (with-gm (command :convert)))]
-    (is (= ["convert"] im-convert-cmd))
-    (is (= ["gm" "convert"] gm-convert-cmd))))
+  (let [convert-cmd (command :convert)]
+    (is (= ["convert"] (stringify convert-cmd)))
+    (is (= ["gm" "convert"] (with-gm (stringify convert-cmd))))))
 
 ;; options
 (defn opt-symbol
@@ -101,4 +100,5 @@
   (with-im
     (convert-tests))
   (with-gm
-    (convert-tests)))
+    (convert-tests))
+  )

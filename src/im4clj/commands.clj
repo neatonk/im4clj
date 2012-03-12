@@ -9,7 +9,19 @@
 (ns ^{:doc "Command fn's"
       :author "Kevin Neaton"}
   im4clj.commands
+  (:refer-clojure :exclude [import compare])
   (:use [im4clj config run]))
+
+(defrecord Command [command-seq])
+
+(defmethod stringify-method Command
+  [cmd]
+  (stringify
+   (if (use-gm?)
+     (cons "gm" (:command-seq cmd))
+     (:command-seq cmd))))
+
+(prefer-method stringify-method Command clojure.lang.IPersistentCollection)
 
 (defn command
   "Build a new command. Prepends \"gm\" to the command if (use-gm?) is true.
@@ -21,7 +33,7 @@
    (command \"convert\")
   "
   [cmd]
-  (if (use-gm?) (list "gm" cmd) cmd))
+  (Command. (list cmd)))
 
 (def ^:private command-specs
   {'animate
