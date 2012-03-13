@@ -34,60 +34,68 @@
   [cmd]
   (Command. (list cmd)))
 
-(def ^:private command-specs
-  {'animate
-   {:doc "TODO: add example usage."}
-
-   'compare
-   {:doc "TODO: add example usage."}
-
-   'composite
-   {:doc "TODO: add example usage."}
-
-   'conjure
-   {:doc "TODO: add example usage."}
-
-   'convert
-   {:doc "Example Usage:\n\n(convert \"input.jpg\" (resize 640 480) \"output.jpg\")"}
-
-   'display
-   {:doc "TODO: add example usage."}
-
-   'identify
-   {:doc "TODO: add example usage."}
-
-   'import
-   {:doc "TODO: add example usage."}
-
-   'mogrify
-   {:doc "TODO: add example usage."}
-
-   'montage
-   {:doc "TODO: add example usage."}
-
-   'stream
-   {:doc "TODO: add example usage.\n\nImageMagick only."}})
 
 (defn- command-docstr
   [cmd]
   (format "Run a %s command with the given options. See IM/GM documentation for usage." cmd))
 
-(defn- intern-commands
-  "Intern all im4clj command fn's in the current namespace or the ns given. See
-im4clj.commands."
-  ([] (intern-commands *ns*))
-  ([ns]
-     (doseq [[cmd cmd-meta] command-specs]
-       (let [doc (command-docstr cmd)
-             doc (if-let [d (:doc cmd-meta)] (str doc "\n\n" d) doc)
-             cmd (with-meta cmd
-                   (assoc cmd-meta
-                     :doc doc
-                     :arglists '([& opts])
-                     :file "im4clj/commands.clj"))]
-         (intern ns cmd
-                 (fn [& opts]
-                   (let [cmd-str (command :convert)]
-                     (apply run cmd-str opts))))))))
+(defmacro defcommand
+  "Define a new command-fn. Takes a symbol and an attr-map.
 
-(intern-commands)
+   TODO: add example usage."
+  [cmd attr-map]
+  (let [docstr (command-docstr cmd)
+        docstr (if-let [d (:doc attr-map)] (str docstr "\n\n" d) docstr)
+        attr-map (assoc attr-map
+                   :doc docstr
+                   :arglists ''([& options]))]
+    `(defn ~cmd
+       ~docstr
+       ~attr-map
+       [& options#]
+       (apply run (command ~(str cmd)) options#))))
+
+(defmacro defcommands
+  "Define a bunch of command-fn's with the given attributes."
+  [attr-map & specs]
+  (let [specs (partition 2 specs)
+        defs  (for [[cmd cmd-attr-map] specs]
+                (let [attrs (merge attr-map cmd-attr-map)]
+                  `(defcommand ~cmd ~attrs)))]
+    `(do ~@defs)))
+
+(defcommands
+  {}
+
+  animate
+  {:doc "TODO: add example usage."}
+
+  compare
+  {:doc "TODO: add example usage."}
+
+  composite
+  {:doc "TODO: add example usage."}
+
+  conjure
+  {:doc "TODO: add example usage."}
+
+  convert
+  {:doc "Example Usage:\n\n(convert \"input.jpg\" (resize 640 480) \"output.jpg\")"}
+
+  display
+  {:doc "TODO: add example usage."}
+
+  identify
+  {:doc "TODO: add example usage."}
+
+  import
+  {:doc "TODO: add example usage."}
+
+  mogrify
+  {:doc "TODO: add example usage."}
+
+  montage
+  {:doc "TODO: add example usage."}
+
+  stream
+  {:doc "TODO: add example usage.\n\nImageMagick only."})
