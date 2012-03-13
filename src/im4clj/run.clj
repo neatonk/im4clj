@@ -16,17 +16,14 @@
 
 (extend-protocol Stringifiable
 
-  clojure.lang.IPersistentCollection
+  clojure.lang.Seqable
   (stringify [this] (flatten (map stringify this)))
 
-  clojure.lang.IFn
-  (stringify [this] (stringify (.invoke this)))
-
-  clojure.lang.Named
+  clojure.lang.Keyword
   (stringify [this] (.getName this))
 
-  Object
-  (stringify [this] (str this))
+  clojure.lang.Symbol
+  (stringify [this] (.toString this))
 
   String
   (stringify [this] this)
