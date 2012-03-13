@@ -11,25 +11,35 @@
   im4clj.run
   (:require [im4clj.im4java :as im4java]))
 
-(defmulti stringify-method
-  "Method used by stringify."
-  type)
+(defprotocol Stringifiable
+  (stringify [this] "Returns a string or a sequence of strings representing this."))
 
-(defmethod stringify-method java.lang.String [s] s)
-(defmethod stringify-method clojure.lang.Named [n] (.getName n))
-(defmethod stringify-method :default [o] (str o))
+(extend-protocol Stringifiable
 
-(defn stringify
-  "Convert args to a flat sequence of strings.
+  clojure.lang.IPersistentCollection
+  (stringify [this] (flatten (map stringify this)))
 
-   TODO: define stringify method for core types and move flatten to appropriate
-   methods."
+  clojure.lang.IFn
+  (stringify [this] (stringify (.invoke this)))
+
+  clojure.lang.Named
+  (stringify [this] (.getName this))
+
+  Object
+  (stringify [this] (str this))
+
+  String
+  (stringify [this] this)
+
+  nil
+  (stringify [this] []))
+
+(defn stringify-all
+  "Convert args to a flat sequence of strings."
   [& args]
   {:post [(coll? %)
           (every? string? %)]}
-  (->> args (map stringify-method) flatten))
-
-(defmethod stringify-method clojure.lang.IPersistentCollection [coll] (apply stringify coll))
+  (stringify args))
 
 
 (defn run
@@ -44,4 +54,4 @@
    (run [:gm :convert] \"input.jpg\" :resize 100 \"output.jpg\")
   "
   [cmd & opts]
-  (apply im4java/run (stringify cmd opts)))
+  (apply im4java/run (stringify-all cmd opts)))

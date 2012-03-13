@@ -14,14 +14,13 @@
 
 (defrecord Command [command-seq])
 
-(defmethod stringify-method Command
-  [cmd]
-  (stringify
-   (if (use-gm?)
-     (cons "gm" (:command-seq cmd))
-     (:command-seq cmd))))
-
-(prefer-method stringify-method Command clojure.lang.IPersistentCollection)
+(extend-type Command
+  Stringifiable
+  (stringify [this]
+    (stringify
+     (if (use-gm?)
+       (cons "gm" (:command-seq this))
+       (:command-seq this)))))
 
 (defn command
   "Build a new command. Prepends \"gm\" to the command if (use-gm?) is true.
