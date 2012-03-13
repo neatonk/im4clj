@@ -34,7 +34,6 @@
   [cmd]
   (Command. (list cmd)))
 
-
 (defn- command-docstr
   [cmd]
   (format "Run a %s command with the given options. See IM/GM documentation for usage." cmd))
@@ -58,14 +57,16 @@
 (defmacro defcommands
   "Define a bunch of command-fn's with the given attributes."
   [attr-map & specs]
-  (let [specs (partition 2 specs)
+  (let [[attr-map specs] (if (map? attr-map)
+                           [attr-map specs]
+                           [{} (cons attr-map specs)])
+        specs (partition 2 specs)
         defs  (for [[cmd cmd-attr-map] specs]
                 (let [attrs (merge attr-map cmd-attr-map)]
                   `(defcommand ~cmd ~attrs)))]
     `(do ~@defs)))
 
 (defcommands
-  {}
 
   animate
   {:doc "TODO: add example usage."}
