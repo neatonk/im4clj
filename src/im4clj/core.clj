@@ -9,6 +9,7 @@
 (ns ^{:doc "ImageMagick for Clojure."
       :author "Kevin Neaton"}
   im4clj.core
+  (:refer-clojure :exclude [import compare])
   (:use [im4clj.util ns])
   (:require [im4clj commands config options run]))
 

@@ -82,10 +82,7 @@
     `(defn ~opt ~attr-map ~@fn-tail)))
 
 (defmacro defoptions
-  "Define a bunch of option-fn's with the given attributes.
-
-   TODO:
-   - alias -options. eg. -adjoin => adjoin"
+  "Define a bunch of option-fn's with the given attributes."
   [attr-map & specs]
   (let [specs (partition 3 specs)
         defs  (for [[opt argspec opt-attr-map] specs]

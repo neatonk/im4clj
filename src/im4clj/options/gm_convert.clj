@@ -9,7 +9,7 @@
   -adjoin []
   {:doc "join images into a single multi-image file"}
 
-  -affine [color]
+  -affine [matrix]
   {:doc "drawing transform matrix"}
 
   -antialias []
