@@ -40,15 +40,15 @@
 
 
 (defn run
-  "Run a command by name with the given opts. Accepts any 'stringify-able'
-   type. Does not check (use-gm?).
+  "Run a command by name with the given opts. Accepts any Stringifiable
+   type.
 
    Prefer pre-defined commands e.g. im4clj.core/convert.
 
    Example Usage:
 
-   (run :convert \"input.jpg\" :resize 100 \"output.jpg\")
-   (run [:gm :convert] \"input.jpg\" :resize 100 \"output.jpg\")
+   (run :convert \"input.jpg\" '-resize 100 \"output.jpg\")
+   (run [:gm :convert] \"input.jpg\" '-resize 100 \"output.jpg\")
   "
   [cmd & opts]
   (apply im4java/run (stringify-all cmd opts)))
