@@ -11,14 +11,8 @@
   (:use [im4clj.core]
         [im4clj.test-common]
         [clojure.test]
-        [clojure.string :only [join]]))
-
-;; (defn fixture-setup-tmp-dirs [f]
-;;   (ensure-tmp-dirs)
-;;   (cleanup-tmp-dir)
-;;   (f))
-
-;; (use-fixtures :once fixture-setup-tmp-dirs)
+        [clojure.string :only [join]]
+        [clojure.template]))
 
 ;; Tests...
 (deftest config-test
@@ -52,45 +46,53 @@
   (doseq [opt options]
     (is (resolve opt))))
 
-(deftest convert-tests
-  (doseq [opt ['(-colorspace "GRAY")
-               '(-crop 100 100 0 0)
-               '(-border 10 10)
-               '(-bordercolor "#123")
-               ;'(-borderwidth "10x10")
-               '(-contrast)
-               ;'(--contrast)
-               ;'(-+contrast)
-               '(-define "jpeg:preserve-settings")
-               '(-depth 8)
-               '(-draw "circle 100,100 150,150")
-               '(-flip)
-               '(-flop)
-               '(-font "Arial.ttf")
-               '(-gaussian 3)
-               '(-intent "Perceptual")
-               ;;'(-limit "memory" "32MiB") failing...
-               '(-quality 100)
-               '(-resize 100 100) ;this should work with 1 arg as well.
-               '(-rotate -90)
-               ;;'(-set "bogus" "true") failing...
-               '(-sharpen 3)
-               ;;'(-text-font "Courier.ttf") failing...
-               '(-type "Optimize")
-               '(-unsharp 3)]]
-    (let [im-or-gm (if (use-gm?) "gm" "im")
-          out-path (tmp-path (str im-or-gm "/convert-" (join "-" opt) ".jpg"))
-          opt-var  (resolve (-> opt first opt-symbol))
-          opt-args (rest opt)
-          test-str (join " " (cons opt-var opt-args))]
+(defmacro with-command-results
+  "Runs the given command and evaluates body with the anaphoric symbols %val and
+  %img bound respectively to the return value and the output path of the
+  command."
+  [[cmd in-path & opts] & body]
+  (let [im-or-gm (if (use-gm?) "gm" "im")
+        cmdstr   (name cmd)
+        out-path (tmp-path (str im-or-gm "/" cmdstr (join "-" (stringify opts)) ".jpg"))]
 
-      (testing test-str
-        (println out-path)
-        (let [return-val (convert test-image
-                                  (apply opt-var opt-args)
-                                  out-path)]
-          (is (nil? return-val))
-          (is (exists? out-path)))))))
+    `(let [~'%img ~out-path
+           ~'%val (~cmd ~in-path ~@opts ~'%img)]
+       ~@body)))
+
+(deftest convert-tests
+  (do-template
+   [opt]
+   (with-command-results
+     (convert test-image opt)
+     (println %img)
+     (is (nil? %val))
+     (is (exists? %img)))
+
+   (-colorspace "GRAY")
+   (-crop 100 100 0 0)
+   (-border 10 10)
+   (-bordercolor "#123")
+   ;;(-borderwidth "10x10")
+   (-contrast)
+   ;;(--contrast)
+   ;;(-+contrast)
+   (-define "jpeg:preserve-settings")
+   (-depth 8)
+   (-draw "circle 100,100 150,150")
+   (-flip)
+   (-flop)
+   (-font "Arial.ttf")
+   (-gaussian 3)
+   (-intent "Perceptual")
+   ;;(-limit "memory" "32MiB") failing...
+   (-quality 100)
+   (-resize 100 100) ;this should work with 1 arg as well.
+   (-rotate -90)
+   ;;(-set "bogus" "true") failing...
+   (-sharpen 3)
+   ;;(-text-font "Courier.ttf") failing...
+   (-type "Optimize")
+   (-unsharp 3)))
 
 (defn test-ns-hook []
   (ensure-tmp-dirs)
