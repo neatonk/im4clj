@@ -12,6 +12,7 @@
   (:use [clojure.java.io :only [file]]))
 
 (def test-image "test/test-image.jpg")
+(def test-image-small "test/test-image-small.jpg")
 
 (def tmp-dir "test/tmp")
 (def tmp-dir-im (str tmp-dir "/im"))

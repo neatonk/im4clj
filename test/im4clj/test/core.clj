@@ -28,7 +28,7 @@
   (do-template
    [opt]
    (with-command-results
-     (convert test-image opt)
+     (convert test-image-small opt)
      (println %img)
      (is (nil? %val))
      (is (exists? %img)))
