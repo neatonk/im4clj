@@ -25,6 +25,9 @@
   clojure.lang.Symbol
   (stringify [this] (.toString this))
 
+  java.lang.Long
+  (stringify [this] (.toString this))
+
   String
   (stringify [this] this)
 

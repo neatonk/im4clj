@@ -8,6 +8,8 @@
       (is (= "convert" (stringify "convert")) "stringify a string")
       (is (= "convert" (stringify :convert)) "stringify a keyword")
       (is (= "convert" (stringify 'convert)) "stringify a symbol")
+
+      (is (= "100" (stringify 100)) "stringify a java.lang.Long")
       (is (empty? (stringify nil))) "stringify nil")
 
     (testing "seqs"
