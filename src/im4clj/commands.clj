@@ -10,61 +10,7 @@
       :author "Kevin Neaton"}
   im4clj.commands
   (:refer-clojure :exclude [import compare])
-  (:use [im4clj config run]))
-
-(defrecord Command [command-seq])
-
-(extend-type Command
-  Stringifiable
-  (stringify [this]
-    (stringify
-     (if (use-gm?)
-       (cons "gm" (:command-seq this))
-       (:command-seq this)))))
-
-(defn command
-  "Build a new command. Prepends \"gm\" to the command if (use-gm?) is true.
-
-   Example Usage:
-
-   (command :convert)
-   (command 'convert)
-   (command \"convert\")
-  "
-  [cmd]
-  (Command. (list cmd)))
-
-(defn- command-docstr
-  [cmd]
-  (format "Run a %s command with the given options. See IM/GM documentation for usage." cmd))
-
-(defmacro defcommand
-  "Define a new command-fn. Takes a symbol and an attr-map.
-
-   TODO: add example usage."
-  [cmd attr-map]
-  (let [docstr (command-docstr cmd)
-        docstr (if-let [d (:doc attr-map)] (str docstr "\n\n" d) docstr)
-        attr-map (assoc attr-map
-                   :doc docstr
-                   :arglists ''([& options]))]
-    `(defn ~cmd
-       ~docstr
-       ~attr-map
-       [& options#]
-       (apply run (command ~(str cmd)) options#))))
-
-(defmacro defcommands
-  "Define a bunch of command-fn's with the given attributes."
-  [attr-map & specs]
-  (let [[attr-map specs] (if (map? attr-map)
-                           [attr-map specs]
-                           [{} (cons attr-map specs)])
-        specs (partition 2 specs)
-        defs  (for [[cmd cmd-attr-map] specs]
-                (let [attrs (merge attr-map cmd-attr-map)]
-                  `(defcommand ~cmd ~attrs)))]
-    `(do ~@defs)))
+  (:use [im4clj.command]))
 
 (defcommands
 
