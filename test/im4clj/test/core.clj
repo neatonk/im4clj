@@ -14,7 +14,6 @@
         [clojure.string :only [join]]
         [clojure.template]))
 
-;; Tests...
 (deftest config-test
   (testing "defaults..."
     (is (false? (use-gm?))
@@ -29,22 +28,6 @@
   (let [convert-cmd (command :convert)]
     (is (= ["convert"] (stringify convert-cmd)))
     (is (= ["gm" "convert"] (with-gm (stringify convert-cmd))))))
-
-;; options
-(defn opt-symbol
-  [opt]
-  (symbol "im4clj.core" (name opt)))
-
-;; IM/GM tests
-(def options
-  (map opt-symbol
-       ['-colorspace '-crop '-border '-bordercolor '-borderwidth '-contrast '-define
-        '-depth '-draw '-flip '-flop '-font '-gaussian '-intent '-limit '-quality '-resize
-        '-rotate '-set '-sharpen '-text-font '-type '-unsharp]))
-
-(deftest existing-options-test
-  (doseq [opt options]
-    (is (resolve opt))))
 
 (defmacro with-command-results
   "Runs the given command and evaluates body with the anaphoric symbols %val and
@@ -102,5 +85,4 @@
   (with-im
     (convert-tests))
   (with-gm
-    (convert-tests))
-  )
+    (convert-tests)))
