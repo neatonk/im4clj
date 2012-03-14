@@ -8,26 +8,8 @@
 
 (ns im4clj.test.core
   (:refer-clojure :exclude [import compare])
-  (:use [im4clj.core]
-        [im4clj.test-common]
-        [clojure.test]
-        [clojure.string :only [join]]
-        [clojure.template]))
-
-(deftest config-test
-  (testing "defaults..."
-    (is (false? (use-gm?))
-        "im4clj should use ImageMagick by default."))
-
-  (testing "with-gm/with-im..."
-    (is (true? (with-gm (use-gm?))))
-    (is (false? (with-im (use-gm?))))))
-
-;; commands
-(deftest command-test
-  (let [convert-cmd (command :convert)]
-    (is (= ["convert"] (stringify convert-cmd)))
-    (is (= ["gm" "convert"] (with-gm (stringify convert-cmd))))))
+  (:use [im4clj core test-common]
+        [clojure test template [string :only [join]]]))
 
 (defmacro with-command-results
   "Runs the given command and evaluates body with the anaphoric symbols %val and
@@ -80,8 +62,6 @@
 (defn test-ns-hook []
   (ensure-tmp-dirs)
   (cleanup-tmp-dir)
-  (config-test)
-  (command-test)
   (with-im
     (convert-tests))
   (with-gm
