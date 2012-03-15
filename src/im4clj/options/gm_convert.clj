@@ -211,7 +211,7 @@
   -level [black-point ["," gamma] ["," white-point] [percent?]]
   {:doc "adjust the level of image contrast"}
 
-  -limit [type value]
+  -limit [type] [value]
   {:doc "Disk, File, Map, Memory, Pixels, or Threads resource limit"}
 
   -list [type]

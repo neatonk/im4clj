@@ -39,8 +39,6 @@
    (-bordercolor "#123")
    ;;(-borderwidth "10x10")
    (-contrast)
-   ;;(--contrast)
-   ;;(-+contrast)
    (-define "jpeg:preserve-settings")
    (-depth 8)
    (-draw "circle 100,100 150,150")
@@ -49,7 +47,7 @@
    (-font "Arial.ttf")
    (-gaussian 3)
    (-intent "Perceptual")
-   ;;(-limit "memory" "32MiB") failing...
+   (-limit "memory" "32MiB")
    (-quality 100)
    (-resize 100 100) ;this should work with 1 arg as well.
    (-rotate -90)
