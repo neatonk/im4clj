@@ -211,8 +211,8 @@
   -level [black-point ["," gamma] ["," white-point] [percent?]]
   {:doc "adjust the level of image contrast"}
 
-  -limit [type value]
-  {:doc "Disk, File, Map, Memory, Pixels, or Threads resource limit"}
+  ;; -limit [type] [value]
+  ;; {:doc "Disk, File, Map, Memory, Pixels, or Threads resource limit"}
 
   -list [type]
   {:doc "the type of list"}
@@ -355,8 +355,8 @@
   -scene [value]
   {:doc "set scene number"}
 
-  -set [attribute value]
-  {:doc "set an image attribute"}
+  ;; -set [attribute] [value]
+  ;; {:doc "set an image attribute"}
 
   -segment [cluster-threshold "x" smoothing-threshold]
   {:doc "segment an image"}
@@ -451,3 +451,16 @@
 
   -write [filename]
   {:doc "write an intermediate image [convert, composite]"})
+
+;; TODO: extend argspec to work with multi-word options and get rid of these.
+(defn -limit
+  "Disk, File, Map, Memory, Pixels, or Threads resource limit"
+  [type value]
+  (list "-limit" type value))
+
+(defn -set
+  "set an image attribute"
+  ([attribute]
+     (list "-set" attribute))
+  ([attribute value]
+     (list "-set" attribute value)))
