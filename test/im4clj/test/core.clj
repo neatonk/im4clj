@@ -11,27 +11,16 @@
   (:use [im4clj core test-common]
         [clojure test template [string :only [join]]]))
 
-(defmacro with-command-results
-  "Runs the given command and evaluates body with the anaphoric symbols %val and
-  %img bound respectively to the return value and the output path of the
-  command."
-  [[cmd in-path & opts] & body]
-  (let [im-or-gm (if (use-gm?) "gm" "im")
-        cmdstr   (name cmd)
-        out-path (tmp-path (str im-or-gm "/" cmdstr (join "-" (stringify opts)) ".jpg"))]
-
-    `(let [~'%img ~out-path
-           ~'%val (~cmd ~in-path ~@opts ~'%img)]
-       ~@body)))
-
 (deftest convert-tests
   (do-template
    [opt]
-   (with-command-results
-     (convert test-image-small opt)
-     (println %img)
-     (is (nil? %val))
-     (is (exists? %img)))
+   (let [im-or-gm (if (use-gm?) "gm" "im")
+         arg-seq  (-> test-image-small opt)
+         out-path (tmp-path (apply str im-or-gm "/" "convert" (rest arg-seq)))
+         ret-val  (convert arg-seq out-path)]
+     (println out-path)
+     (is (nil? ret-val))
+     (is (exists? out-path)))
 
    (-colorspace "GRAY")
    (-crop 100 100 0 0)
@@ -39,21 +28,19 @@
    (-bordercolor "#123")
    ;;(-borderwidth "10x10")
    (-contrast)
-   ;;(--contrast)
-   ;;(-+contrast)
    (-define "jpeg:preserve-settings")
    (-depth 8)
    (-draw "circle 100,100 150,150")
    (-flip)
    (-flop)
-   (-font "Arial.ttf")
+   ;;(-font "Arial.ttf")
    (-gaussian 3)
    (-intent "Perceptual")
-   ;;(-limit "memory" "32MiB") failing...
+   (-limit "memory" "32MiB")
    (-quality 100)
    (-resize 100 100) ;this should work with 1 arg as well.
    (-rotate -90)
-   ;;(-set "bogus" "true") failing...
+   (-set "bogus" "true")
    (-sharpen 3)
    ;;(-text-font "Courier.ttf") failing...
    (-type "Optimize")
@@ -66,3 +53,4 @@
     (convert-tests))
   (with-gm
     (convert-tests)))
+test-image-small

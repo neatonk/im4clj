@@ -7,19 +7,21 @@
 
 (defn-magick convert-grayscale
   [in-path out-path]
-  (convert in-path (colorspace "GRAY") out-path))
+  (convert (-> in-path (colorspace "GRAY")) out-path))
 
 (defn-magick resize-100-100
   [in-path out-path]
-  (convert in-path (resize 100 100) out-path)
+  (convert (-> in-path (resize 100 100)) out-path)
   out-path)
 
 (defn-magick polaroid
   [in-path out-path size]
   ;; convert spiral_stairs_sm.jpg -thumbnail 120x120 \
   ;;         -bordercolor white -background black  +polaroid  poloroid.png
-  (convert in-path (thumbnail size size)
-           (bordercolor "white") (background "black")
+  (convert (-> in-path
+               (thumbnail size size)
+               (bordercolor "white")
+               (background "black"))
            "+polaroid"
            out-path))
 
@@ -32,7 +34,3 @@
   (ensure-tmp-dirs)
   (cleanup-tmp-dir)
   (test-magick))
-
-(comment
-  (run-tests)
-  )
