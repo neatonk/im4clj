@@ -26,13 +26,36 @@
 (defn- mk-fn-arglists
   [argspecs]
   (map vec (for [spec argspecs]
-             (->> spec flatten (filter symbol?)))))
+             (cons 'this (->> spec flatten (filter symbol?))))))
+
+(defprotocol AppendableSeq
+  "Protocol. Used to append zero or more items to 'this."
+  (append [this]
+    "Returns a coll containing 'this or the items in 'this if it is a collection.")
+  (append [this more]
+    "Returns a coll containing 'this or the items in 'this if it is a collection,
+    followed by the items in 'more."))
+
+(extend-protocol AppendableSeq
+
+  clojure.lang.Seqable
+  (append [this] this)
+  (append [this more] (concat this more))
+
+  String
+  (append [this] (list this))
+  (append [this more] (cons this more))
+
+  nil
+  (append [this] nil)
+  (append [this more] more))
 
 (defn- mk-fn-clause
   [optstr spec params]
-  (if (empty? params)
-    `([] ~optstr)
-    `([~@params] (list ~optstr (str ~@(flatten spec))))))
+  (let [[[this] params] (split-at 1 params)]
+    (if (empty? params)
+      `([~this] (append ~this (list ~optstr)))
+      `([~this ~@params] (append ~this (list ~optstr (str ~@(flatten spec))))))))
 
 (defn- mk-gensym-param-map
   [params]
