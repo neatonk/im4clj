@@ -35,7 +35,7 @@ namespace.
     <div class="NamespaceTOC">
       <span class="toc-header">Namespaces</span>
       <ul id="left-sidebar-list">
-        <li><a href="im4clj.commands-api.html" class="wiki_link">im4clj.commands</a></li><li><a href="im4clj.config-api.html" class="wiki_link">im4clj.config</a></li><li><a href="im4clj.core-api.html" class="wiki_link">im4clj.core</a></li><li><a href="im4clj.defoptions-api.html" class="wiki_link">im4clj.defoptions</a></li><li><a href="im4clj.geometry-api.html" class="wiki_link">im4clj.geometry</a></li><li><a href="im4clj.im4java-api.html" class="wiki_link">im4clj.im4java</a></li><li><a href="im4clj.magick-api.html" class="wiki_link">im4clj.magick</a></li><li><a href="im4clj.options-api.html" class="wiki_link">im4clj.options</a></li><li><a href="im4clj.run-api.html" class="wiki_link">im4clj.run</a></li><li><a href="im4clj.util.log-api.html" class="wiki_link">im4clj.util.log</a></li><li><a href="im4clj.util.ns-api.html" class="wiki_link">im4clj.util.ns</a></li>
+        <li><a href="im4clj.command-api.html" class="wiki_link">im4clj.command</a></li><li><a href="im4clj.commands-api.html" class="wiki_link">im4clj.commands</a></li><li><a href="im4clj.config-api.html" class="wiki_link">im4clj.config</a></li><li><a href="im4clj.core-api.html" class="wiki_link">im4clj.core</a></li><li><a href="im4clj.defoptions-api.html" class="wiki_link">im4clj.defoptions</a></li><li><a href="im4clj.im4java-api.html" class="wiki_link">im4clj.im4java</a></li><li><a href="im4clj.magick-api.html" class="wiki_link">im4clj.magick</a></li><li><a href="im4clj.options-api.html" class="wiki_link">im4clj.options</a></li><li><a href="im4clj.run-api.html" class="wiki_link">im4clj.run</a></li><li><a href="im4clj.util.log-api.html" class="wiki_link">im4clj.util.log</a></li><li><a href="im4clj.util.ns-api.html" class="wiki_link">im4clj.util.ns</a></li>
       </ul>
     </div>
     
@@ -53,8 +53,6 @@ namespace.
     <a href="#toc0">Overview</a>
     <div style="margin-left: 1em;" class="toc-entry">
       <a href="#im4clj.commands/animate">animate</a>
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#im4clj.commands/command">command</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#im4clj.commands/compare">compare</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
@@ -97,77 +95,59 @@ namespace.
   <hr />
   <h2 id="im4clj.commands/animate">animate</h2>
   <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (animate &amp; opts)
+  <pre id="var-usage">Usage: (animate &amp; options)
 </pre>
   <pre id="var-docstr">Run a animate command with the given options. See IM/GM documentation for usage.
 
 TODO: add example usage.</pre>
   
   
-  
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="im4clj.commands/command">command</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (command cmd)
-</pre>
-  <pre id="var-docstr">Build a new command. Prepends "gm" to the command if (use-gm?) is true.
-
- Example Usage:
-
- (command :convert)
- (command 'convert)
- (command "convert")
-</pre>
-  
-  
-  <a href="http://github.com/neatonk/im4clj/blob/d9cabf90938d11ce0846a1e5d9f6f05e2248cb70/src/im4clj/commands.clj#L14" id="var-source">Source</a>
+  <a href="http://github.com/neatonk/im4clj/blob/e25d116153eea84d435991594c6ce2ecbbff5312/src/im4clj/commands.clj#L15" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
   <h2 id="im4clj.commands/compare">compare</h2>
   <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (compare &amp; opts)
+  <pre id="var-usage">Usage: (compare &amp; options)
 </pre>
   <pre id="var-docstr">Run a compare command with the given options. See IM/GM documentation for usage.
 
 TODO: add example usage.</pre>
   
   
-  
+  <a href="http://github.com/neatonk/im4clj/blob/e25d116153eea84d435991594c6ce2ecbbff5312/src/im4clj/commands.clj#L15" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
   <h2 id="im4clj.commands/composite">composite</h2>
   <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (composite &amp; opts)
+  <pre id="var-usage">Usage: (composite &amp; options)
 </pre>
   <pre id="var-docstr">Run a composite command with the given options. See IM/GM documentation for usage.
 
 TODO: add example usage.</pre>
   
   
-  
+  <a href="http://github.com/neatonk/im4clj/blob/e25d116153eea84d435991594c6ce2ecbbff5312/src/im4clj/commands.clj#L15" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
   <h2 id="im4clj.commands/conjure">conjure</h2>
   <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (conjure &amp; opts)
+  <pre id="var-usage">Usage: (conjure &amp; options)
 </pre>
   <pre id="var-docstr">Run a conjure command with the given options. See IM/GM documentation for usage.
 
 TODO: add example usage.</pre>
   
   
-  
+  <a href="http://github.com/neatonk/im4clj/blob/e25d116153eea84d435991594c6ce2ecbbff5312/src/im4clj/commands.clj#L15" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
   <h2 id="im4clj.commands/convert">convert</h2>
   <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (convert &amp; opts)
+  <pre id="var-usage">Usage: (convert &amp; options)
 </pre>
   <pre id="var-docstr">Run a convert command with the given options. See IM/GM documentation for usage.
 
@@ -176,78 +156,78 @@ Example Usage:
 (convert "input.jpg" (resize 640 480) "output.jpg")</pre>
   
   
-  
+  <a href="http://github.com/neatonk/im4clj/blob/e25d116153eea84d435991594c6ce2ecbbff5312/src/im4clj/commands.clj#L15" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
   <h2 id="im4clj.commands/display">display</h2>
   <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (display &amp; opts)
+  <pre id="var-usage">Usage: (display &amp; options)
 </pre>
   <pre id="var-docstr">Run a display command with the given options. See IM/GM documentation for usage.
 
 TODO: add example usage.</pre>
   
   
-  
+  <a href="http://github.com/neatonk/im4clj/blob/e25d116153eea84d435991594c6ce2ecbbff5312/src/im4clj/commands.clj#L15" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
   <h2 id="im4clj.commands/identify">identify</h2>
   <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (identify &amp; opts)
+  <pre id="var-usage">Usage: (identify &amp; options)
 </pre>
   <pre id="var-docstr">Run a identify command with the given options. See IM/GM documentation for usage.
 
 TODO: add example usage.</pre>
   
   
-  
+  <a href="http://github.com/neatonk/im4clj/blob/e25d116153eea84d435991594c6ce2ecbbff5312/src/im4clj/commands.clj#L15" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
   <h2 id="im4clj.commands/import">import</h2>
   <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (import &amp; opts)
+  <pre id="var-usage">Usage: (import &amp; options)
 </pre>
   <pre id="var-docstr">Run a import command with the given options. See IM/GM documentation for usage.
 
 TODO: add example usage.</pre>
   
   
-  
+  <a href="http://github.com/neatonk/im4clj/blob/e25d116153eea84d435991594c6ce2ecbbff5312/src/im4clj/commands.clj#L15" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
   <h2 id="im4clj.commands/mogrify">mogrify</h2>
   <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (mogrify &amp; opts)
+  <pre id="var-usage">Usage: (mogrify &amp; options)
 </pre>
   <pre id="var-docstr">Run a mogrify command with the given options. See IM/GM documentation for usage.
 
 TODO: add example usage.</pre>
   
   
-  
+  <a href="http://github.com/neatonk/im4clj/blob/e25d116153eea84d435991594c6ce2ecbbff5312/src/im4clj/commands.clj#L15" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
   <h2 id="im4clj.commands/montage">montage</h2>
   <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (montage &amp; opts)
+  <pre id="var-usage">Usage: (montage &amp; options)
 </pre>
   <pre id="var-docstr">Run a montage command with the given options. See IM/GM documentation for usage.
 
 TODO: add example usage.</pre>
   
   
-  
+  <a href="http://github.com/neatonk/im4clj/blob/e25d116153eea84d435991594c6ce2ecbbff5312/src/im4clj/commands.clj#L15" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
   <h2 id="im4clj.commands/stream">stream</h2>
   <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (stream &amp; opts)
+  <pre id="var-usage">Usage: (stream &amp; options)
 </pre>
   <pre id="var-docstr">Run a stream command with the given options. See IM/GM documentation for usage.
 
@@ -256,7 +236,7 @@ TODO: add example usage.
 ImageMagick only.</pre>
   
   
-  
+  <a href="http://github.com/neatonk/im4clj/blob/e25d116153eea84d435991594c6ce2ecbbff5312/src/im4clj/commands.clj#L15" id="var-source">Source</a>
 </div>
 
 

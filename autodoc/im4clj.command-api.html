@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>im4clj.defoptions - im4clj API documentation</title>
+    <title>im4clj.command - im4clj API documentation</title>
     <link href="static/favicon.png" rel="icon" />
     <link href="static/favicon.png" rel="shortcut icon" />
     <link media="all" type="text/css" href="static/clojure.css" rel="stylesheet" />
@@ -52,26 +52,24 @@ namespace.
   <div style="margin-left: 1em;" class="toc-section">
     <a href="#toc0">Overview</a>
     <div style="margin-left: 1em;" class="toc-entry">
-      <a href="#im4clj.defoptions/AppendableSeq">AppendableSeq</a>
+      <a href="#im4clj.command/command">command</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#im4clj.defoptions/append">append</a>
+      <a href="#im4clj.command/defcommand">defcommand</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#im4clj.defoptions/defoption">defoption</a>
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#im4clj.defoptions/defoptions">defoptions</a>
+      <a href="#im4clj.command/defcommands">defcommands</a>
     </div>
     <br />
   </div>
 </div>
 </div>
-                <div id="content-tag"><h1 id="overview">API for <span id="namespace-name">im4clj.defoptions</span>
+                <div id="content-tag"><h1 id="overview">API for <span id="namespace-name">im4clj.command</span>
   - <span id="header-project">im4clj</span> <span id="header-version"></span>
   </h1>
 <span id="author-line">by <span id="author-name">Kevin Neaton</span><br /></span>
-<br />Full namespace name: <span id="long-name">im4clj.defoptions</span>
+<br />Full namespace name: <span id="long-name">im4clj.command</span>
 <p></p>
 <h2>Overview</h2>
-<pre id="namespace-docstr">Macros used internally to define the option-fn's used by im4clj.</pre>
+<pre id="namespace-docstr">Command infrastructure.</pre>
 
 
 <br />
@@ -79,57 +77,45 @@ namespace.
 <div id="var-entry">
   <br />
   <hr />
-  <h2 id="im4clj.defoptions/AppendableSeq">AppendableSeq</h2>
-  <span id="var-type">var</span><br />
-  <pre id="var-usage"></pre>
-  <pre id="var-docstr">Protocol. Used to append zero or more items to 'this.</pre>
-  
-  
-  <a href="http://github.com/neatonk/im4clj/blob/30cfa16d4f035411eb9ab3e48d9707458e165834/src/im4clj/defoptions.clj#L31" id="var-source">Source</a>
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="im4clj.defoptions/append">append</h2>
+  <h2 id="im4clj.command/command">command</h2>
   <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (append this more)
+  <pre id="var-usage">Usage: (command cmd)
 </pre>
-  <pre id="var-docstr">Returns a coll containing 'this or the items in 'this if it is a collection,
-followed by the items in 'more.</pre>
+  <pre id="var-docstr">Build a new command. Prepends "gm" to the command if (use-gm?) is true.
+
+ Example Usage:
+
+ (command :convert)
+ (command 'convert)
+ (command "convert")
+</pre>
   
   
-  
+  <a href="http://github.com/neatonk/im4clj/blob/e25d116153eea84d435991594c6ce2ecbbff5312/src/im4clj/command.clj#L24" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="im4clj.defoptions/defoption">defoption</h2>
+  <h2 id="im4clj.command/defcommand">defcommand</h2>
   <span id="var-type">macro</span><br />
-  <pre id="var-usage">Usage: (defoption opt argspec attr-map)
+  <pre id="var-usage">Usage: (defcommand cmd attr-map)
 </pre>
-  <pre id="var-docstr">Define a new option-fn. Takes a symbol, one or more argspecs, and an attr-map.
+  <pre id="var-docstr">Define a new command-fn. Takes a symbol and an attr-map.
 
-argspec =&gt; [required-form [optional-form]+]
-required-form =&gt; constant-or-symbol+
-optional-form =&gt; constant-or-symbol+
-
-e.g. [width "x" height ["+" x "+" y] [special]]
-
-TODO:
-- implement pre and post conditions.
-- implement +options.</pre>
+TODO: add example usage.</pre>
   
   
-  <a href="http://github.com/neatonk/im4clj/blob/30cfa16d4f035411eb9ab3e48d9707458e165834/src/im4clj/defoptions.clj#L78" id="var-source">Source</a>
+  <a href="http://github.com/neatonk/im4clj/blob/e25d116153eea84d435991594c6ce2ecbbff5312/src/im4clj/command.clj#L40" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="im4clj.defoptions/defoptions">defoptions</h2>
+  <h2 id="im4clj.command/defcommands">defcommands</h2>
   <span id="var-type">macro</span><br />
-  <pre id="var-usage">Usage: (defoptions attr-map &amp; specs)
+  <pre id="var-usage">Usage: (defcommands attr-map &amp; specs)
 </pre>
-  <pre id="var-docstr">Define a bunch of option-fn's with the given attributes.</pre>
+  <pre id="var-docstr">Define a bunch of command-fn's with the given attributes.</pre>
   
   
-  <a href="http://github.com/neatonk/im4clj/blob/30cfa16d4f035411eb9ab3e48d9707458e165834/src/im4clj/defoptions.clj#L107" id="var-source">Source</a>
+  <a href="http://github.com/neatonk/im4clj/blob/e25d116153eea84d435991594c6ce2ecbbff5312/src/im4clj/command.clj#L56" id="var-source">Source</a>
 </div>
 
 
