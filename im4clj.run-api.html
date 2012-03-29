@@ -35,7 +35,7 @@ namespace.
     <div class="NamespaceTOC">
       <span class="toc-header">Namespaces</span>
       <ul id="left-sidebar-list">
-        <li><a href="im4clj.commands-api.html" class="wiki_link">im4clj.commands</a></li><li><a href="im4clj.config-api.html" class="wiki_link">im4clj.config</a></li><li><a href="im4clj.core-api.html" class="wiki_link">im4clj.core</a></li><li><a href="im4clj.defoptions-api.html" class="wiki_link">im4clj.defoptions</a></li><li><a href="im4clj.geometry-api.html" class="wiki_link">im4clj.geometry</a></li><li><a href="im4clj.im4java-api.html" class="wiki_link">im4clj.im4java</a></li><li><a href="im4clj.magick-api.html" class="wiki_link">im4clj.magick</a></li><li><a href="im4clj.options-api.html" class="wiki_link">im4clj.options</a></li><li><a href="im4clj.run-api.html" class="wiki_link">im4clj.run</a></li><li><a href="im4clj.util.log-api.html" class="wiki_link">im4clj.util.log</a></li><li><a href="im4clj.util.ns-api.html" class="wiki_link">im4clj.util.ns</a></li>
+        <li><a href="im4clj.command-api.html" class="wiki_link">im4clj.command</a></li><li><a href="im4clj.commands-api.html" class="wiki_link">im4clj.commands</a></li><li><a href="im4clj.config-api.html" class="wiki_link">im4clj.config</a></li><li><a href="im4clj.core-api.html" class="wiki_link">im4clj.core</a></li><li><a href="im4clj.defoptions-api.html" class="wiki_link">im4clj.defoptions</a></li><li><a href="im4clj.im4java-api.html" class="wiki_link">im4clj.im4java</a></li><li><a href="im4clj.magick-api.html" class="wiki_link">im4clj.magick</a></li><li><a href="im4clj.options-api.html" class="wiki_link">im4clj.options</a></li><li><a href="im4clj.run-api.html" class="wiki_link">im4clj.run</a></li><li><a href="im4clj.util.log-api.html" class="wiki_link">im4clj.util.log</a></li><li><a href="im4clj.util.ns-api.html" class="wiki_link">im4clj.util.ns</a></li>
       </ul>
     </div>
     
@@ -55,6 +55,8 @@ namespace.
       <a href="#im4clj.run/run">run</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#im4clj.run/stringify">stringify</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#im4clj.run/stringify-all">stringify-all</a>
     </div>
     <br />
   </div>
@@ -79,33 +81,41 @@ namespace.
   <span id="var-type">function</span><br />
   <pre id="var-usage">Usage: (run cmd &amp; opts)
 </pre>
-  <pre id="var-docstr">Run a command by name with the given opts. Accepts any 'stringify-able'
- type. Does not check (use-gm?).
+  <pre id="var-docstr">Run a command by name with the given opts. Accepts any Stringifiable
+ type.
 
  Prefer pre-defined commands e.g. im4clj.core/convert.
 
  Example Usage:
 
- (run :convert "input.jpg" :resize 100 "output.jpg")
- (run [:gm :convert] "input.jpg" :resize 100 "output.jpg")
+ (run :convert "input.jpg" '-resize 100 "output.jpg")
+ (run [:gm :convert] "input.jpg" '-resize 100 "output.jpg")
 </pre>
   
   
-  <a href="http://github.com/neatonk/im4clj/blob/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/run.clj#L32" id="var-source">Source</a>
+  <a href="http://github.com/neatonk/im4clj/blob/8bd59ccb3968f268e6ba18714770bd59d23c3e0b/src/im4clj/run.clj#L45" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
   <h2 id="im4clj.run/stringify">stringify</h2>
   <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (stringify &amp; args)
+  <pre id="var-usage">Usage: (stringify this)
 </pre>
-  <pre id="var-docstr">Convert args to a flat sequence of strings.
-
-TODO: define stringify method for core types and move flatten to appropriate
-methods.</pre>
+  <pre id="var-docstr">Returns a string or a sequence of strings representing this.</pre>
   
   
-  <a href="http://github.com/neatonk/im4clj/blob/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/run.clj#L22" id="var-source">Source</a>
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="im4clj.run/stringify-all">stringify-all</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (stringify-all &amp; args)
+</pre>
+  <pre id="var-docstr">Convert args to a flat sequence of strings.</pre>
+  
+  
+  <a href="http://github.com/neatonk/im4clj/blob/8bd59ccb3968f268e6ba18714770bd59d23c3e0b/src/im4clj/run.clj#L37" id="var-source">Source</a>
 </div>
 
 
