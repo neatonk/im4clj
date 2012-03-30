@@ -34,21 +34,30 @@
   [cmd]
   (Command. (list cmd)))
 
+(defn- command-examples
+  [attr-map]
+  (if-let [examples (second (:examples attr-map))]
+
+    (case (count examples)
+      0 ""
+      1 (str (first examples))
+      (apply str "\n\n  " (interpose "\n  " examples)))
+    "TODO: add example usage."))
+
 (defn- command-docstr
-  [cmd]
-  (format "Run a %s command with the given options. See IM/GM documentation for usage." cmd))
+  [cmd attr-map]
+  (let [examples (command-examples attr-map)]
+    (format "Run the %s command with the given argument form. See IM/GM documentation for detailed usage.\n\n  Example Usage: %s" cmd examples)))
 
 (defmacro defcommand
   "Define a new command-fn. Takes a symbol and an attr-map.
 
    TODO: add example usage."
   [cmd attr-map]
-  (let [docstr (command-docstr cmd)
-        docstr (if-let [d (:doc attr-map)] (str docstr "\n\n  " d) docstr)
-        arglists (or (:arglists attr-map) ''([& options]))
+  (let [arglists (or (:arglists attr-map) ''([& options]))
         attr-map (assoc attr-map
-                   :doc docstr
-                   :arglists arglists)]
+                   :arglists arglists)
+        docstr   (command-docstr cmd attr-map)]
     `(defn ~cmd
        ~docstr
        ~attr-map
