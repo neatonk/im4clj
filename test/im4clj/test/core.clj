@@ -15,9 +15,8 @@
   (do-template
    [opt]
    (let [im-or-gm (if (use-gm?) "gm" "im")
-         arg-seq  (-> test-image-small opt)
-         out-path (tmp-path (apply str im-or-gm "/" "convert" (rest arg-seq)))
-         ret-val  (convert arg-seq out-path)]
+         out-path (tmp-path (apply str im-or-gm "/" "convert" opt))
+         ret-val  (convert test-image-small opt out-path)]
      (println out-path)
      (is (nil? ret-val))
      (is (exists? out-path)))
@@ -53,4 +52,3 @@
     (convert-tests))
   (with-gm
     (convert-tests)))
-test-image-small

@@ -1,5 +1,5 @@
 (ns im4clj.options.gm-convert
-  (:use [im4clj.defoptions :only [defoptions append]]))
+  (:use [im4clj.defoptions :only [defoptions]]))
 
 (defoptions
   {:command "gm convert"
@@ -455,12 +455,12 @@
 ;; TODO: extend argspec to work with multi-word options and get rid of these.
 (defn -limit
   "Disk, File, Map, Memory, Pixels, or Threads resource limit"
-  [this type value]
-  (append this (list "-limit" type value)))
+  [type value]
+  (list "-limit" type value))
 
 (defn -set
   "set an image attribute"
-  ([this attribute]
-     (append this (list "-set" attribute)))
-  ([this attribute value]
-     (append this (list "-set" attribute value))))
+  ([attribute]
+     (list "-set" attribute))
+  ([attribute value]
+     (list "-set" attribute value)))

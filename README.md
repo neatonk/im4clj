@@ -6,18 +6,15 @@ ImageMagick/GraphicsMagick commandline wrapper for Clojure. Manipulate images wi
 Crop an image...
 
 ```clojure
-(convert (-> "path/to/image.jpg"
-             (-crop 640 480 -1 50)
-             (-write "path/to/new-image.jpg")))
+user> (convert "path/to/image.jpg" (-crop 640 480 -1 50) "path/to/new-image.jpg")
 ```
-
 Get documentation...
 
 ```clojure
 user> (doc -crop)
 -------------------------
 im4clj.core/-crop
-([this width height] [this width height x y] [this width height x y special])
+([width height] [width height x y] [width height x y special])
   preferred size and location of the cropped image
 nil
 ```
@@ -32,7 +29,8 @@ Add the following dependency to your `project.clj` file:
 Documentation
 -------------
 
-[API Docs](http://neatonk.github.com/im4clj)
+* [API Docs](http://neatonk.github.com/im4clj)
+
 
 License
 -------
