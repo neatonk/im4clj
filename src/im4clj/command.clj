@@ -31,8 +31,8 @@
   (command 'convert)
   (command \"convert\")
   "
-  [cmd]
-  (Command. (list cmd)))
+  [cmd & more]
+  (Command. (list* cmd more)))
 
 (defn- command-examples
   [attr-map]
