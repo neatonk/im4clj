@@ -41,7 +41,6 @@
           (every? string? %)]}
   (stringify args))
 
-
 (defn run
   "Run a command by name with the given opts. Accepts any Stringifiable
    type.
