@@ -18,7 +18,8 @@
    :version "1.3.13"}
 
   animate
-  {:doc ""
+  {:examples '[(animate "cockatoo.*")
+               (animate "-map" "best" "cockatoo.*" )]
    :arglists '([options? files*])}
 
   compare
@@ -31,7 +32,9 @@
   {:arglists '([options? script.msl]+)}
 
   convert
-  {:doc "Example Usage:\n\n  (convert \"input.jpg\" (resize 640 480) \"output.jpg\")"
+  {:examples '[(convert "input.jpg" "-resize" "640x480" "output.jpg")
+               (convert (-> "input.jpg" (-resize 640 480)) "output.jpg")
+               (convert (-resize "input.jpg" 640 480) "output.jpg")]
    :arglists '([options? input-file? options? output-file])}
 
   display
@@ -51,4 +54,4 @@
 
 ;; (defcommand stream
 ;;   {:project "ImageMagick"
-;;    :doc "TODO: add example usage.\n\nImageMagick only."})
+;;    :example "\n\nImageMagick only."})
