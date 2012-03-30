@@ -5,7 +5,8 @@
             :distribution :repo
             :comments "same as Clojure"}
   :dependencies [[org.clojure/clojure "1.3.0"]
-                 [org.im4java/im4java "1.2.0"]]
+                 [org.im4java/im4java "1.2.0"]
+                 [clj-glob "1.0.0"]]
   :autodoc {:name "im4clj",
             :page-title "im4clj API Documentation"
             :copyright "Copyright 2012, deeperbydesign, inc."
