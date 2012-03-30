@@ -6,43 +6,49 @@
 ;   the terms of this license.
 ;   You must not remove this notice, or any other, from this software.
 
-(ns ^{:doc "Command fn's"
-      :author "Kevin Neaton"}
+(ns ^{:doc "Command function's. Uses im4clj.command/defcommands to define named series of named fn's which run the similarly named IM/GM commands."
+      :author "Kevin Neaton"
+      :see-also "im4clj.command"}
   im4clj.commands
   (:refer-clojure :exclude [import compare])
   (:use [im4clj.command]))
 
 (defcommands
+  {:project "GraphicsMagick"
+   :version "1.3.13"}
 
   animate
-  {:doc "TODO: add example usage."}
+  {:doc ""
+   :arglists '([options? files*])}
 
   compare
-  {:doc "TODO: add example usage."}
+  {:arglists '([options? reference-image options? compare-image options?])}
 
   composite
-  {:doc "TODO: add example usage."}
+  {:arglists '([options? change-image base-image mask-image? output-image])}
 
   conjure
-  {:doc "TODO: add example usage."}
+  {:arglists '([options? script.msl]+)}
 
   convert
-  {:doc "Example Usage:\n\n(convert \"input.jpg\" (resize 640 480) \"output.jpg\")"}
+  {:doc "Example Usage:\n\n  (convert \"input.jpg\" (resize 640 480) \"output.jpg\")"
+   :arglists '([options? input-file? options? output-file])}
 
   display
-  {:doc "TODO: add example usage."}
+  {:arglists '([options? files*]+)}
 
   identify
-  {:doc "TODO: add example usage."}
+  {:arglists '([files*])}
 
   import
-  {:doc "TODO: add example usage."}
+  {:arglists '([options? file])}
 
   mogrify
-  {:doc "TODO: add example usage."}
+  {:arglists '([options? files*])}
 
   montage
-  {:doc "TODO: add example usage."}
+  {:arglists '([options? file options-and-files? output-file])})
 
-  stream
-  {:doc "TODO: add example usage.\n\nImageMagick only."})
+;; (defcommand stream
+;;   {:project "ImageMagick"
+;;    :doc "TODO: add example usage.\n\nImageMagick only."})

@@ -6,7 +6,7 @@
 ;   the terms of this license.
 ;   You must not remove this notice, or any other, from this software.
 
-(ns ^{:doc "Command infrastructure."
+(ns ^{:doc "Command infrastructure. Used by im4clj.commands to define IM/GM command-fn's for 'convert, 'identify, 'montage, etc."
       :author "Kevin Neaton"}
   im4clj.command
   (:use [im4clj config run]))
@@ -22,13 +22,14 @@
        (:command-seq this)))))
 
 (defn command
-  "Build a new command. Prepends \"gm\" to the command if (use-gm?) is true.
+  "Create a new Command object. When stringified, \"gm\" will be conditionally
+  prepended to the result if (use-gm?)  is true.
 
-   Example Usage:
+  Example Usage:
 
-   (command :convert)
-   (command 'convert)
-   (command \"convert\")
+  (command :convert)
+  (command 'convert)
+  (command \"convert\")
   "
   [cmd]
   (Command. (list cmd)))
@@ -43,10 +44,11 @@
    TODO: add example usage."
   [cmd attr-map]
   (let [docstr (command-docstr cmd)
-        docstr (if-let [d (:doc attr-map)] (str docstr "\n\n" d) docstr)
+        docstr (if-let [d (:doc attr-map)] (str docstr "\n\n  " d) docstr)
+        arglists (or (:arglists attr-map) ''([& options]))
         attr-map (assoc attr-map
                    :doc docstr
-                   :arglists ''([& options]))]
+                   :arglists arglists)]
     `(defn ~cmd
        ~docstr
        ~attr-map
@@ -54,11 +56,12 @@
        (apply run (command ~(str cmd)) options#))))
 
 (defmacro defcommands
-  "Define a bunch of command-fn's with the given attributes."
-  [attr-map & specs]
-  (let [[attr-map specs] (if (map? attr-map)
-                           [attr-map specs]
-                           [{} (cons attr-map specs)])
+  "Define a bunch of command-fn's at once. Accepts an optional map of attributes
+  to be applied to each command."
+  [attr-map? & specs]
+  (let [[attr-map specs] (if (map? attr-map?)
+                           [attr-map? specs]
+                           [{} (cons attr-map? specs)])
         specs (partition 2 specs)
         defs  (for [[cmd cmd-attr-map] specs]
                 (let [attrs (merge attr-map cmd-attr-map)]
