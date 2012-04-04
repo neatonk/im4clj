@@ -1,4 +1,5 @@
-(ns ^{:doc "Namespace utilities"}
+(ns ^{:doc "Namespace utilities"
+      :skip-wiki true}
   im4clj.util.ns)
 
 (defn immigrate

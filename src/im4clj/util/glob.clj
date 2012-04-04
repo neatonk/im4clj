@@ -7,7 +7,8 @@
 ;   You must not remove this notice, or any other, from this software.
 
 (ns ^{:doc "Glob related utils."
-      :author "Kevin Neaton"}
+      :author "Kevin Neaton"
+      :skip-wiki true}
   im4clj.util.glob
   (:use [org.satta.glob :only [glob]]
         [clojure.walk :only [postwalk]]))

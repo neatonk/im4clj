@@ -7,7 +7,8 @@
 ;   You must not remove this notice, or any other, from this software.
 
 (ns ^{:doc "Basic logging util's"
-      :author "Kevin Neaton"}
+      :author "Kevin Neaton"
+      :skip-wiki true}
   im4clj.util.log)
 
 (def ^:dynamic *debug* false)
