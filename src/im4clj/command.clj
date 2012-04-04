@@ -37,7 +37,6 @@
 (defn- command-examples
   [attr-map]
   (if-let [examples (second (:examples attr-map))]
-
     (case (count examples)
       0 ""
       1 (str (first examples))
