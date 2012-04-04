@@ -7,4 +7,5 @@
 /checkouts
 /.lein-deps-sum
 /test/tmp
+/autodoc/*
 .#*
