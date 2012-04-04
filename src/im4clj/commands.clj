@@ -7,8 +7,7 @@
 ;   You must not remove this notice, or any other, from this software.
 
 (ns ^{:doc "Command function's. Uses im4clj.command/defcommands to define named series of named fn's which run the similarly named IM/GM commands."
-      :author "Kevin Neaton"
-      :see-also "im4clj.command"}
+      :author "Kevin Neaton"}
   im4clj.commands
   (:refer-clojure :exclude [import compare])
   (:use [im4clj.command]))
@@ -29,7 +28,7 @@
   {:arglists '([options? change-image base-image mask-image? output-image])}
 
   conjure
-  {:arglists '([options? script.msl]+)}
+  {:arglists '([options? script.msl & more])}
 
   convert
   {:examples '[(convert "input.jpg" "-resize" "640x480" "output.jpg")
@@ -38,7 +37,7 @@
    :arglists '([options? input-file? options? output-file])}
 
   display
-  {:arglists '([options? files*]+)}
+  {:arglists '([options? files* & more])}
 
   identify
   {:arglists '([files*])}
