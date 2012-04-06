@@ -51,7 +51,6 @@
    Example Usage:
 
    (run :convert \"input.jpg\" '-resize 100 \"output.jpg\")
-   (run [:gm :convert] \"input.jpg\" '-resize 100 \"output.jpg\")
   "
   [cmd & opts]
   (apply im4java/run (stringify-all cmd opts)))
