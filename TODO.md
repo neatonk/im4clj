@@ -31,7 +31,6 @@ im4clj.defoptions
 im4clj.im4java
 
 im4clj.magick
-- remove ns. originally crated to resolve ns conflicts between option fn's and clojure.core. not needed.
 
 im4clj.options
 - add regression tests for option argspecs.
