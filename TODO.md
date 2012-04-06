@@ -20,6 +20,7 @@ im4clj.core
 - add examples to ns docstring?
 - Add comprehensive tests for each option required.
   Use test.generative?
+- merge [im4clj commands options config]
 
 im4clj.defoptions
 - add argspec tests?
