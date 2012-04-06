@@ -11,9 +11,8 @@
   im4clj.core
   (:refer-clojure :exclude [import compare])
   (:use [im4clj.util ns])
-  (:require [im4clj commands config options run]))
+  (:require [im4clj commands config options]))
 
 (immigrate 'im4clj.commands
            'im4clj.config
-           'im4clj.options
-           'im4clj.run)
+           'im4clj.options)
