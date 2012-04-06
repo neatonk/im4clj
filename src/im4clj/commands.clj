@@ -32,7 +32,6 @@
 
   convert
   {:examples '[(convert "input.jpg" "-resize" "640x480" "output.jpg")
-               (convert (-> "input.jpg" (-resize 640 480)) "output.jpg")
                (convert (-resize "input.jpg" 640 480) "output.jpg")]
    :arglists '([options? input-file? options? output-file])}
 
@@ -54,3 +53,9 @@
 ;; (defcommand stream
 ;;   {:project "ImageMagick"
 ;;    :example "\n\nImageMagick only."})
+
+(defcommand convert
+  {:examples '[(convert "input.jpg" "-resize" "640x480" "output.jpg")
+               (convert (-> "input.jpg" (-resize 640 480)) "output.jpg")
+               (convert (-resize "input.jpg" 640 480) "output.jpg")]
+   :arglists '([options? input-file? options? output-file])})

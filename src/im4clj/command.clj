@@ -49,9 +49,16 @@
     (format "Run the %s command with the given argument form. See IM/GM documentation for detailed usage.\n\n  Example Usage: %s" cmd examples)))
 
 (defmacro defcommand
-  "Define a new command-fn. Takes a symbol and an attr-map.
+  "Define a new command-fn. Takes a symbol and an attr-map representing the
+  command to be defined. If present in attr-map, the keys :arglists and
+  :examples are treated specially. All keys are retained as meta-data for the
+  symbol provided.
 
-   TODO: add example usage."
+  (defcommand convert
+    {:examples '[(convert \"input.jpg\" \"-resize\" \"640x480\" \"output.jpg\")
+                 (convert (-> \"input.jpg\" (-resize 640 480)) \"output.jpg\")
+                 (convert (-resize \"input.jpg\" 640 480) \"output.jpg\")]
+     :arglists '([options? input-file? options? output-file])})"
   [cmd attr-map]
   (let [arglists (or (:arglists attr-map) ''([& options]))
         attr-map (assoc attr-map
@@ -64,8 +71,8 @@
        (apply run (command ~(str cmd)) options#))))
 
 (defmacro defcommands
-  "Define a bunch of command-fn's at once. Accepts an optional map of attributes
-  to be applied to each command."
+  "Define a number of command-fn's from the given specs. If a map is provided
+  prior to the specs it's contents will be applied to each spec."
   [attr-map? & specs]
   (let [[attr-map specs] (if (map? attr-map?)
                            [attr-map? specs]

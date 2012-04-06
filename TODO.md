@@ -9,15 +9,11 @@ README.md
 - Add Examples?
 
 im4clj.command
-- improve docstrings for defcommand and defcommands
-- add docstring for Command.
 
 im4clj.commands
-- correct 'convert example usage.
 
 im4clj.config
 - merge into im4clj.command OR im4clj.run?
-- add docstring for *use-gm*
 
 im4clj.core
 - improve ns docstring.

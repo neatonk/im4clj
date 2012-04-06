@@ -10,7 +10,9 @@
       :author "Kevin Neaton"}
   im4clj.config)
 
-(def ^{:dynamic true :private true} *use-gm* nil)
+(def ^{:doc "Dynamic var used to select the GraphicksMagick command. nil by default."
+       :dynamic true}
+  *use-gm* nil)
 
 (defn use-gm
   "Get the thread-local value of *use-gm*."
