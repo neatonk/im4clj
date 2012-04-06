@@ -12,6 +12,7 @@
   (:require [im4clj.im4java :as im4java]))
 
 (defprotocol Stringifiable
+  "Protocol to control the conversion of commandline components prior to execution."
   (stringify [this] "Returns a string or a sequence of strings representing this."))
 
 (extend-protocol Stringifiable

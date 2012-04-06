@@ -33,7 +33,6 @@ im4clj.options
 - add regression tests for option argspecs.
 
 im4clj.run
-- Add docstring for Stringifiable.
 - correct 'run example usage.
 
 Future
