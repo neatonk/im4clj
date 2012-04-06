@@ -20,14 +20,12 @@ im4clj.core
 - add examples to ns docstring?
 - Add comprehensive tests for each option required.
   Use test.generative?
-- merge [im4clj commands options config]
+- merge [im4clj commands options config]?
 
 im4clj.defoptions
 - add argspec tests?
 
 im4clj.im4java
-
-im4clj.magick
 
 im4clj.options
 - add regression tests for option argspecs.
