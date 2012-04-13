@@ -35,7 +35,7 @@ namespace.
     <div class="NamespaceTOC">
       <span class="toc-header">Namespaces</span>
       <ul id="left-sidebar-list">
-        <li><a href="im4clj.command-api.html" class="wiki_link">im4clj.command</a></li><li><a href="im4clj.commands-api.html" class="wiki_link">im4clj.commands</a></li><li><a href="im4clj.config-api.html" class="wiki_link">im4clj.config</a></li><li><a href="im4clj.core-api.html" class="wiki_link">im4clj.core</a></li><li><a href="im4clj.defoptions-api.html" class="wiki_link">im4clj.defoptions</a></li><li><a href="im4clj.im4java-api.html" class="wiki_link">im4clj.im4java</a></li><li><a href="im4clj.magick-api.html" class="wiki_link">im4clj.magick</a></li><li><a href="im4clj.options-api.html" class="wiki_link">im4clj.options</a></li><li><a href="im4clj.run-api.html" class="wiki_link">im4clj.run</a></li>
+        <li><a href="im4clj.command-api.html" class="wiki_link">im4clj.command</a></li><li><a href="im4clj.commands-api.html" class="wiki_link">im4clj.commands</a></li><li><a href="im4clj.config-api.html" class="wiki_link">im4clj.config</a></li><li><a href="im4clj.core-api.html" class="wiki_link">im4clj.core</a></li><li><a href="im4clj.defoptions-api.html" class="wiki_link">im4clj.defoptions</a></li><li><a href="im4clj.im4java-api.html" class="wiki_link">im4clj.im4java</a></li><li><a href="im4clj.options-api.html" class="wiki_link">im4clj.options</a></li><li><a href="im4clj.run-api.html" class="wiki_link">im4clj.run</a></li>
       </ul>
     </div>
     
@@ -57,6 +57,8 @@ namespace.
       <a href="#im4clj.config/use-gm!">use-gm!</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#im4clj.config/use-gm?">use-gm?</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#im4clj.config/use-im?">use-im?</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#im4clj.config/with-gm">with-gm</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
@@ -88,7 +90,7 @@ namespace.
   <pre id="var-docstr">Get the thread-local value of *use-gm*.</pre>
   
   
-  <a href="http://github.com/neatonk/im4clj/blob/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj#L15" id="var-source">Source</a>
+  <a href="http://github.com/neatonk/im4clj/blob/2b80fb4084e341530d626fc58a3d62dedffc48cf/src/im4clj/config.clj#L18" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -100,7 +102,7 @@ namespace.
   <pre id="var-docstr">Set the thread-local value of *use-gm*.</pre>
   
   
-  <a href="http://github.com/neatonk/im4clj/blob/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj#L19" id="var-source">Source</a>
+  <a href="http://github.com/neatonk/im4clj/blob/2b80fb4084e341530d626fc58a3d62dedffc48cf/src/im4clj/config.clj#L22" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -112,7 +114,19 @@ namespace.
 for binding.</pre>
   
   
-  <a href="http://github.com/neatonk/im4clj/blob/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj#L24" id="var-source">Source</a>
+  <a href="http://github.com/neatonk/im4clj/blob/2b80fb4084e341530d626fc58a3d62dedffc48cf/src/im4clj/config.clj#L27" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="im4clj.config/use-im?">use-im?</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (use-im?)
+</pre>
+  <pre id="var-docstr">Predicate. Returns true if *use-gm* is bound to false. Use with-gm and with-im
+for binding.</pre>
+  
+  
+  <a href="http://github.com/neatonk/im4clj/blob/2b80fb4084e341530d626fc58a3d62dedffc48cf/src/im4clj/config.clj#L32" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -123,7 +137,7 @@ for binding.</pre>
   <pre id="var-docstr">Evaluates 'body' with *use-gm* bound to true.</pre>
   
   
-  <a href="http://github.com/neatonk/im4clj/blob/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj#L29" id="var-source">Source</a>
+  <a href="http://github.com/neatonk/im4clj/blob/2b80fb4084e341530d626fc58a3d62dedffc48cf/src/im4clj/config.clj#L37" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -134,7 +148,7 @@ for binding.</pre>
   <pre id="var-docstr">Evaluates 'body' with *use-gm* bound to false.</pre>
   
   
-  <a href="http://github.com/neatonk/im4clj/blob/403c5356f49e74924f54cf684e033704689711ec/src/im4clj/config.clj#L35" id="var-source">Source</a>
+  <a href="http://github.com/neatonk/im4clj/blob/2b80fb4084e341530d626fc58a3d62dedffc48cf/src/im4clj/config.clj#L43" id="var-source">Source</a>
 </div>
 
 

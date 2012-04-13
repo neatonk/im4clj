@@ -35,7 +35,7 @@ namespace.
     <div class="NamespaceTOC">
       <span class="toc-header">Namespaces</span>
       <ul id="left-sidebar-list">
-        <li><a href="im4clj.command-api.html" class="wiki_link">im4clj.command</a></li><li><a href="im4clj.commands-api.html" class="wiki_link">im4clj.commands</a></li><li><a href="im4clj.config-api.html" class="wiki_link">im4clj.config</a></li><li><a href="im4clj.core-api.html" class="wiki_link">im4clj.core</a></li><li><a href="im4clj.defoptions-api.html" class="wiki_link">im4clj.defoptions</a></li><li><a href="im4clj.im4java-api.html" class="wiki_link">im4clj.im4java</a></li><li><a href="im4clj.magick-api.html" class="wiki_link">im4clj.magick</a></li><li><a href="im4clj.options-api.html" class="wiki_link">im4clj.options</a></li><li><a href="im4clj.run-api.html" class="wiki_link">im4clj.run</a></li>
+        <li><a href="im4clj.command-api.html" class="wiki_link">im4clj.command</a></li><li><a href="im4clj.commands-api.html" class="wiki_link">im4clj.commands</a></li><li><a href="im4clj.config-api.html" class="wiki_link">im4clj.config</a></li><li><a href="im4clj.core-api.html" class="wiki_link">im4clj.core</a></li><li><a href="im4clj.defoptions-api.html" class="wiki_link">im4clj.defoptions</a></li><li><a href="im4clj.im4java-api.html" class="wiki_link">im4clj.im4java</a></li><li><a href="im4clj.options-api.html" class="wiki_link">im4clj.options</a></li><li><a href="im4clj.run-api.html" class="wiki_link">im4clj.run</a></li>
       </ul>
     </div>
     
@@ -79,20 +79,21 @@ namespace.
   <hr />
   <h2 id="im4clj.command/command">command</h2>
   <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (command cmd &amp; more)
+  <pre id="var-usage">Usage: (command cmd)
+       (command cmd use-gm)
 </pre>
-  <pre id="var-docstr">Create a new Command object. When stringified, "gm" will be conditionally
-prepended to the result if (use-gm?)  is true.
+  <pre id="var-docstr">Create a new Command object for 'cmd'. When stringified, "gm" will be
+conditionally prepended to the result if (use-gm?) is true. Use the second
+form to force the use of im or gm.
 
 Example Usage:
 
 (command :convert)
-(command 'convert)
-(command "convert")
+(command :convert true)
 </pre>
   
   
-  <a href="http://github.com/neatonk/im4clj/blob/a694b5824df256fe11616dab26c86d379321545f/src/im4clj/command.clj#L24" id="var-source">Source</a>
+  <a href="http://github.com/neatonk/im4clj/blob/2b80fb4084e341530d626fc58a3d62dedffc48cf/src/im4clj/command.clj#L25" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -100,12 +101,19 @@ Example Usage:
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (defcommand cmd attr-map)
 </pre>
-  <pre id="var-docstr">Define a new command-fn. Takes a symbol and an attr-map.
+  <pre id="var-docstr">Define a new command-fn. Takes a symbol and an attr-map representing the
+command to be defined. If present in attr-map, the keys :arglists and
+:examples are treated specially. All keys are retained as meta-data for the
+symbol provided.
 
-TODO: add example usage.</pre>
+(defcommand convert
+  {:examples '[(convert "input.jpg" "-resize" "640x480" "output.jpg")
+               (convert (-&gt; "input.jpg" (-resize 640 480)) "output.jpg")
+               (convert (-resize "input.jpg" 640 480) "output.jpg")]
+   :arglists '([options? input-file? options? output-file])})</pre>
   
   
-  <a href="http://github.com/neatonk/im4clj/blob/a694b5824df256fe11616dab26c86d379321545f/src/im4clj/command.clj#L51" id="var-source">Source</a>
+  <a href="http://github.com/neatonk/im4clj/blob/2b80fb4084e341530d626fc58a3d62dedffc48cf/src/im4clj/command.clj#L54" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -113,11 +121,11 @@ TODO: add example usage.</pre>
   <span id="var-type">macro</span><br />
   <pre id="var-usage">Usage: (defcommands attr-map? &amp; specs)
 </pre>
-  <pre id="var-docstr">Define a bunch of command-fn's at once. Accepts an optional map of attributes
-to be applied to each command.</pre>
+  <pre id="var-docstr">Define a number of command-fn's from the given specs. If a map is provided
+prior to the specs it's contents will be applied to each spec.</pre>
   
   
-  <a href="http://github.com/neatonk/im4clj/blob/a694b5824df256fe11616dab26c86d379321545f/src/im4clj/command.clj#L66" id="var-source">Source</a>
+  <a href="http://github.com/neatonk/im4clj/blob/2b80fb4084e341530d626fc58a3d62dedffc48cf/src/im4clj/command.clj#L76" id="var-source">Source</a>
 </div>
 
 
