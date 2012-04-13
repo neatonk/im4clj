@@ -9,6 +9,7 @@ README.md
 - Add Examples?
 
 im4clj.command
+- move all "gm" bits to im4clj.config?
 
 im4clj.commands
 
@@ -20,7 +21,6 @@ im4clj.core
 - add examples to ns docstring?
 - Add comprehensive tests for each option required.
   Use test.generative?
-- merge [im4clj commands options config]?
 
 im4clj.defoptions
 - add argspec tests?
@@ -31,6 +31,7 @@ im4clj.options
 - add regression tests for option argspecs.
 
 im4clj.run
+- make stingify return a seq of strings even when given a string?
 
 Future
 ------
