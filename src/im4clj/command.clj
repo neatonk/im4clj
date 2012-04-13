@@ -9,30 +9,33 @@
 (ns ^{:doc "Command infrastructure. Used by im4clj.commands to define IM/GM command-fn's for 'convert, 'identify, 'montage, etc."
       :author "Kevin Neaton"}
   im4clj.command
-  (:use [im4clj config run]))
+  (:use [im4clj run])
+  (:require [im4clj.config :as config]))
 
-(defrecord Command [command-seq])
-
-(extend-type Command
+(defrecord Command [command-seq use-gm]
   Stringifiable
   (stringify [this]
     (stringify
-     (if (use-gm?)
-       (cons "gm" (:command-seq this))
-       (:command-seq this)))))
+     (cond
+      (true? use-gm) (cons "gm" command-seq)
+      (false? use-gm) command-seq
+      (config/use-gm?) (cons "gm" command-seq)
+      :else command-seq))))
 
 (defn command
-  "Create a new Command object. When stringified, \"gm\" will be conditionally
-  prepended to the result if (use-gm?)  is true.
+  "Create a new Command object for 'cmd'. When stringified, \"gm\" will be
+  conditionally prepended to the result if (use-gm?) is true. Use the second
+  form to force the use of im or gm.
 
   Example Usage:
 
   (command :convert)
-  (command 'convert)
-  (command \"convert\")
+  (command :convert true)
   "
-  [cmd & more]
-  (Command. (list* cmd more)))
+  ([cmd]
+     (Command. (list cmd) nil))
+  ([cmd use-gm]
+     (Command. (list cmd) use-gm)))
 
 (defn- command-examples
   [attr-map]

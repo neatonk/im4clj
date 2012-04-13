@@ -11,7 +11,8 @@
   im4clj.config)
 
 (def ^{:doc "Dynamic var used to select the GraphicksMagick command. nil by default."
-       :dynamic true}
+       :dynamic true
+       :private true}
   *use-gm* nil)
 
 (defn use-gm
@@ -27,6 +28,11 @@
   "Predicate. Returns true if *use-gm* is bound to true. Use with-gm and with-im
   for binding."
   [] (true?  *use-gm*))
+
+(defn use-im?
+  "Predicate. Returns true if *use-gm* is bound to false. Use with-gm and with-im
+  for binding."
+  [] (false?  *use-gm*))
 
 (defmacro with-gm
   "Evaluates 'body' with *use-gm* bound to true."
