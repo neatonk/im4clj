@@ -29,7 +29,6 @@ im4clj.im4java
 
 im4clj.options
 - add regression tests for option argspecs.
-- merge gm_convert into options.
 
 im4clj.run
 
