@@ -20,9 +20,9 @@
   [] *use-gm*)
 
 (defn use-gm!
-  "Set the thread-local value of *use-gm*."
+  "Atomically alters the root binding of *use-gm*. Use sparringly."
   ([] (use-gm! true))
-  ([bool] (set! *use-gm* bool)))
+  ([new-val] (alter-var-root (var *use-gm*) (constantly new-val))))
 
 (defn use-gm?
   "Predicate. Returns true if *use-gm* is bound to true. Use with-gm and with-im
