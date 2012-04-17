@@ -26,9 +26,12 @@ im4clj.defoptions
 - add argspec tests?
 
 im4clj.im4java
+- improve error messages.
+- return shell out.
 
 im4clj.options
 - add regression tests for option argspecs.
+- ensure argspecs are correct and complete.
 
 im4clj.run
 - make stingify return a seq of strings even when given a string?
@@ -62,3 +65,4 @@ im4clj.run
 - Extend map to act like an unordered collection of options and args when stringified?
 - Make command runner configurable, so that im4java can be replaced by 'pallet.shell,
   clojure.java.shell, etc.
+- Automagically identify and expand glob strings?
