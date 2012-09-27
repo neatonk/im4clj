@@ -5,6 +5,11 @@ ImageMagick/GraphicsMagick commandline wrapper for Clojure.
 
 _See the [im4clj wiki][wiki] and the im4clj [API docs][API] for more detailed information._
 
+**NOTE:** im4clj is not yet complete. Please feel free to try it out, add issues and make pull requests. 
+
+Example
+-------
+
 Crop an image...
 
 ```clj
