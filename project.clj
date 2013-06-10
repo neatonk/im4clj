@@ -1,5 +1,6 @@
-(defproject im4clj "0.0.1-SNAPSHOT"
+(defproject im4clj "0.0.1"
   :description "ImageMagick for Clojure. im4clj is a wrapper for the ImageMagick and GraphicsMagick commandline tools. It is heavily influenced by, and partly based on im4java. Use im4clj.core to get started."
+  :url "https://github.com/neatonk/im4clj"
   :license {:name "Eclipse Public License - v 1.0"
             :url "http://www.eclipse.org/legal/epl-v10.html"
             :distribution :repo

@@ -1,14 +1,20 @@
-im4clj
-======
+# NOTE
+
+***
+
+`im4clj` is incomplete and is not currently under active development.
+I personally, reccomend using a generic shell scripting tool like https://github.com/Raynes/conch instead.
+However, `im4clj` does provide some additional niceties like (inline documentation) and will remain here for that purpose.
+
+***
+
+# im4clj
 
 ImageMagick/GraphicsMagick commandline wrapper for Clojure.
 
 _See the [im4clj wiki][wiki] and the im4clj [API docs][API] for more detailed information._
 
-**NOTE:** im4clj is not yet complete. Please feel free to try it out, add issues and make pull requests. 
-
-Example
--------
+## Example
 
 Crop an image...
 
@@ -29,23 +35,20 @@ nil
 
 ```
 
-Install
--------
+## Install
 
 Install [ImageMagick][IM] or [GraphicsMagick][GM].
 
 Add the following dependency to your `project.clj` file:
 
-    [im4clj "0.0.1-SNAPSHOT"]
+    [im4clj "0.0.1"]
 
-Documentation
--------------
+## Documentation
 
 * [API docs][API]
 
 
-License
--------
+## License
 
 Copyright (C) deeperbydesign, inc 2012.
 
